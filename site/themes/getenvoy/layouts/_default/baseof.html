@@ -1,11 +1,24 @@
-<!DOCTYPE html>
-<html>
-    {{- partial "head.html" . -}}
-    <body>
-        {{- partial "header.html" . -}}
-        <div id="content">
-        {{- block "main" . }}{{- end }}
-        </div>
-        {{- partial "footer.html" . -}}
-    </body>
+{{ partial "head" . }}
+	<body id="top">
+		 <!-- partial "header" . -->
+
+		<div id="menu">
+			{{ partial "menu" .}}
+		</div>
+		{{ if not .IsHome }}
+		<div id="header">
+			{{ partial "header" .}}
+		</div>
+		{{ end }}
+
+
+
+
+		{{ "<!-- Main -->" | safeHTML }}
+		<div id="main">
+			{{ block "main" . }}{{ end }}
+		</div>
+
+		{{ partial "footer" . }}
+	</body>
 </html>

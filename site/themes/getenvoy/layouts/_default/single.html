@@ -1,0 +1,7 @@
+{{ define "main" }}
+<section class="single">
+		<h1>{{ .Title }}</h1>
+		<p>{{ partial "post-meta" . }}</p>
+	{{ .Content }}
+</section>
+{{ end }}

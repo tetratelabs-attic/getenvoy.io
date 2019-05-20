@@ -1,0 +1,10 @@
+
+    <section class=" platforms">
+        <p class="count">Available on {{ len .Site.Data.platforms }} platforms </p>
+            {{ range .Site.Data.platforms }}
+            <a href="/platforms/centos" class="package-platform {{ .item }}">
+                <h3 class="title">{{ .item }}</h3>
+            </a>
+            {{ end }}
+        
+    </section>

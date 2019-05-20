@@ -1,0 +1,25 @@
+<h4>Platforms</h4>
+<ul>
+        {{ range .Site.Data.platforms }}
+        <li><a href="/platforms/centos">
+            {{ .item }}
+        </a></li>
+        {{ end }}
+</ul>
+<h4>Component sets</h4>
+<ul>
+        {{ range .Site.Data.components }}
+        <li><a href="/platforms/centos">
+            {{ .item }}
+        </a></li>
+        {{ end }}
+</ul>
+<h4>Related blog articles</h4>
+<ul>
+    {{ range where .Site.RegularPages "Section" "blogs" }}
+    <li><a href="{{ .URL }}">
+        {{ .Title }}
+    </a></li>
+    {{end}}
+</ul>
+

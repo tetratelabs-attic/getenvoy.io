@@ -1,0 +1,14 @@
+{{ define "main" }}
+    
+    <div class="platform-box">
+        <nav>
+            {{ partial "platform-nav.html" . }}
+        </nav>
+        <section class="body single">
+            {{ .Content }}
+        </section>
+    </div>
+
+    
+{{ end }}
+

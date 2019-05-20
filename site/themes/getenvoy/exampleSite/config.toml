@@ -1,7 +1,7 @@
-baseurl = "/"
+baseurl = "https://example.org/"
 languageCode = "en-us"
-title = "GetEnvoy"
-theme = "getenvoy"
+title = "Strata"
+theme = "hugo-strata-theme"
 disqusShortname = "spf13"
 # Enable Google Analytics by inserting your tracking code
 googleAnalytics = ""
@@ -49,23 +49,12 @@ paginate = 10
 
 	[params.about]
 		hide  = false
-		logo = "GetEnvoy"
-		title = "Experience the fastest<br> most production ready way to install Envoy"
+		title = "Ipsum lorem dolor aliquam ante commodo magna sed accumsan arcu neque."
+		content = "Accumsan orci faucibus id eu lorem semper. Eu ac iaculis ac nunc nisi lorem vulputate lorem neque cubilia ac in adipiscing in curae lobortis tortor primis integer massa adipiscing id nisi accumsan pellentesque commodo blandit enim arcu non at amet id arcu magna. Accumsan orci faucibus id eu lorem semper nunc nisi lorem vulputate lorem neque cubilia."
 
-    [params.platforms]
-        hide  = false
-        
-    [params.releases]
-        hide = false
-    
-    [params.startnow]
-        hide = false
-    
-    [params.subscribe]
-        hide = false
 
 	[params.portfolio]
-		hide  = true
+		hide  = false
 		title = "Recent Work"
 
 		# The images and thumbnails are stored under static/images
@@ -147,17 +136,12 @@ paginate = 10
 
 
 # Menu links that appear on the left sidebar
- [[menu.main]]
-  name = "Home"
-  url  = "/"
-  weight = 0
+[[menu.main]]
+	name = "Home"
+	url  = "/"
+	weight = 10
 
- [[menu.main]]
-  name = "About"
-  url  = "about"
-  weight = 5
-
- [[menu.main]]
-  name = "Blog"
-  url  = "post/"
-  weight = 10
+[[menu.main]]
+	name = "Blog"
+	url  = "post/"
+	weight = 0
