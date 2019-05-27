@@ -1,7 +1,7 @@
 <h4>Platforms</h4>
 <ul>
         {{ range .Site.Data.platforms }}
-        <li><a href="/platforms/centos">
+        <li><a href="/platforms/envoy/{{ lower .item }}">
             {{ .item }}
         </a></li>
         {{ end }}

@@ -1,5 +1,2 @@
-- item: 'CentOS'
-- item: 'Red Hat'
-- item: 'Debian'
 - item: 'Ubuntu'
-- item: 'MacOS'
+- item: 'Debian'
