@@ -7,19 +7,19 @@ for (let preBlock of preBlocks) {
             let cmd = getCodeCommand(block)
             
             // Create a temporary textarea to copy from
-            var copyArea = document.createElement("textarea");
-            copyArea.value = cmd;
+            var copyArea = document.createElement("textarea")
+            copyArea.value = cmd
             copyArea.setAttribute('readonly', '')
-            copyArea.style.position = 'absolute';
-            copyArea.style.left = '-9999px';
-            block.appendChild(copyArea);
-            copyArea.select();
-            document.execCommand('copy');
+            copyArea.style.position = 'absolute'
+            copyArea.style.left = '-9999px'
+            block.appendChild(copyArea)
+            copyArea.select()
+            document.execCommand('copy')
             block.removeChild(copyArea)
     
             // Inform users we have copied the text
             if (cmd !== "") {
-                var inform = document.createElement("div");
+                var inform = document.createElement("div")
                 inform.textContent = "Copied command to clipboard!"
                 block.appendChild(inform)
         
@@ -32,19 +32,18 @@ for (let preBlock of preBlocks) {
 
 // Warning this will only work with bash/shell!
 function getCodeCommand(block) {
-    const inner = block.innerText;
-    const lines = inner.split("\n");
-    let cmd = "";
-    for (let i = 0; i < lines.length; i++) {
-        if (lines[i].startsWith("$ ")) {
-            lines[i] = lines[i].substring(2);
+    const inner = block.innerText
+    const lines = inner.split("\n")
+    let cmd = ""
+    for (let line of lines) {
+        if (line.startsWith("$ ")) {
+            line = line.substring(2)
         }
-        cmd += lines[i];
-        if (!lines[i].endsWith(" \\")) {
+        cmd += line
+        if (!line.endsWith(" \\")) {
             return cmd
-        } else {
-            cmd += "\n";
         }
+        cmd += "\n"
     }
-    return cmd;
+    return cmd
 }
