@@ -25,10 +25,13 @@
 	});
 
 	$(function() {
-
+		function placeholder(e){
+			al
+		}
 		var $window = $(window),
 			$body = $('body'),
-			$header = $('#header');
+			$header = $('#header')
+			$form = $('form');
 
 		// Disable animations/transitions until the page has loaded.
 			$body.addClass('is-loading');
@@ -51,7 +54,11 @@
 			}
 
 		// Fix: Placeholder polyfill.
-			$('form').placeholder();
+			$form .placeholder();
+			$form.find('submit').on('click',function(e){
+				$(this).closest('form').submit();
+				return false;
+			});
 
 		// Prioritize "important" elements on medium.
 			skel.on('+medium -medium', function() {

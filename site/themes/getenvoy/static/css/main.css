@@ -44,11 +44,41 @@ body #menu > nav.menu ul {
 	margin:0;
 }
 body #menu > nav.menu a{
-	padding:1rem;
 	display:inline-block;
 	text-decoration: none;
 	color:#999;
 	border:none;
+	padding: 1.5rem 1rem;
+    
+}
+body #menu > nav.menu a.home{
+	position: relative;
+	width:200px;
+	font-size:0;
+}
+body #menu > nav.menu a.home::after,
+body #menu > nav.menu a.home::before{
+	content: '';
+	position: absolute;
+	top:0;
+	bottom:0;
+	margin:.67rem 0;
+	background:url(/images/getEnvoy-horizontal-outline.svg) no-repeat left;
+	background-size: auto 3rem;
+	display:block;
+	width:100%;
+	filter: grayscale(100%) contrast(0);
+	opacity: .33;
+	transition: all .5s;
+}
+
+body #menu > nav.menu a.home::after{
+	background-image:url(/images/getEnvoy-horizontal.svg);
+	opacity: 0;
+}
+body #menu > nav.menu a.home:hover:after{
+	opacity: 1;
+	filter: grayscale(0);
 }
 
 body #header > header,
@@ -80,7 +110,7 @@ body #header > header > h1 > em{
 	font-size:0;
 	z-index: -1;
 	position:absolute;
-	background:url(/images/get-envoy-header.png) no-repeat left;
+	background:url(/images/getEnvoy-header.svg) no-repeat left;
 	background-size:contain;
 	top:-2rem;
 	bottom:-2rem; left:0;
@@ -147,7 +177,28 @@ header.major {text-align:center; margin-top:4rem;}
    box-shadow: 0 2px 4px #d5dde5, 0 0 0 2px rgba(34, 130, 179, 0.3);
    border-radius: 3px;
    position: relative;
-   min-width: 140px
+   min-width: 140px;
+   transition: .5s all;
+ }
+ .package-platform:after {
+    content: '↓';
+    display: block;
+    position: absolute;
+    bottom: 1rem;
+    height: 1.5rem;
+    width: 1.5rem;
+    background: #9cc3d4;
+    margin: 0 0 0 -.75rem;
+    left: 50%;
+    border-radius: 50%;
+    color: #fff;
+    text-align: center;
+    line-height: 1.5rem;
+	font-size: .8rem;
+	box-shadow: inset 0 1px 3px rgba(0,0,0,.33)
+ }
+ .package-platform:hover {
+	 background:rgb(207, 246, 255);
  }
 @media screen and (max-width: 890px){
 	.package-platform{
@@ -258,6 +309,7 @@ header.major {text-align:center; margin-top:4rem;}
 	border:1px solid #ccc;
 	border-radius: 2px;
 	width:17rem;
+	color:#666;
 }
 
 form.micro.inline {
@@ -273,14 +325,16 @@ form.micro.inline * {
 	margin:0;
 }
 form.micro.inline .icon {
-		font-size: 0;
-		display: flex;
+	font-size: 0;
+	display: flex;
     width: 3rem;
-		justify-content: center;
-		align-items: center;
-		text-align: center;
-		vertical-align: middle;
-		border: 1px solid #ccc;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	vertical-align: middle;
+	border: 1px solid #ccc;
+	position: relative;
+	z-index:2;
 }
 form.micro.inline .icon::before{
 	font-size:1.75rem;
