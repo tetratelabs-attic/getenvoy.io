@@ -1,11 +1,11 @@
 {{ partial "head" . }}
-	<body id="top">
+	<body id="top" class="kind-{{ .Kind }} section-{{ .Section }} {{ replace  .Title " " "-" }}">
 		 <!-- partial "header" . -->
 
 		<div id="menu">
 			{{ partial "menu" .}}
 		</div>
-		{{ if not .IsHome }}
+		{{ if .IsPage }}
 		<div id="header">
 			{{ partial "header" .}}
 		</div>

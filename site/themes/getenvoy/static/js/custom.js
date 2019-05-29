@@ -1,5 +1,7 @@
 // Add onClick listeners to all relevant code blocks that copy the command only.
 var preBlocks = document.getElementsByTagName("PRE")
+// Only allow 1 block to fill the clipboard at a time.
+var clipboard = null;
 for (let preBlock of preBlocks) {
     let block = preBlock.firstChild
     if (block.nodeName === "CODE") {
@@ -19,12 +21,20 @@ for (let preBlock of preBlocks) {
     
             // Inform users we have copied the text
             if (cmd !== "") {
+                // if this is a second clipboard, remove the old one.
+                if(clipboard) clipboard.parentNode.removeChild(clipboard)
                 var inform = document.createElement("div")
-                inform.textContent = "Copied command to clipboard!"
+                clipboard = inform;
+                inform.setAttribute("class", "clipboard")
+                inform.textContent = "Copied command to clipboard"
                 block.appendChild(inform)
+                setTimeout(function(){ inform.setAttribute("class", "clipboard fade") },100);
         
-                // Delete the message after 2 seconds
-                setTimeout(function(){block.removeChild(inform)}, 2000)
+                // Delete the message after 2 seconds and clean up clipboard
+                    setTimeout(function(){if(block && inform.parentElement ===  block){
+                        block.removeChild(inform); 
+                        clipboard = null
+                    }}, 3000)
             }
         })
     }

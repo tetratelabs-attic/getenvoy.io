@@ -1,17 +1,13 @@
 <h4>Platforms</h4>
+{{ $section := where $.Site.RegularPages "Section" "platforms"}}
+{{ $activePage := .Params.platform }}
 <ul>
-        {{ range .Site.Data.platforms }}
-        <li><a href="/platforms/envoy/{{ lower .item }}">
-            {{ .item }}
+        {{ range $section }}
+        <li {{  if eq .Params.platform $activePage }} class="active" {{ end }}><a href="{{ .Permalink | relURL }}" class="{{ .Params.platform }}">
+            {{ .Params.platform }}
         </a></li>
         {{ end }}
+
 </ul>
-<!-- <h4>Related blog articles</h4>
-<ul>
-    {{ range where .Site.RegularPages "Section" "blogs" }}
-    <li><a href="{{ .URL }}">
-        {{ .Title }}
-    </a></li>
-    {{end}}
-</ul> -->
+
 
