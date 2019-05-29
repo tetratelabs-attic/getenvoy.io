@@ -55,6 +55,7 @@ body #menu > nav.menu a.home{
 	position: relative;
 	width:200px;
 	font-size:0;
+	outline:none;
 }
 body #menu > nav.menu a.home::after,
 body #menu > nav.menu a.home::before{
@@ -62,9 +63,9 @@ body #menu > nav.menu a.home::before{
 	position: absolute;
 	top:0;
 	bottom:0;
-	margin:.67rem 0;
+	margin:.85rem 0;
 	background:url(/images/getEnvoy-horizontal-outline.svg) no-repeat left;
-	background-size: auto 3rem;
+	background-size: contain;
 	display:block;
 	width:100%;
 	filter: grayscale(100%) contrast(0);
@@ -76,9 +77,11 @@ body #menu > nav.menu a.home::after{
 	background-image:url(/images/getEnvoy-horizontal.svg);
 	opacity: 0;
 }
+body #menu > nav.menu a.home:focus:after,
 body #menu > nav.menu a.home:hover:after{
 	opacity: 1;
 	filter: grayscale(0);
+	
 }
 
 body #header > header,
@@ -93,7 +96,6 @@ body #menu > nav,
 
 body #header{
 	background:#f9f9f9;
-	padding-top:3.5rem;
 	border-bottom:1px solid #ddd;
  }
  body #header > header{
@@ -116,6 +118,8 @@ body #header > header > h1 > em{
 	bottom:-2rem; left:0;
 	width:12rem;
 }
+body > *:nth-child(2) {padding-top: 4.25rem !important;}
+body.kind-home > *:nth-child(2){padding-top: 2rem !important;}
 
 body #main > section {
 	text-align:center;
@@ -160,6 +164,16 @@ header.major {text-align:center; margin-top:4rem;}
    color: pink;
    text-decoration: none;
  }
+body.kind-home #main > .platforms > h4 {display:none;}
+body.kind-home #main > .platforms > ul,
+body.kind-home #main > .platforms > ul > li{
+	list-style: none;
+	margin:0; 
+	padding:0;
+	display: inline;
+	position: static;
+	font-size: 0;
+}
  .platforms{
    text-align: center;
    font-size: 0;
@@ -168,6 +182,9 @@ header.major {text-align:center; margin-top:4rem;}
 	 font-size:1rem;
  }
  .platforms > .count {margin:3rem 0 1rem; font-size:1rem;}
+ .platforms {}
+
+
  .package-platform{
    display:inline-block;
    margin:1rem 1%;
@@ -195,10 +212,22 @@ header.major {text-align:center; margin-top:4rem;}
     text-align: center;
     line-height: 1.5rem;
 	font-size: .8rem;
-	box-shadow: inset 0 1px 3px rgba(0,0,0,.33)
+	box-shadow: inset 0 1px 3px rgba(0,0,0,.33);
+	transition: .5s all;
  }
+ .package-platform:focus, 
  .package-platform:hover {
-	 background:rgb(207, 246, 255);
+	 background:rgb(246, 253, 255);
+	 box-shadow: 0 2px 8px #b9ccdf, 0 0 0 2px rgba(5, 113, 167, 0.67);
+	 outline: none;
+ }
+ .package-platform:focus:after,
+ .package-platform:hover:after{
+	 background:#4cadd6
+ }
+ .package-platform:active{
+	background:rgb(246, 253, 255);
+	box-shadow: inset 0 2px 4px #b9ccdf, 0 0 0 2px rgba(5, 113, 167, 0.5)
  }
 @media screen and (max-width: 890px){
 	.package-platform{
@@ -311,7 +340,16 @@ header.major {text-align:center; margin-top:4rem;}
 	width:17rem;
 	color:#666;
 }
-
+#main > section.subscribe label input:hover,
+#main > section.subscribe label input:focus{
+	background:#F6FDFF;
+	box-shadow: inset 0 2px 4px #b9ccdf,inset 0 0 0 1px rgba(5, 113, 167, 0.67)
+}
+form.micro.inline .icon:hover,
+form.micro.inline .icon:focus{
+	background:#F6FDFF;
+	box-shadow: 0 1px 1px #b9ccdf,inset 0 0 0 1px rgba(5, 113, 167, 0.67)	
+}
 form.micro.inline {
 	display: inline-flex;
 	align-items: stretch;
@@ -397,7 +435,19 @@ form.micro.inline .icon::before{
 .platform-box > nav ul {
 	margin-bottom: 1rem;
 }
-
+.platform-box > nav ul > li.active:before
+{	
+    display: block;
+    position: absolute;
+    content: '▶';
+    padding: .5rem 0;
+    font-size: .75rem;
+    line-height: 1rem;
+}
+.platform-box > nav ul > li.active > a {
+	color:#09c;
+	font-weight:bold;
+}
 .platform-box nav h4 {
 	margin:.25rem 0 .5rem;
 }
@@ -424,7 +474,10 @@ form.micro.inline .icon::before{
 	counter-increment: steps;
 	position: relative;
 	margin-bottom: 1rem;
-	box-shadow:inset 1px 0 1px  #ddd;
+	box-shadow:inset 2px 0   #eee;
+}
+.body.single > ol > li:last-of-type{
+	box-shadow: none;
 }
 .body.single h2,
 .body.single > ol > li strong {
@@ -2136,6 +2189,24 @@ form.micro.inline .icon::before{
 		font-size: 0.9em;
 		margin: 0 0.25em;
 		padding: 0.25em 0.65em;
+		position: relative;
+	}
+	code .clipboard{
+		position: absolute;
+		bottom:0;
+		right:0;
+		background: #fff;
+		border:1px solid #ddd;
+		padding:.5rem 1rem;
+		border-radius: 3px;
+		font-family: roboto;
+		font-weight: bold;
+		opacity: .85;
+		color:#589;
+		transition:all 2.5s;
+	}
+	code .clipboard.fade{
+		opacity: 0;
 	}
 
 	pre {
@@ -3237,22 +3308,7 @@ form.micro.inline .icon::before{
 
 
 
-		/* Footer */
-
-			#footer {
-				padding: 0 3em 5em 3em;
-				width: 30%;
-			}
-
-				#footer .copyright li {
-					border-left-width: 0;
-					display: block;
-					line-height: 2.25em;
-					margin-left: 0;
-					padding-left: 0;
-				}
-
-
+		
 
 
 	}
@@ -3286,20 +3342,7 @@ form.micro.inline .icon::before{
 
 		/* Footer */
 
-			#footer {
-				background-attachment: scroll;
-				background-color: #1f1815;
-				background-image: url("images/overlay.png"), url("../images/bg.jpg");
-				background-position: top left,						bottom center;
-				background-repeat: repeat,							no-repeat;
-				background-size: auto,							cover;
-				bottom: auto;
-				left: auto;
-				padding: 4em 4em 6em 4em;
-				position: relative;
-				text-align: center;
-				width: 100%;
-			}
+
 
 				#footer .icons {
 					margin: 0 0 1em 0;
@@ -3364,14 +3407,6 @@ form.micro.inline .icon::before{
 				ul.labeled-icons li h3 {
 					line-height: 1.75em;
 				}
-
-
-
-		/* Footer */
-
-			#footer {
-				padding: 2.25em 1.5em;
-			}
 
 		/* Main */
 

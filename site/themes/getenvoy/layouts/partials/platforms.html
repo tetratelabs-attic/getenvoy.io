@@ -1,10 +1,16 @@
 
-    <section class=" platforms">
-        <p class="count">Envoy binaries available on {{ len .Site.Data.platforms }} platforms.</p>
-            {{ range .Site.Data.platforms }}
-            <a href="/platforms/envoy/{{ lower .item }}" class="package-platform {{ .item }}">
-                <h3 class="title">{{ .item }}</h3>
-            </a>
+<section class=" platforms">
+    <h4>Platforms</h4>
+    {{ $activePage := .Params.platform }}
+    {{ $section := where $.Site.RegularPages "Section" "platforms"}}
+        <p class="count">Envoy binaries available on {{ len $section }} platforms.</p>
+        <ul>    
+            {{ range $section }}
+            <li {{  if eq .Params.platform $activePage }} class="active" {{ end }}><a href="{{ .Permalink | relURL }}" class="package-platform {{ .Params.platform }}">
+                <h3 style="background-image:url({{ .Params.logo | safeCSS   }})" class="title">{{ .Title }}</h3>
+            </a></li>
             {{ end }}
+        </ul>
             <p>More coming soon.</p>
-    </section>
+
+</section>
