@@ -61,7 +61,7 @@ paginate = 10
         hide = false
     
     [params.subscribe]
-        hide = false
+        hide = true
 
 	[params.portfolio]
 		hide  = true
