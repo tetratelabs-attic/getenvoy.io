@@ -27,7 +27,7 @@ paginate = 10
 
 	[params.sidebar]
 		# Replace the avatar with a picture of your own under static/images
-		avatar = "avatar.jpg"
+		avatar = "avatar.svg"
 		# Use Markdown to format the string. This works nearly all over the theme
 		bio = ""
 		# The icons will be shown if you enter your username
@@ -41,8 +41,7 @@ paginate = 10
 		linkedin = ""
 
 		copyright = [
-			"&copy; Tetrate.io",
-			"Design: [HTML5 UP](//html5up.net)"
+			"&copy; Tetrate.io"
 		]
 
 
@@ -55,7 +54,7 @@ paginate = 10
         hide  = false
         
     [params.releases]
-        hide = false
+        hide = true
     
     [params.startnow]
         hide = false

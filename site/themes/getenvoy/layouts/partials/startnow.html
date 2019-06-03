@@ -1,3 +1,4 @@
 <section class="startnow color-row">
-    <a hrf="#"><em>Start now!</em> in 4 easy steps</a>
+    {{ $section := where $.Site.RegularPages "Section" "platforms"}}
+    <a href="/platforms"><em>Install now!</em> on {{ len $section }} platforms</a>
 </section>
