@@ -2,7 +2,7 @@ baseurl = "/"
 languageCode = "en-us"
 title = "GetEnvoy"
 theme = "getenvoy"
-disqusShortname = "spf13"
+disqusShortname = ""
 # Enable Google Analytics by inserting your tracking code
 googleAnalytics = ""
 # Define how many posts should appear on a site
