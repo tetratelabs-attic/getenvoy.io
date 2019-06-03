@@ -41,8 +41,7 @@ paginate = 10
 		linkedin = ""
 
 		copyright = [
-			"&copy; Tetrate.io",
-			"Design: [HTML5 UP](//html5up.net)"
+			"&copy; Tetrate.io"
 		]
 
 
@@ -55,7 +54,7 @@ paginate = 10
         hide  = false
         
     [params.releases]
-        hide = false
+        hide = true
     
     [params.startnow]
         hide = false

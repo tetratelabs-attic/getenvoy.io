@@ -164,7 +164,10 @@ header.major {text-align:center; margin-top:4rem;}
    color: pink;
    text-decoration: none;
  }
-body.kind-home #main > .platforms > h4 {display:none;}
+ #main > .platforms > h4,
+ body.kind-home #main > .platforms > h4 {display:none;}
+#main > .platforms > ul,
+#main > .platforms > ul > li,
 body.kind-home #main > .platforms > ul,
 body.kind-home #main > .platforms > ul > li{
 	list-style: none;
