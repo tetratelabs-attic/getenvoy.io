@@ -425,9 +425,20 @@ form.micro.inline .icon::before{
 	align-items: stretch;
 }
 .platform-box > nav{
-	width:20rem;
+	min-width:10rem;
+	max-width:10rem;
 	padding:3rem 1rem;
 }
+@media screen and (max-width: 35rem) {
+ #main >	.platform-box > nav {
+	 display:none;
+ }
+ #main >	.platform-box > .body.single {
+	 border:none;
+	 padding:2rem 0;
+ }
+}
+
 .platform-box > nav ul,
 .platform-box > nav ul > li{
 	display:block;
