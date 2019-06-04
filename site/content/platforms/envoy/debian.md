@@ -6,6 +6,13 @@ categories = []
 logo = "/images/debian-logo.png"
 +++
 
+## Requirements ##
+
+- jessie (8)
+- stretch (9)
+- buster (10)
+- bullseye (11)
+
 ## Installation ##
 
 1. **Update `apt` index.**
