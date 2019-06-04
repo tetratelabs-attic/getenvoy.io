@@ -30,7 +30,7 @@ $ curl -sL 'https://getenvoy.io/gpg' | sudo apt-key add -
 
 1. **Verify the key has the fingerprint `5270 CEAC 57F6 3EBD 9EA9  005D 0253 D0B2 6FF9 74DB`.**
 ```sh
-$ sudo apt-key fingerprint 6FF974DB
+$ apt-key fingerprint 6FF974DB
 pub   4096R/6FF974DB 2019-03-01
       Key fingerprint = 5270 CEAC 57F6 3EBD 9EA9  005D 0253 D0B2 6FF9 74DB
 uid                  GetEnvoy <getenvoy@tetrate.io>
