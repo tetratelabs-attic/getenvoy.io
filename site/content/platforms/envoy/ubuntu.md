@@ -25,7 +25,7 @@ $ sudo apt-get install -y \
 
 1. **Add the Tetrate GPG key.**
 ```sh
-$ curl -s 'https://bintray.com/user/downloadSubjectPublicKey?username=tetrate' | sudo apt-key add -
+$ curl -s 'https://www.getenvoy.io/gpg' | sudo apt-key add -
 ```
 
 1. **Verify the key has the fingerprint `5270 CEAC 57F6 3EBD 9EA9  005D 0253 D0B2 6FF9 74DB`.**
