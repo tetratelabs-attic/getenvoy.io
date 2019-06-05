@@ -1,11 +1,14 @@
 static_resources:
   listeners:
   - address:
+      # Tells Envoy to listen on 0.0.0.0:15000
       socket_address:
         address: 0.0.0.0
         port_value: 15000
     filter_chains:
+    # Any requests received on this address are sent through this chain of filters
     - filters:
+      # If the request is HTTP it will pass through this HTTP filter
       - name: envoy.http_connection_manager 
         typed_config:
           "@type": type.googleapis.com/envoy.config.filter.network.http_connection_manager.v2.HttpConnectionManager
@@ -23,25 +26,33 @@ static_resources:
               domains:
               - "*"
               routes:
+              # Match on host (:authority in HTTP2) headers
               - match:
-                  prefix: "/google"
+                  prefix: "/"
+                  headers:
+                    - name: ":authority"
+                      exact_match: "google.com"
                 route:
-                  host_rewrite: www.google.com
-                  prefix_rewrite: "/"
+                  # Send request to an endpoint in the Google cluster
                   cluster: google
+                  host_rewrite: www.google.com
               - match:
-                  prefix: "/bing"
+                  prefix: "/"
+                  headers:
+                    - name: ":authority"
+                      exact_match: "bing.com"
                 route:
-                  host_rewrite: www.bing.com
-                  prefix_rewrite: "/"
+                  # Send request to an endpoint in the Bing cluster
                   cluster: bing
+                  host_rewrite: www.bing.com
           http_filters:
           - name: envoy.router
             typed_config: {}
   clusters:
   - name: google
     connect_timeout: 1s
-    type: strict_dns
+    # Instruct Envoy to continouously resolve DNS of www.google.com asynchronously
+    type: strict_dns 
     dns_lookup_family: V4_ONLY
     lb_policy: round_robin
     load_assignment:
@@ -55,6 +66,7 @@ static_resources:
                 port_value: 80
   - name: bing
     connect_timeout: 1s
+    # Instruct Envoy to continouously resolve DNS of www.bing.com asynchronously
     type: strict_dns
     dns_lookup_family: V4_ONLY
     lb_policy: round_robin
