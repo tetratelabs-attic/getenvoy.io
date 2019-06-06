@@ -68,8 +68,6 @@ body #menu > nav.menu a.home::before{
 	background-size: contain;
 	display:block;
 	width:100%;
-	filter: grayscale(100%) contrast(0);
-	opacity: .33;
 	transition: all .5s;
 }
 
