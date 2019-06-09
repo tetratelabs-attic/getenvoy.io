@@ -107,12 +107,13 @@ body #header > header > h1 {
 	position: relative;
 	padding: 1.25rem 0 0 6.25rem;
 	z-index: 1;
+	line-height: 1.1em;
 }
 body #header > header > h1 > em{
 	font-size:0;
 	z-index: -1;
 	position:absolute;
-	background:url(/images/getEnvoy-header.svg) no-repeat left;
+	background:url(/images/getEnvoy-header.svg) no-repeat left top;
 	background-size:contain;
 	top:-2rem;
 	bottom:-2rem; left:0;
