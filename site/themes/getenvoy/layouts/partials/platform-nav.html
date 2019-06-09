@@ -1,6 +1,8 @@
 {{ $section := where $.Site.RegularPages "Section" "platforms"}}
 {{ $activePage := .Params.platform }}
-<ul>
+
+<h4><a {{ if and (eq .Section "platforms") (eq .Page.Kind "section")  }} class="active" {{ end }} href="/platforms/">Platforms</a></h4>
+<ul class="platforms">
         {{ range $section }}
         <li {{  if eq .Params.platform $activePage }} class="active" {{ end }}><a href="{{ .Permalink | relURL }}" class="{{ .Params.platform }}">
             {{ .Params.platform }}
@@ -8,5 +10,3 @@
         {{ end }}
 
 </ul>
-
-

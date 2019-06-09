@@ -92,6 +92,8 @@ body #menu > nav,
 	width:100%;
 }
 
+body.kind-section.section-platforms #header > header,
+body.kind-home #header > header {display: none;}
 body #header{
 	background:#f9f9f9;
 	border-bottom:1px solid #ddd;
@@ -423,19 +425,25 @@ form.micro.inline .icon::before{
 	align-items: stretch;
 }
 .platform-box > nav{
-	min-width:10rem;
-	max-width:10rem;
-	padding:3rem 1rem;
+	min-width:16rem;
+	max-width:16rem;
+	padding:3rem 0rem 3rem 1rem;
 }
 @media screen and (max-width: 35rem) {
- #main >	.platform-box > nav {
+ #main > .platform-box > nav {
 	 display:none;
  }
- #main >	.platform-box > .body.single {
+ #main > .platform-box > .body.single {
 	 border:none;
 	 padding:2rem 0;
  }
 }
+
+.body.list article{ margin-bottom: 3rem;}
+.body.list article .metadata {
+	margin-bottom: 1rem;
+}
+
 
 .platform-box > nav ul,
 .platform-box > nav ul > li{
@@ -463,10 +471,22 @@ form.micro.inline .icon::before{
 .platform-box nav h4 {
 	margin:.25rem 0 .5rem;
 }
-.platform-box > nav ul > li > a {padding:.5rem 1rem; display: block; border:none; color:#8bc}
+.platform-box nav h4 a{
+	text-decoration: none;
+	border-bottom:none;
+}
+.platform-box nav h4 a.active{
+	color:#000;
+	font-weight: bold;
+}
+
+.platform-box > nav ul > li > a {padding:.5rem 1rem; display: block; border:none; color:#8bc; text-align: left}
 .platform-box > .body.single {
 	border-left:1px solid #ddd;
 }
+
+.platform-box > nav ul.tutorials > li > a {font-size:.85rem;}
+
 .body.single {padding:3rem; max-width: 60rem}
 
 .body.single > ol,

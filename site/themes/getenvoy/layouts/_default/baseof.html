@@ -5,11 +5,10 @@
 		<div id="menu">
 			{{ partial "menu" .}}
 		</div>
-		{{ if .IsPage }}
-		<div id="header">
+		
+		<div id="header" class="{{ if .IsPage }} page {{ else }} section {{ end }}">
 			{{ partial "header" .}}
 		</div>
-		{{ end }}
 
 
 
