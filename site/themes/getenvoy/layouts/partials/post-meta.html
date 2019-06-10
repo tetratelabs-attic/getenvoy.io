@@ -1,5 +1,7 @@
-<i class="fa fa-calendar"></i>&nbsp;&nbsp;
-<time datetime="{{ .Date }}">{{ .Date.Format .Site.Params.date_format }}</time>&nbsp;&nbsp;
+{{ if not .Date.IsZero }}
+    <i class="fa fa-calendar"></i>&nbsp;&nbsp;
+    <time datetime="{{ .Date }}">{{ .Date.Format .Site.Params.date_format }}</time>&nbsp;&nbsp;
+{{ end }}
 
 {{ if .Site.Params.Show_read_time }}{{ .ReadingTime }} min read&nbsp;&nbsp;{{ end }}
 
