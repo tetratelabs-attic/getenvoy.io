@@ -52,7 +52,7 @@ static_resources:
   - name: google
     connect_timeout: 1s
     # Instruct Envoy to continouously resolve DNS of www.google.com asynchronously
-    type: strict_dns 
+    type: logical_dns 
     dns_lookup_family: V4_ONLY
     lb_policy: round_robin
     load_assignment:
@@ -67,7 +67,7 @@ static_resources:
   - name: bing
     connect_timeout: 1s
     # Instruct Envoy to continouously resolve DNS of www.bing.com asynchronously
-    type: strict_dns
+    type: logical_dns
     dns_lookup_family: V4_ONLY
     lb_policy: round_robin
     load_assignment:
