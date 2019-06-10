@@ -511,6 +511,9 @@ form.micro.inline .icon::before{
 .body.single > ol > li:last-of-type{
 	box-shadow: none;
 }
+.body.single h2:not(:first-child) {
+	margin-top: 1.5rem;
+}
 .body.single h2,
 .body.single > ol > li strong {
 	display:block;
@@ -518,7 +521,7 @@ form.micro.inline .icon::before{
 	font-style: normal;
 	text-shadow: none;
 	color:#666;
-	margin-bottom:.5rem;
+	margin-bottom: 0.5rem;
 }
 .body.single > ol > li:before {
 	position: absolute;

@@ -4,6 +4,12 @@ tags = []
 categories = []
 +++
 
+## Requirements ##
+
+An installation of Envoy. You can find instructions on  how to install Envoy [here](https://www.getenvoy.io/platforms/).
+
+## Instructions ##
+
 In this tutorial we are going to use Envoy as a basic front proxy to Google and Bing. When we hit Envoy with the host header `google.com` it will proxy our request to `www.google.com` and when we hit Envoy with the host header `bing.com` it will proxy our request to `www.bing.com`.
 
 1. **Retrieve static configuration for Envoy to use.**
