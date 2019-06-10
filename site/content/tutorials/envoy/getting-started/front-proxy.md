@@ -2,6 +2,7 @@
 title = "Getting Started with Envoy as a Basic Front Proxy"
 tags = []
 categories = []
+orderweight = 0
 +++
 
 ## Requirements ##
