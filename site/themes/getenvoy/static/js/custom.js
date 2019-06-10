@@ -1,6 +1,7 @@
 $(function() {
     function clipboardMagic(){
 
+        // find all the "code" blocks and bind click event...
         $("pre code").on('click',function(a,b,c){
             var $this = $(this);
 
@@ -12,6 +13,8 @@ $(function() {
             if($this.hasClass("language-sh-output")){
                 $this = $this.parent().prev().find('code');                
             }
+            // if I don't have a $this, I should quit.
+            if($this.length < 1) return false;
 
             // parse to get the right linebreaks and such...
             var cmd = getCodeCommand($this[0]);
