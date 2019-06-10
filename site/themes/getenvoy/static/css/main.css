@@ -107,12 +107,13 @@ body #header > header > h1 {
 	position: relative;
 	padding: 1.25rem 0 0 6.25rem;
 	z-index: 1;
+	line-height: 1.1em;
 }
 body #header > header > h1 > em{
 	font-size:0;
 	z-index: -1;
 	position:absolute;
-	background:url(/images/getEnvoy-header.svg) no-repeat left;
+	background:url(/images/getEnvoy-header.svg) no-repeat left top;
 	background-size:contain;
 	top:-2rem;
 	bottom:-2rem; left:0;
@@ -429,13 +430,22 @@ form.micro.inline .icon::before{
 	max-width:16rem;
 	padding:3rem 0rem 3rem 1rem;
 }
-@media screen and (max-width: 35rem) {
+@media screen and (max-width: 45rem) {
  #main > .platform-box > nav {
 	 display:none;
  }
  #main > .platform-box > .body.single {
 	 border:none;
 	 padding:2rem 0;
+ }
+ body #menu > nav.menu a.home{
+    padding: .5rem 0;
+    width: 2rem;
+    height: 4rem;
+ }
+ body #menu > nav.menu a.home::after, body #menu > nav.menu a.home::before{
+    background-size: auto 100%;
+    background-position: left;
  }
 }
 
@@ -483,6 +493,7 @@ form.micro.inline .icon::before{
 .platform-box > nav ul > li > a {padding:.5rem 1rem; display: block; border:none; color:#8bc; text-align: left}
 .platform-box > .body.single {
 	border-left:1px solid #ddd;
+	width:100%;
 }
 
 .platform-box > nav ul.tutorials > li > a {font-size:.85rem;}
