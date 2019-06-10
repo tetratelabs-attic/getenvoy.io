@@ -31,10 +31,7 @@ $(function() {
             setTimeout(function(){ $inform.addClass("fade") },100);
 
             // clean-up...
-            setTimeout(function(){
-                $inform.remove(); 
-                clipboard = null;
-            }, 3000);
+            setTimeout(function(){ $inform.remove();}, 3000);
 
         });
 
