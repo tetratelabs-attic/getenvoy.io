@@ -6,12 +6,11 @@ categories = []
 logo = "/images/macos.svg"
 +++
 
-## Installation ##
+## Requirements ##
 
-1. **Install [Homebrew](https://brew.sh/).**
-```sh
-$ /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-```
+To install Envoy, you need to have installed [Homebrew](https://brew.sh/).
+
+## Installation ##
 
 1. **Add the Tetrate Homebrew GetEnvoy tap.**
 ```sh
