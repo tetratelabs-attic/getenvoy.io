@@ -453,7 +453,13 @@ form.micro.inline .icon::before{
 .body.list article .metadata {
 	margin-bottom: 1rem;
 }
-
+.body > section.next-steps{
+	margin-top:3rem;
+}
+.body > section.next-steps > a{
+	margin-bottom:1rem;
+	display:inline-block;
+}
 
 .platform-box > nav ul,
 .platform-box > nav ul > li{
