@@ -2258,6 +2258,7 @@ form.micro.inline .icon::before{
 		opacity: .85;
 		color:#589;
 		transition:all 2.5s;
+		z-index: 1;
 	}
 	code .clipboard.fade{
 		opacity: 0;
@@ -2270,12 +2271,18 @@ form.micro.inline .icon::before{
 		margin: 2em 0 2em 0;
 	}
 
-		pre code {
-			display: block;
-			line-height: 1.75em;
-			padding: 1em 1.5em;
-			overflow-x: auto;
-		}
+	pre code {
+		display: block;
+		line-height: 1.75em;
+		padding: 1em 1.5em;
+		overflow-x: auto;
+	}
+
+	/* This is a little hacky, if anyone can think of a better way to do this be my guest! */
+	pre+pre code.language-sh-output {
+		margin-top: -45px;
+		border-top: none;
+	}
 
 	.align-left {
 		text-align: left;

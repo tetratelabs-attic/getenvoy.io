@@ -3,11 +3,12 @@ title = "Getting Started with Envoy as a Basic Front Proxy"
 tags = []
 categories = []
 orderweight = 0
+abstract = "In this tutorial we use Envoy as a basic front proxy to Google and Bing."
 +++
 
 ## Requirements ##
 
-An installation of Envoy. You can find instructions on  how to install Envoy [here](https://www.getenvoy.io/platforms/).
+An installation of Envoy. You can find instructions on how to install Envoy [here](https://www.getenvoy.io/platforms/).
 
 ## Instructions ##
 
@@ -33,6 +34,8 @@ $ envoy --config-path ./basic-front-proxy.yaml
 1. **Open a new shell and cURL Envoy with `google.com` as the host header.**
 ```sh
 $ curl -s -o /dev/null -vvv -H 'Host: google.com' localhost:15000/
+```
+```sh-output
 Connected to localhost (127.0.0.1) port 15000 (#0)
 > GET / HTTP/1.1
 > Host: google.com
@@ -48,6 +51,8 @@ In this abbreviated response you can see that we made it to google.com as it is 
 1. **cURL Envoy with `bing.com` as the host header.**
 ```sh
 $ curl -s -o /dev/null -vvv -H 'Host: bing.com' localhost:15000/
+```
+```sh-output
 ...
 Connected to localhost (127.0.0.1) port 15000 (#0)
 > GET / HTTP/1.1
@@ -63,7 +68,7 @@ Connected to localhost (127.0.0.1) port 15000 (#0)
 In this abbreviated response you can see that we made it to bing.com as it is also setting a cookie. If you want to see the full `HTTP` response body remove the `-s -o /dev/null` flags.
 
 1. **Check the access logs in the shell running Envoy.**
-```sh
+```sh-output
 [2019-06-05T08:30:01.145Z] "GET / HTTP/1.1" 200 - 0 111162 374 135 "-" "curl/7.54.0" "c1aeafd2-dcd9-4070-80fd-f8f4f6bd1e85" "www.bing.com" "13.107.21.200:80"
 [2019-06-05T08:30:07.799Z] "GET / HTTP/1.1" 200 - 0 12426 64 60 "-" "curl/7.54.0" "0c8ce45d-e99e-4ddc-9cc4-06d75d81e610" "www.google.com" "216.58.213.4:80"
 ```

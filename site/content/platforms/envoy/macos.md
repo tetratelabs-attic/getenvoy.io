@@ -16,6 +16,8 @@ $ /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/inst
 1. **Add the Tetrate Homebrew GetEnvoy tap.**
 ```sh
 $ brew tap tetratelabs/getenvoy
+```
+```sh-output
 ==> Tapping tetratelabs/getenvoy
 Cloning into '/usr/local/Homebrew/Library/Taps/tetratelabs/homebrew-getenvoy'...
 Tapped 1 formula.
@@ -25,6 +27,8 @@ Tapped 1 formula.
 To install the `nightly` version instead, add `--HEAD` flag to the install command.
 ```sh
 $ brew install envoy
+```
+```sh-output
 ==> Installing envoy from tetratelabs/getenvoy
 ==> Downloading ...
 ######################################################################## 100.0%
