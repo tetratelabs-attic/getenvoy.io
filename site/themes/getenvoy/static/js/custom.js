@@ -27,7 +27,6 @@ $(function() {
             $copyArea = null;
 
             // notify the user of the action and set the GUI state...
-            if($inform) $inform.remove();
             $inform = $('<div class="clipboard">Copied command to clipboard</div>').appendTo($this);
             setTimeout(function(){ $inform.addClass("fade") },100);
 
