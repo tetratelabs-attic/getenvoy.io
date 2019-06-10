@@ -1,0 +1,13 @@
+{{ $section := where $.Site.RegularPages "Section" "tutorials"}}
+{{ $activePage := .Params.title }}
+
+<h4><a {{ if and (eq .Section "tutorials") (eq .Page.Kind "section")  }} class="active" {{ end }} href="/tutorials/">Tutorials</a></h4>
+<ul class="tutorials">
+    {{ range $section }}
+    <li {{  if eq .Params.title $activePage }} class="active" {{ end }}><a href="{{ .Permalink | relURL }}" class="{{ .Params.tutorials }}">
+        {{ .Params.title }}
+    </a></li>
+    {{ end }}
+</ul>
+
+

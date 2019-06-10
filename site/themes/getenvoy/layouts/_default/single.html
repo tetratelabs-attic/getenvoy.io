@@ -1,7 +1,15 @@
 {{ define "main" }}
-<section class="single">
-		<h1>{{ .Title }}</h1>
-		<p>{{ partial "post-meta" . }}</p>
-	{{ .Content }}
-</section>
+    
+    <div class="platform-box">
+        <nav>
+            {{ partial "platform-nav.html" . }}
+            {{ partial "tutorial-nav.html" . }}
+            {{ partial "blog-nav.html" . }}
+        </nav>
+        <section class="body single">
+            {{ .Content }}
+        </section>
+    </div>
+    
 {{ end }}
+
