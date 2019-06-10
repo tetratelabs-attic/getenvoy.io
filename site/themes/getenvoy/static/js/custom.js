@@ -1,59 +1,59 @@
-// Add onClick listeners to all relevant code blocks that copy the command only.
-var preBlocks = document.getElementsByTagName("PRE")
-// Only allow 1 block to fill the clipboard at a time.
-var clipboard = null;
-for (let preBlock of preBlocks) {
-    let block = preBlock.firstChild
-    if (block.nodeName === "CODE") {
-        block.addEventListener("click", function(){
-            let cmd = getCodeCommand(block)
-            
-            // Create a temporary textarea to copy from
-            var copyArea = document.createElement("textarea")
-            copyArea.value = cmd
-            copyArea.setAttribute('readonly', '')
-            copyArea.style.position = 'absolute'
-            copyArea.style.left = '-9999px'
-            block.appendChild(copyArea)
-            copyArea.select()
-            document.execCommand('copy')
-            block.removeChild(copyArea)
-    
-            // Inform users we have copied the text
-            if (cmd !== "") {
-                // if this is a second clipboard, remove the old one.
-                if(clipboard) clipboard.parentNode.removeChild(clipboard)
-                var inform = document.createElement("div")
-                clipboard = inform;
-                inform.setAttribute("class", "clipboard")
-                inform.textContent = "Copied command to clipboard"
-                block.appendChild(inform)
-                setTimeout(function(){ inform.setAttribute("class", "clipboard fade") },100);
-        
-                // Delete the message after 2 seconds and clean up clipboard
-                    setTimeout(function(){if(block && inform.parentElement ===  block){
-                        block.removeChild(inform); 
-                        clipboard = null
-                    }}, 3000)
-            }
-        })
-    }
-}
+$(function() {
+    function clipboardMagic(){
 
-// Warning this will only work with bash/shell!
-function getCodeCommand(block) {
-    const inner = block.innerText
-    const lines = inner.split("\n")
-    let cmd = ""
-    for (let line of lines) {
-        if (line.startsWith("$ ")) {
-            line = line.substring(2)
-        }
-        cmd += line
-        if (!line.endsWith(" \\")) {
+        $("pre code").on('click',function(a,b,c){
+            var $this = $(this);
+
+            // set initial state...
+            $('pre code .clipboard').remove(); 
+            var $inform = null;
+            
+            // if this is output, not cmds, act on  the previous block...
+            if($this.hasClass("language-sh-output")){
+                $this = $this.parent().prev().find('code');                
+            }
+
+            // parse to get the right linebreaks and such...
+            var cmd = getCodeCommand($this[0]);
+
+            // create the dom input element to do the select/copy then remove...
+            var $copyArea = $('<textarea class="to-clipboard hide-me" />').appendTo('body').val(cmd);
+            $copyArea[0].select();
+            document.execCommand('copy');
+            $copyArea.remove();
+            $copyArea = null;
+
+            // notify the user of the action and set the GUI state...
+            if($inform) $inform.remove();
+            $inform = $('<div class="clipboard">Copied command to clipboard</div>').appendTo($this);
+            setTimeout(function(){ $inform.addClass("fade") },100);
+
+            // clean-up...
+            setTimeout(function(){
+                $inform.remove(); 
+                clipboard = null;
+            }, 3000);
+
+        });
+
+        function getCodeCommand(block) {
+            const inner = block.innerText
+            const lines = inner.split("\n")
+            let cmd = ""
+            for (let line of lines) {
+                if (line.startsWith("$ ")) {
+                    line = line.substring(2)
+                }
+                cmd += line
+                if (!line.endsWith(" \\")) {
+                    return cmd
+                }
+                cmd += "\n"
+            }
             return cmd
         }
-        cmd += "\n"
-    }
-    return cmd
-}
+    };
+
+    clipboardMagic();
+
+});

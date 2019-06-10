@@ -188,7 +188,14 @@ body.kind-home #main > .platforms > ul > li{
  .platforms > .count {margin:3rem 0 1rem; font-size:1rem;}
  .platforms {}
 
-
+body .hide-me {
+	position: fixed;
+	left: -99rem;	top: -99rem;
+	opacity:  0;
+	overflow: hidden;
+	max-height:0; max-width:0;  
+	z-index: -1;  
+}
  .package-platform{
    display:inline-block;
    margin:1rem 1%;
@@ -2280,8 +2287,13 @@ form.micro.inline .icon::before{
 
 	/* This is a little hacky, if anyone can think of a better way to do this be my guest! */
 	pre+pre code.language-sh-output {
-		margin-top: -45px;
+		margin-top: -2rem;
 		border-top: none;
+		box-shadow: inset 999rem 0 0 rgba(0,0,0,.03);
+		border-top-left-radius: 0;
+		border-top-right-radius: 0;
+		border-top:none;
+		color:#555;
 	}
 
 	.align-left {
