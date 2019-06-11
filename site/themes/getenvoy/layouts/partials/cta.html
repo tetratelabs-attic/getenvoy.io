@@ -1,0 +1,14 @@
+<section class="cta">
+    <h3>Got what you need?</h3>
+	{{ if .Site.Params.about.cta }}
+		<div class="cta buttons">
+		{{ range .Site.Params.about.cta}}
+			<a class="btn btn-primary" href="{{ .href }}">{{ .title }}</a>
+		{{ end }}
+		</div>
+	{{ end }}
+	{{ if .Site.Params.about.version }}
+		<p class="version">GetEnvoy <strong>{{ .Site.Params.about.version }}</strong> is now available </p>
+		<p class="change-log"><a href="#">Read the changelog</a></p>
+	{{ end }}
+</section>
