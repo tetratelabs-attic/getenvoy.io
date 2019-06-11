@@ -23,36 +23,29 @@
  html body {
    min-height: 100%;
    font: 16px/1.25em 'Source Sans Pro', sans-serif;
+   background:#fff;
+   box-shadow:0 4px 8px rgba(0,0,0,.25)
  }
-
+html {background:#ddd;}
 body #menu {
 	position: fixed;
 	top:0; left:0; right:0;
-	box-shadow: 0 2px 8px rgba(0,0,0,.33);
-	background:#fff;
-	z-index: 2;
-}
-body.kind-home #menu{
 	background:#224281;
 	box-shadow: none;
-	text-align: center
+	z-index: 2;
 }
+#footer nav.menu,
+body.kind-home #menu {text-align: center}
+#footer .menu .home,
 body.kind-home #menu .home {
 	display:none;
 }
+#footer section nav.menu ul,
 body.kind-home #menu > nav.menu ul {
-	float: none;
-
+	float: none;	
 }
-body.kind-home #menu > nav.menu ul li a {
-	color:#fff;
-	text-transform: uppercase;
-	font-size: 1.1rem;
-	font-weight: bold;
-}
-body #header > nav.menu {
-
-}
+#footer nav.menu ul > li,
+#footer nav.menu ul,
 body #menu > nav.menu ul > li,
 body #menu > nav.menu ul {
 	float:right;
@@ -61,10 +54,14 @@ body #menu > nav.menu ul {
 	padding: 0;
 	margin:0;
 }
+#footer nav.menu ul a,
 body #menu > nav.menu a{
 	display:inline-block;
 	text-decoration: none;
-	color:#999;
+	color:#fff;
+	text-transform: uppercase;
+	font-size: 1.1rem;
+	font-weight: bold;
 	border:none;
 	padding: 1.5rem 1rem;
     
@@ -82,7 +79,7 @@ body #menu > nav.menu a.home::before{
 	top:0;
 	bottom:0;
 	margin:.85rem 0;
-	background:url(/images/getEnvoy-horizontal-outline.svg) no-repeat left;
+	background:url(/images/getEnvoy-horizontal-outline-white.svg) no-repeat left;
 	background-size: contain;
 	display:block;
 	width:100%;
@@ -90,7 +87,7 @@ body #menu > nav.menu a.home::before{
 }
 
 body #menu > nav.menu a.home::after{
-	background-image:url(/images/getEnvoy-horizontal.svg);
+	background-image:url(/images/getEnvoy-horizontal-outline.svg);
 	opacity: 0;
 }
 body #menu > nav.menu a.home:focus:after,
@@ -144,29 +141,22 @@ body.kind-home #header > header .platforms h4{
 	display:none;
 }
 body #header{
-	background:#f9f9f9;
-	border-bottom:1px solid #ddd;
+	background:#008fd1;
  }
  body #header > header{
-	padding-top:3rem;	
-	padding-bottom:3rem;	
+	padding-top:2rem;	
+	padding-bottom:2rem;	
 }
 body #header > header > h1 {
 	margin:0 1rem;
 	position: relative;
-	padding: 1.25rem 0 0 6.25rem;
 	z-index: 1;
 	line-height: 1.1em;
+	color:#fff;
+	text-transform: uppercase;
 }
 body #header > header > h1 > em{
-	font-size:0;
-	z-index: -1;
-	position:absolute;
-	background:url(/images/getEnvoy-header.svg) no-repeat left top;
-	background-size:contain;
-	top:-2rem;
-	bottom:-2rem; left:0;
-	width:12rem;
+	display:none;
 }
 body > *:nth-child(2) {padding-top: 4.25rem !important;}
 body.kind-home > *:nth-child(2){padding-top: 2rem !important;}
@@ -180,6 +170,7 @@ h1, h2, h3, h4, h5, h6{
 }
 body h3 {
 	font-size: 1.67em;
+	text-transform: uppercase;
 }
 header.major {text-align:center; margin-top:4rem;}
  h1.logo {
@@ -235,6 +226,19 @@ header.major {text-align:center; margin-top:4rem;}
 	border:none;
 	margin:.5rem;
 	border-radius: 4px;
+ }
+ header > .about > p a {display:inline-block; border-bottom:1px solid transparent}
+ header > .about > p a:hover{
+	border-bottom:1px dotted;
+	color:#9ef;
+}
+ a:hover {
+	 color:#57BDD6;
+	 
+ }
+ header > .about > .cta > a:hover,
+ header > .about > .cta > a:focus{
+	 background:#57BDD6
  }
 header .platforms .count,
 header > .about a,
@@ -307,6 +311,7 @@ body .hide-me {
    min-width: 140px;
    transition: .5s all;
    background: #fff;
+   border:none;
  }
  .package-platform:after {
     content: '↓';
@@ -492,10 +497,10 @@ form.micro.inline .icon::before{
 }
 
 #footer {
-	background:#f0f0f0;
+	background:#224281;
 	position: relative;
-	border-top:1px solid #ddd;
 	text-align: center;
+	color:#fff;
 }
 
 #footer section{ padding:1rem 0 3rem;}
@@ -520,7 +525,7 @@ form.micro.inline .icon::before{
 #footer section .copyright,
 #footer section .copyright a,
 #footer section .icons a{
-	color:#999;
+	color:#fff;
 }
 #footer section.copyright-box {
 	margin:0;
@@ -570,6 +575,9 @@ form.micro.inline .icon::before{
 	display:inline-block;
 }
 
+.platform-box > nav {
+	text-transform: uppercase
+}
 .platform-box > nav ul,
 .platform-box > nav ul > li{
 	display:block;
@@ -607,7 +615,7 @@ form.micro.inline .icon::before{
 
 .platform-box > nav ul > li > a {padding:.5rem 1rem; display: block; border:none; color:#8bc; text-align: left}
 .platform-box > .body.single {
-	border-left:1px solid #ddd;
+	border-left:6px solid #789ec3;
 	width:100%;
 }
 
@@ -632,7 +640,7 @@ form.micro.inline .icon::before{
 	counter-increment: steps;
 	position: relative;
 	margin-bottom: 1rem;
-	box-shadow:inset 2px 0   #eee;
+	box-shadow:inset 3px 0  #b9ccdf;
 }
 .body.single > ol > li:last-of-type{
 	box-shadow: none;
@@ -648,6 +656,7 @@ form.micro.inline .icon::before{
 	text-shadow: none;
 	color:#666;
 	margin-bottom: 0.5rem;
+	text-transform: uppercase;
 }
 .body.single > ol > li:before {
 	position: absolute;
@@ -658,11 +667,11 @@ form.micro.inline .icon::before{
 	text-align: center;
 	line-height: 2.5rem;
 	width:2.5rem;
-	box-shadow: 0 0 1px 1px #ccc, 0 0 0 1rem #fff;
+	box-shadow: 0 0 0 1rem #fff;
 	content:counter(steps);
-	color:#000;
 	font-weight: bold;
-	background:#fff;
+	background:#008fd1;
+	color:#fff;
 }
 
 
@@ -2353,6 +2362,7 @@ form.micro.inline .icon::before{
 		margin: 0 0.25em;
 		padding: 0.25em 0.65em;
 		position: relative;
+		text-transform: none !important;
 	}
 	code .clipboard{
 		position: absolute;

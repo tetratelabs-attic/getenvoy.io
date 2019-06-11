@@ -55,7 +55,7 @@ pygmentsUseClasses = true
 
 		[[ params.about.cta ]]
 			title = "Get started"
-			url = "#"
+			href = "/platforms/"
 
     [params.platforms]
         hide  = false
