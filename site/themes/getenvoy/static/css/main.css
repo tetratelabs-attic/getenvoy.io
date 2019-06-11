@@ -226,8 +226,10 @@ header.major {text-align:center; margin-top:4rem;}
 	border:none;
 	margin:.5rem;
 	border-radius: 4px;
+	transition:.5s
  }
- header > .about > p a {display:inline-block; border-bottom:1px solid transparent}
+
+ header > .about > p a {display:inline-block; border-bottom:1px solid transparent; transition:.5s}
  header > .about > p a:hover{
 	border-bottom:1px dotted;
 	color:#9ef;
