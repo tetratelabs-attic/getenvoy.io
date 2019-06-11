@@ -63,8 +63,13 @@ body #menu > nav.menu a{
 	font-size: 1.1rem;
 	font-weight: bold;
 	border:none;
-	padding: 1.5rem 1rem;
-    
+	padding: 1.5rem 1rem;   
+}
+body #menu > nav.menu a:hover,
+body #menu > nav.menu a:focus,
+#footer a:hover,
+#footer a:focus{
+	color:#9ef !important;
 }
 body #menu > nav.menu a.home{
 	position: relative;
