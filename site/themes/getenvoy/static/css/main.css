@@ -114,21 +114,45 @@ body.kind-home section#why{
 	font-weight: 200;
 	text-align: left;
 }
-body.kind-home section#why h3{
+body.kind-home #main section > h3{
 	font-weight: bold;
 	text-align:center;
 	margin-bottom:2rem;
 	text-transform: uppercase;
 	font-size: 2rem;
 }
+body.kind-home #main .card {
+	display:inline-block;
+	width:20rem;
+	padding:2rem;
+	margin:0 1rem 4rem;
+	box-shadow: 0 4px 8px rgba(0,0,0,.25), 0 0 0 1px #ccc;
+	border-radius: 4px;
+	line-height: 1.4em;
+	font-size: 1.1rem;
+	min-height: 14rem;
+}
+body.kind-home #main .card > h4 {
+	text-transform: uppercase;
+	font-weight: bold;
+	color:#000;
+	margin-bottom: 2rem;
+	font-size: 1.5rem;
+}
 body.kind-section.section-platforms #header > header {display: none;}
 body.kind-home #header > header {
 	max-width: 100%;
 	padding: 0;
 }
+body.kind-home #header > header .cta,
 body.kind-home #header > header .about {
 	background:#224281;
-	padding: 2rem 0 1rem;
+	padding: 2rem 0 2rem;
+	margin:0;
+}
+body.kind-home #header > header > .cta {
+	padding:0 0 1rem;
+	margin-top:0;
 }
 body.kind-home #header > header .platforms
 {
@@ -206,11 +230,13 @@ header.major {text-align:center; margin-top:4rem;}
 	font-size:1.67rem;
 	font-weight: bold;
  }
- header > .about > .cta {
+ header > .cta h3{display:none}
+ body.kind-home #header >header > .cta > .cta {
 	 text-align:center;
-	 margin:2rem;
+	 margin-top:-2rem;
  }
- header > .about > .cta > a {
+ .cta > a,
+ header > .cta > .cta > a {
 	font-weight: 600;
     border-radius: 0;
     line-height: 4rem;;
@@ -228,9 +254,9 @@ header.major {text-align:center; margin-top:4rem;}
 	border-radius: 4px;
 	transition:.5s
  }
-
- header > .about > p a {display:inline-block; border-bottom:1px solid transparent; transition:.5s}
- header > .about > p a:hover{
+ #main .cta > a {margin-bottom: 3rem;}
+ header > .cta > p a {display:inline-block; border-bottom:1px solid transparent; transition:.5s}
+ header > .cta > p a:hover{
 	border-bottom:1px dotted;
 	color:#9ef;
 }
@@ -238,13 +264,13 @@ header.major {text-align:center; margin-top:4rem;}
 	 color:#57BDD6;
 	 
  }
- header > .about > .cta > a:hover,
- header > .about > .cta > a:focus{
+ header > .cta > .cta > a:hover,
+ header > .cta > .cta > a:focus{
 	 background:#57BDD6
  }
 header .platforms .count,
-header > .about a,
-header > .about > p {
+header > .cta a,
+header > .cta > p {
 	 color:#fff;
 	 text-align: center;
 	 font-size:1.5rem;
@@ -254,6 +280,7 @@ header > .about > p {
  header .platforms .count{
 	 color:#666;
  }
+ header > .cta strong,
  header > .about strong {
 	 font-weight: bold;
 	 color:#fff;
