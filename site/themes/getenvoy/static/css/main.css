@@ -106,6 +106,7 @@ body #menu > nav,
 	padding: 0 5%;
 	width:100%;
 }
+body.kind-home section.quote,
 body.kind-home section#why{
 	max-width: 60rem;
 	margin:0 auto;
@@ -114,6 +115,23 @@ body.kind-home section#why{
 	font-weight: 200;
 	text-align: left;
 }
+body.kind-home section.quote footer p {
+	margin:0;
+	display:inline-block;
+}
+body.kind-home section.quote footer p.author{
+	margin:0 1rem; font-weight: 600;
+}
+body.kind-home section.quote footer p.job-title:after {
+	content:', ';
+}
+body.kind-home section.quote > blockquote{
+	margin:2rem; 
+	padding:4rem;
+	background:#224281;
+	color:#fff;
+}
+
 body.kind-home #main section > h3{
 	font-weight: bold;
 	text-align:center;
@@ -747,14 +765,7 @@ form.micro.inline .icon::before{
 		list-style: none;
 	}
 
-	blockquote, q {
-		quotes: none;
-	}
 
-	blockquote:before, blockquote:after, q:before, q:after {
-		content: '';
-		content: none;
-	}
 
 	table {
 		border-collapse: collapse;
@@ -2375,12 +2386,6 @@ form.micro.inline .icon::before{
 			margin: 3em 0;
 		}
 
-	blockquote {
-		border-left: solid 6px #efefef;
-		font-style: italic;
-		margin: 0 0 2em 0;
-		padding: 0.5em 0 0.5em 1.5em;
-	}
 
 	code {
 		background: #f7f7f7;
