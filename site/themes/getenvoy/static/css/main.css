@@ -3168,8 +3168,14 @@ form.micro.inline .icon::before{
 
 /* Footer */
 
-
+		#footer h4{
+			display: inline-block;
+			vertical-align: middle;
+		}
 		#footer .icons {
+			display: inline-block;
+			margin: 0 0 0 1rem;
+			vertical-align: middle;
 		}
 
 			#footer .icons a {
