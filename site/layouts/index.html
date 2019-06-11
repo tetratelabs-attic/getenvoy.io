@@ -1,19 +1,12 @@
 
 {{ define "main" }}
-{{ if not .Site.Params.about.hide }}
-  {{ partial "about" . }}
-{{ end }}
-
-{{ if not .Site.Params.platforms.hide }}
-  {{ partial "platforms" . }}
-{{ end }}
 
 {{ if not .Site.Params.releases.hide }}
  {{ partial "releases" . }}
 {{ end }}
 
-{{ if not .Site.Params.startnow.hide }}
- {{ partial "startnow" . }}
+{{ if not .Site.Params.why.hide }}
+ {{ partial "why" . }}
 {{ end }}
 
 {{ if not .Site.Params.subscribe.hide }}

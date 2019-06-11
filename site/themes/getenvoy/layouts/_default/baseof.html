@@ -10,14 +10,11 @@
 			{{ partial "header" .}}
 		</div>
 
-
-
-
 		{{ "<!-- Main -->" | safeHTML }}
 		<div id="main">
 			{{ block "main" . }}{{ end }}
 		</div>
-
+		
 		{{ partial "footer" . }}
 	</body>
 </html>

@@ -16,13 +16,13 @@
  /*
    Or add your statements here:
   */
-  @import url('https://fonts.googleapis.com/css?family=Open+Sans:300|Roboto&display=swap');
+  @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,900&display=swap');
  
 
  html, 
  html body {
    min-height: 100%;
-   font: 16px/1.25em 'roboto','Source Sans Pro', sans-serif;
+   font: 16px/1.25em 'Source Sans Pro', sans-serif;
  }
 
 body #menu {
@@ -31,6 +31,24 @@ body #menu {
 	box-shadow: 0 2px 8px rgba(0,0,0,.33);
 	background:#fff;
 	z-index: 2;
+}
+body.kind-home #menu{
+	background:#224281;
+	box-shadow: none;
+	text-align: center
+}
+body.kind-home #menu .home {
+	display:none;
+}
+body.kind-home #menu > nav.menu ul {
+	float: none;
+
+}
+body.kind-home #menu > nav.menu ul li a {
+	color:#fff;
+	text-transform: uppercase;
+	font-size: 1.1rem;
+	font-weight: bold;
 }
 body #header > nav.menu {
 
@@ -91,9 +109,40 @@ body #menu > nav,
 	padding: 0 5%;
 	width:100%;
 }
-
-body.kind-section.section-platforms #header > header,
-body.kind-home #header > header {display: none;}
+body.kind-home section#why{
+	max-width: 60rem;
+	margin:0 auto;
+	padding:4rem 2rem;
+	font-size: 1.5rem;
+	font-weight: 200;
+	text-align: left;
+}
+body.kind-home section#why h3{
+	font-weight: bold;
+	text-align:center;
+	margin-bottom:2rem;
+	text-transform: uppercase;
+	font-size: 2rem;
+}
+body.kind-section.section-platforms #header > header {display: none;}
+body.kind-home #header > header {
+	max-width: 100%;
+	padding: 0;
+}
+body.kind-home #header > header .about {
+	background:#224281;
+	padding: 2rem 0 1rem;
+}
+body.kind-home #header > header .platforms
+{
+	background:#dce8f4;
+	background:#f4f4f4;
+	margin:0;
+	padding:2rem 0;
+}
+body.kind-home #header > header .platforms h4{
+	display:none;
+}
 body #header{
 	background:#f9f9f9;
 	border-bottom:1px solid #ddd;
@@ -127,15 +176,15 @@ body #main > section {
 	padding:1rem 0;
 }
 h1, h2, h3, h4, h5, h6{
-	font-family:'Open Sans', sans-serif !important 
+	font-family:'Source Sans Pro', sans-serif !important 
 }
 body h3 {
 	font-size: 1.67em;
 }
 header.major {text-align:center; margin-top:4rem;}
  h1.logo {
-	width:20%;
-	min-width: 250px;
+	width:33%;
+	min-width: 20rem;
 	position: relative; 
 	margin:0;
 	font-size:0;
@@ -143,19 +192,67 @@ header.major {text-align:center; margin-top:4rem;}
 	display:inline-block;
 	box-sizing: content-box;
 	margin-bottom:2rem;
+	max-width: 30rem;
  }
  h1.logo:after{
 	content:''; 
 	width:100%;
-	padding:100% 0 0;
+	padding:33% 0 0;
 	display:block;
 	position: relative;
-	background:url(/images/getEnvoy.svg) no-repeat center;
+	background:url(/images/getEnvoy-horizontal-outline-white.svg) no-repeat center;
 	background-size:contain;
  }
- header.major > h2 {
-	 font-size:1.75rem;
+ header.major > h2,
+ header.major > h3  {
+	 font-size:2rem;
+	 color:#fff;
+	 text-transform: uppercase;
+	 line-break: 1.1em;
+	 font-weight: 200;
  }
+ header.major > h3 {
+	font-size:1.67rem;
+	font-weight: bold;
+ }
+ header > .about > .cta {
+	 text-align:center;
+	 margin:2rem;
+ }
+ header > .about > .cta > a {
+	font-weight: 600;
+    border-radius: 0;
+    line-height: 4rem;;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+    display: inline-block;
+    font-size: 1.5rem;
+    min-width: 12rem;
+    text-align: center;
+	text-decoration: none;
+	color:#fff;
+	background:#008fd1;
+	border:none;
+	margin:.5rem;
+	border-radius: 4px;
+ }
+header .platforms .count,
+header > .about a,
+header > .about > p {
+	 color:#fff;
+	 text-align: center;
+	 font-size:1.5rem;
+	 font-weight: 200;
+	 border:none;
+ }
+ header .platforms .count{
+	 color:#666;
+ }
+ header > .about strong {
+	 font-weight: bold;
+	 color:#fff;
+ }
+
  .page.container {
    max-width: 1280px; width:100%; margin:0 auto;
    padding:4rem;
@@ -169,8 +266,8 @@ header.major {text-align:center; margin-top:4rem;}
  body.kind-home #main > .platforms > h4 {display:none;}
 #main > .platforms > ul,
 #main > .platforms > ul > li,
-body.kind-home #main > .platforms > ul,
-body.kind-home #main > .platforms > ul > li{
+body.kind-home .platforms > ul,
+body.kind-home .platforms > ul > li{
 	list-style: none;
 	margin:0; 
 	padding:0;
@@ -178,6 +275,8 @@ body.kind-home #main > .platforms > ul > li{
 	position: static;
 	font-size: 0;
 }
+body.kind-home .platforms > ul li a{max-width: 13rem;}
+
  .platforms{
    text-align: center;
    font-size: 0;
@@ -185,7 +284,7 @@ body.kind-home #main > .platforms > ul > li{
  .platforms > * {
 	 font-size:1rem;
  }
- .platforms > .count {margin:3rem 0 1rem; font-size:1rem;}
+ .platforms > .count {margin:0 0 1rem; font-size:1rem;}
  .platforms {}
 
 body .hide-me {
@@ -199,14 +298,15 @@ body .hide-me {
  .package-platform{
    display:inline-block;
    margin:1rem 1%;
-   width:18%;
+   width:15%;
    font-size:1rem;
    box-sizing: border-box;
-   box-shadow: 0 2px 4px #d5dde5, 0 0 0 2px rgba(34, 130, 179, 0.3);
+   box-shadow: 0 2px 4px #d5dde5, 0 0 0 4px #008fd1;
    border-radius: 3px;
    position: relative;
    min-width: 140px;
    transition: .5s all;
+   background: #fff;
  }
  .package-platform:after {
     content: '↓';
@@ -215,29 +315,30 @@ body .hide-me {
     bottom: 1rem;
     height: 1.5rem;
     width: 1.5rem;
-    background: #9cc3d4;
     margin: 0 0 0 -.75rem;
     left: 50%;
     border-radius: 50%;
     color: #fff;
     text-align: center;
     line-height: 1.5rem;
-	font-size: .8rem;
-	box-shadow: inset 0 1px 3px rgba(0,0,0,.33);
+	font-size: 1.75rem;
 	transition: .5s all;
+	color:#008fd1;
+	font-weight: bold;
  }
  .package-platform:focus, 
  .package-platform:hover {
 	 background:rgb(246, 253, 255);
-	 box-shadow: 0 2px 8px #b9ccdf, 0 0 0 2px rgba(5, 113, 167, 0.67);
+	 background:#ddf9ff;
+	 box-shadow: 0 2px 8px #b9ccdf, 0 0 0 4px rgba(5, 113, 167, 0.67);
 	 outline: none;
  }
- .package-platform:focus:after,
- .package-platform:hover:after{
+ .zpackage-platform:focus:after,
+ .zpackage-platform:hover:after{
 	 background:#4cadd6
  }
  .package-platform:active{
-	background:rgb(246, 253, 255);
+	background:#c0eef9;
 	box-shadow: inset 0 2px 4px #b9ccdf, 0 0 0 2px rgba(5, 113, 167, 0.5)
  }
 @media screen and (max-width: 890px){
@@ -2144,7 +2245,7 @@ form.micro.inline .icon::before{
 		}
 
 	body, input, select, textarea {
-		color: #a2a2a2;
+		color: #666;
 		font-family: "Source Sans Pro", Helvetica, sans-serif;
 		font-size: 16pt;
 		font-weight: 400;
@@ -2157,7 +2258,7 @@ form.micro.inline .icon::before{
 		-ms-transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out;
 		transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out;
 		border-bottom: dotted 1px;
-		color: #49bf9d;
+		color: #008fd1;
 		text-decoration: none;
 	}
 
@@ -2173,7 +2274,7 @@ form.micro.inline .icon::before{
 	}
 
 	p {
-		margin: 0 0 0 0;
+		margin: 0 0 1em;
 		font-family: "Source Sans Pro", Helvetica, sans-serif;
 		line-height: 1.5em;
 	}
@@ -2261,7 +2362,7 @@ form.micro.inline .icon::before{
 		border:1px solid #ddd;
 		padding:.5rem 1rem;
 		border-radius: 3px;
-		font-family: roboto;
+		font-family: 'Source Sans Pro';
 		font-weight: bold;
 		opacity: .85;
 		color:#589;
@@ -2315,11 +2416,6 @@ form.micro.inline .icon::before{
 		text-align: center;
 	}
 
-	header p {
-		color: #b2b2b2;
-		position: relative;
-		margin: 0 0 1.5em 0;
-	}
 
 	header h2 + p {
 		font-size: 1.25em;
@@ -2341,9 +2437,6 @@ form.micro.inline .icon::before{
 		line-height: 1.5em;
 	}
 
-	header.major h2 {
-		font-size: 2em;
-	}
 
 /* Form */
 
