@@ -620,8 +620,8 @@ form.micro.inline .icon::before{
 	border-left:6px solid #789ec3;
 	width:100%;
 }
-
-.platform-box > nav ul.tutorials > li > a {font-size:.85rem;}
+.platform-box > nav ul.blogs > li > a,
+.platform-box > nav ul.tutorials > li > a {font-size:.9rem;}
 
 .body.single {padding:3rem; max-width: 60rem}
 
