@@ -708,8 +708,14 @@ form.micro.inline .icon::before{
 	position: absolute;
 	display: block;
 	top:0; bottom:0; left:0;
-	background:#008fd1;
-	box-shadow: inset 0 -40rem 20rem -20rem #224281
+
+	/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#008fd1+0,224281+100 */
+	background: #008fd1; /* Old browsers */
+	background: -moz-linear-gradient(top,  #008fd1 0%, #224281 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top,  #008fd1 0%,#224281 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom,  #008fd1 0%,#224281 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#008fd1', endColorstr='#224281',GradientType=0 ); /* IE6-9 */
+
 }
 
 .platform-box > nav ul.blogs > li > a,
