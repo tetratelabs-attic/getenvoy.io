@@ -698,9 +698,20 @@ form.micro.inline .icon::before{
 
 .platform-box > nav ul > li > a {padding:.5rem 1rem; display: block; border:none; color:#8bc; text-align: left}
 .platform-box > .body.single {
-	border-left:6px solid #008fd1;
+	z-border-left:6px solid #008fd1;
 	width:100%;
+	position: relative;
 }
+.platform-box > .body.single::before{
+	content:'';
+	width:8px;
+	position: absolute;
+	display: block;
+	top:0; bottom:0; left:0;
+	background:#008fd1;
+	box-shadow: inset 0 -40rem 20rem -20rem #224281
+}
+
 .platform-box > nav ul.blogs > li > a,
 .platform-box > nav ul.tutorials > li > a {font-size:.9rem;}
 
