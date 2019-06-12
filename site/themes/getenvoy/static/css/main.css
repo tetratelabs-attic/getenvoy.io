@@ -68,7 +68,7 @@ body #menu > nav.menu a{
 	display:inline-block;
 	text-decoration: none;
 	color:#fff;
-	text-transform: uppercase;
+	z-text-transform: uppercase;
 	font-size: 1.1rem;
 	font-weight: bold;
 	border:none;
@@ -157,7 +157,7 @@ body.kind-home #main section > h3{
 	font-weight: bold;
 	text-align:center;
 	margin-bottom:2rem;
-	text-transform: uppercase;
+	z-text-transform: uppercase;
 	font-size: 2rem;
 }
 body.kind-home #main .card {
@@ -173,7 +173,7 @@ body.kind-home #main .card {
 	vertical-align:top;
 }
 body.kind-home #main .card > h4 {
-	text-transform: uppercase;
+	z-text-transform: uppercase;
 	font-weight: bold;
 	color:#000;
 	margin-bottom: 2rem;
@@ -217,7 +217,7 @@ body #header > header > h1 {
 	z-index: 1;
 	line-height: 1.1em;
 	color:#fff;
-	text-transform: uppercase;
+	z-text-transform: uppercase;
 }
 body #header > header > h1 > em{
 	display:none;
@@ -234,7 +234,7 @@ h1, h2, h3, h4, h5, h6{
 }
 body h3 {
 	font-size: 1.67em;
-	text-transform: uppercase;
+	z-text-transform: uppercase;
 }
 header.major {text-align:center; margin-top:4rem;}
  h1.logo {
@@ -262,7 +262,7 @@ header.major {text-align:center; margin-top:4rem;}
  header.major > h3  {
 	 font-size:2rem;
 	 color:#fff;
-	 text-transform: uppercase;
+	 z-text-transform: uppercase;
 	 line-break: 1.1em;
 	 font-weight: 200;
  }
@@ -280,7 +280,7 @@ header.major {text-align:center; margin-top:4rem;}
 	font-weight: 600;
     border-radius: 0;
     line-height: 4rem;;
-    text-transform: uppercase;
+    z-text-transform: uppercase;
     letter-spacing: -1px;
     display: inline-block;
     font-size: 1.5rem;
@@ -739,7 +739,7 @@ form.micro.inline .icon::before{
 	text-shadow: none;
 	color:#666;
 	margin-bottom: 0.5rem;
-	text-transform: uppercase;
+	z-text-transform: uppercase;
 }
 .body.single > ol > li:before {
 	position: absolute;
