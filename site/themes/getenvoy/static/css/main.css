@@ -129,12 +129,17 @@ body.kind-home section#why{
 	font-weight: 200;
 	text-align: left;
 }
+body.kind-home section.quote {
+	font-size:1.67rem;
+}
 body.kind-home section.quote footer p {
 	margin:0;
 	display:inline-block;
+	margin:0 .5rem 0 0;
+	font-size: 1.25rem;
 }
 body.kind-home section.quote footer p.author{
-	margin:0 1rem; font-weight: 600;
+	font-weight: 600;
 }
 body.kind-home section.quote footer p.job-title:after {
 	content:', ';
