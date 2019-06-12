@@ -623,8 +623,21 @@ form.micro.inline .icon::before{
 	margin-top:3rem;
 }
 .body > section.next-steps > a{
-	margin-bottom:1rem;
-	display:inline-block;
+	margin-bottom:2rem;
+	display:block;
+	border:none;
+}
+.body > section.next-steps > a > h4{
+	font-weight: bold;
+	margin:1rem 0;
+	border-bottom: 1px solid transparent;
+	font-size: 1.25rem;
+}
+.body > section.next-steps > a:hover > h4{
+	border-bottom: 1px dotted;
+}
+.body > section.next-steps > a > p{
+	color:#666;
 }
 
 .platform-box > nav {
