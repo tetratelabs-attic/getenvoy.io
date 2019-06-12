@@ -1,5 +1,9 @@
 {{ define "main" }}
-    {{ .Content }}
+    
     {{ partial "platforms" . }}
+
+    <div class="extra-copy">
+        {{ .Content }}
+    </div>
   
 {{ end }}

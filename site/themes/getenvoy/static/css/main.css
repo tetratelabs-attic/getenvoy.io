@@ -34,6 +34,15 @@ body #menu {
 	box-shadow: none;
 	z-index: 2;
 }
+
+.extra-copy {
+	padding:2rem;
+	max-width: 60rem;
+	margin:0 auto;
+	font-size: 1.2rem;
+	text-align: center;
+}
+
 #footer nav.menu,
 body.kind-home #menu {text-align: center}
 #footer .menu .home,
@@ -154,6 +163,7 @@ body.kind-home #main .card {
 	line-height: 1.4em;
 	font-size: 1.1rem;
 	min-height: 14rem;
+	vertical-align:top;
 }
 body.kind-home #main .card > h4 {
 	text-transform: uppercase;
