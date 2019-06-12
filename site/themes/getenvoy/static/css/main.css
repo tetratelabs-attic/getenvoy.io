@@ -715,7 +715,6 @@ form.micro.inline .icon::before{
 	background: -webkit-linear-gradient(top,  #008fd1 0%,#224281 100%); /* Chrome10-25,Safari5.1-6 */
 	background: linear-gradient(to bottom,  #008fd1 0%,#224281 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#008fd1', endColorstr='#224281',GradientType=0 ); /* IE6-9 */
-
 }
 
 .platform-box > nav ul.blogs > li > a,
@@ -2482,6 +2481,9 @@ form.micro.inline .icon::before{
 		line-height: 1.75em;
 		padding: 1em 1.5em;
 		overflow-x: auto;
+		color:#000;
+		font-weight: 400;
+		text-shadow: 0 0 1px rgba(0,0,0,.25);
 	}
 
 	/* This is a little hacky, if anyone can think of a better way to do this be my guest! */
