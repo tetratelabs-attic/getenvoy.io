@@ -50,7 +50,7 @@ pygmentsUseClasses = true
 		hide  = false
 		logo = "GetEnvoy"
 		title = "The easiest way to get started with Envoy"
-		subtitle = "ON ANY CLOUD OR ANY PLATFORM"
+		subtitle = "on any cloud or any platform"
 		version = "0.0.1"
 
 		[[ params.about.cta ]]
