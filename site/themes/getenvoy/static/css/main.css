@@ -36,7 +36,7 @@ body #menu {
 }
 
 .extra-copy {
-	padding:2rem;
+	padding:2rem 2rem 8rem;
 	max-width: 60rem;
 	margin:0 auto;
 	font-size: 1.2rem;
@@ -146,6 +146,8 @@ body.kind-home section.quote > blockquote{
 	color:#fff;
 }
 
+body.kind-section.section-platforms #main > section.platforms {padding:4rem 0 0}
+body.kind-section.section-platforms section.platforms > h3,
 body.kind-home #main section > h3{
 	font-weight: bold;
 	text-align:center;
