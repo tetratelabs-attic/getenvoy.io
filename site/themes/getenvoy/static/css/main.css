@@ -696,7 +696,7 @@ form.micro.inline .icon::before{
 	font-weight: bold;
 }
 
-.platform-box > nav ul > li > a {padding:.5rem 1rem; display: block; border:none; color:#8bc; text-align: left}
+.platform-box > nav ul > li > a {padding:.5rem 1rem; display: block; border:none; color:#8bc; text-align: left; text-transform: none;}
 .platform-box > .body.single {
 	z-border-left:6px solid #008fd1;
 	width:100%;
