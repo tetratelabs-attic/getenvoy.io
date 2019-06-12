@@ -51,7 +51,7 @@ pluralizelisttitles = false
 		hide  = false
 		logo = "GetEnvoy"
 		title = "The easiest way to get started with Envoy"
-		subtitle = "on any cloud or any platform"
+		subtitle = "on any cloud or platform"
 		version = "0.0.1"
 
 		[[ params.about.cta ]]
