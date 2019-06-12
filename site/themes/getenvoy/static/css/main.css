@@ -2481,7 +2481,6 @@ form.micro.inline .icon::before{
 		line-height: 1.75em;
 		padding: 1em 1.5em;
 		overflow-x: auto;
-		color:#000;
 		font-weight: 400;
 		text-shadow: 0 0 1px rgba(0,0,0,.25);
 	}
