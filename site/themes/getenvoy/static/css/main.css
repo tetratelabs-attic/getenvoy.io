@@ -2863,7 +2863,7 @@ form.micro.inline .icon::before{
 	ol {
 		list-style: decimal;
 		margin: 0 0 2em 0;
-		padding-left: 1.25em;
+		padding-left: 1.5em;
 	}
 
 		ol li {
@@ -2873,7 +2873,7 @@ form.micro.inline .icon::before{
 	ul {
 		list-style: disc;
 		margin: 0 0 2em 0;
-		padding-left: 1em;
+		padding-left: 1.5em;
 	}
 
 		ul li {
