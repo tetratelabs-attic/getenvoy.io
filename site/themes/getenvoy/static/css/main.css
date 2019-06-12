@@ -299,9 +299,10 @@ header.major {text-align:center; margin-top:4rem;}
 	 color:#57BDD6;
 	 
  }
- header > .cta > .cta > a:hover,
- header > .cta > .cta > a:focus{
-	 background:#57BDD6
+.cta > .cta > a.btn-primary:hover,
+.cta > .cta > a.btn-primary:focus{
+	 background:#57BDD6;
+	 color:#fff;
  }
 header .platforms .count,
 header > .cta a,
