@@ -667,6 +667,7 @@ form.micro.inline .icon::before{
 	text-decoration: none;
 	margin:0;
 	padding:0;
+	position: relative;
 }
 .platform-box > nav ul {
 	margin-bottom: 1rem;
@@ -678,7 +679,8 @@ form.micro.inline .icon::before{
     content: '▶';
     padding: .5rem 0;
     font-size: .75rem;
-    line-height: 1rem;
+	line-height: 1.25rem;
+	left:1px;
 }
 .platform-box > nav ul > li.active > a {
 	color:#09c;
