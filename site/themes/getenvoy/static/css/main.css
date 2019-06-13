@@ -760,19 +760,19 @@ form.micro.inline .icon::before{
 	z-text-transform: uppercase;
 }
 .body.single > ol > li:before {
-	position: absolute;
-	top:-.5rem;
-	left:-1.25rem;
-	display: block;
-	border-radius: 50%;
-	text-align: center;
-	line-height: 2.5rem;
-	width:2.5rem;
-	box-shadow: 0 0 0 1rem #fff;
-	content:counter(steps);
-	font-weight: bold;
-	background:#008fd1;
-	color:#fff;
+    position: absolute;
+    top: -.5rem;
+    left: -1rem;
+    display: block;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 2.25rem;
+    width: 2.25rem;
+    box-shadow: 0 0 0 0.5rem #fff;
+    content: counter(steps);
+    font-weight: bold;
+    background: #008fd1;
+    color: #fff;
 }
 
 
