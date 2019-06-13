@@ -8,10 +8,7 @@ logo = "/images/debian-logo.png"
 
 ## Requirements ##
 
-- jessie (8)
-- stretch (9)
-- buster (10)
-- bullseye (11)
+Envoy is supported on Debian 8 and above.
 
 ## Installation ##
 
