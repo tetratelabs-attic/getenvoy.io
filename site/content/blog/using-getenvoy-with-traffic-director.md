@@ -1,0 +1,63 @@
++++
+tags = []
+categories = []
+title = "Using GetEnvoy with Google Traffic Director"
+abstract = "Learn how to leverage GetEnvoy's package distributed Envoy."
++++
+
+Traffic Director is a hosted Envoy control plane offering on Google Cloud Platform. Currently to deploy Envoy on VMs their [documentation](https://cloud.google.com/traffic-director/docs/setting-up-traffic-director) suggests the following:
+
+1. Install Docker on your local machine.
+2. Pull the Istio Envoy proxy image from Dockerhub.
+3. Copy the Envoy binary out to your local machine.
+4. Copy the Envoy to all the machines you want to deploy to.
+5. Run the Envoy instances.
+
+If you're deploying on VMs this may seem like a weird approach to deploying things. Why aren't they using a package manager to distribute Envoy? The answer is that there isn't currently an official Envoy binary distributed by the project only a Docker image. This is why we have to copy the binary from within the Docker image.
+
+The GetEnvoy project mantains Stable and Nightly builds of Envoy for Ubuntu, Debian, CentOS and RHEL distributed via `apt` and `yum`. These can be used to distribute Envoys to your VMs and connect your VM based workloads to Traffic Director.
+
+Rather than running the `pull_envoy.sh` script provided in the documentation, you just need to ensure that Envoy is installed on the machine and there is a sym-link to directory that the provided `run.sh` is in. The steps to connecting a single VM to the Traffic Director xDS API are as follows:
+
+1. **Install Envoy on the VM.**
+For more detailed instructions checkout our [installation guides](https://getenvoy.io/platforms).
+```sh
+$ sudo apt-get install -y apt-transport-https ca-certificates curl gnupg2 software-properties-common && \
+curl -sL 'https://getenvoy.io/gpg' | sudo apt-key add - && \
+sudo add-apt-repository "deb [arch=amd64] https://dl.bintray.com/tetrate/getenvoy-deb $(lsb_release -cs) stable" && \
+sudo apt-get update && sudo apt-get install -y getenvoy-envoy
+```
+
+
+1. **Get the Traffic Director helper scripts onto the VM.**
+```sh
+$ wget https://storage.googleapis.com/traffic-director/beta/traffic-director-beta.tar.gz && \
+tar -xzvf traffic-director-beta.tar.gz && \
+cd traffic-director-beta
+```
+
+1. **Edit the `sidecar.env` to use the correct user.**
+```sh
+$ sed -ie "s|ENVOY_USER=''|ENVOY_USER='$(whoami)'|g" sidecar.env
+```
+
+1. **Sym-link the installed Envoy to the directory on the `run.sh` script.**
+```sh
+$ ln -s /usr/bin/envoy ./envoy
+```
+
+1. **Run Envoy using the provided helper script.**
+```sh
+$ sudo ./run.sh
+```
+
+1. **Verify that Envoy is running.**
+```sh
+$ ps aux | grep envoy
+```
+```sh-output
+user      2885  0.2  0.9 136352 35972 ?        Sl   15:02   0:00 ./envoy --config-path ./bootstrap_instance.yaml --log-level info
+user      2913  0.0  0.0  12752   968 pts/0    S+   15:04   0:00 grep envoy
+```
+
+Assuming you have set up Traffic Director correctly, the Envoy instance will now be connected to Traffic Director. For instructions on setting up Traffic Director to understand your topology follow the [Setting Up Traffic Director](https://cloud.google.com/traffic-director/docs/setting-up-traffic-director) how-to guide.
