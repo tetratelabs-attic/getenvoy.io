@@ -8,8 +8,7 @@ logo = "/images/ubuntu_black-orange_hex_su.svg"
 
 ## Requirements ##
 
-- xenial (16.04 LTS)
-- bionic (18.04 LTS)
+Envoy is supported on LTS versions of Ubuntu 16.04 and above.
 
 ## Installation ##
 

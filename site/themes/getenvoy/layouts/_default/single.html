@@ -16,6 +16,7 @@
 				{{ range sort $steps ".Params.orderweight"}}
 				<a href="{{ .Permalink | relURL }}" class="next-step">
 					<h4>{{ .Title }}</h4>
+					<p>{{ .Params.abstract }}</p>
 				</a>
 				{{ end }}
 	

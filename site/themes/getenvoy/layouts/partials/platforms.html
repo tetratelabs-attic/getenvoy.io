@@ -1,9 +1,16 @@
 
 <section class=" platforms">
+    
+    {{ if and ( eq .Kind "section") (eq .Section "platforms") }}
+    <h3>Choose your platform</h3>
+    {{ else }}
     <h4>Platforms</h4>
+    {{end}} 
+    
+    
     {{ $activePage := .Params.platform }}
     {{ $section := where $.Site.RegularPages "Section" "platforms"}}
-        <p class="count">Envoy binaries available on {{ len $section }} platforms.</p>
+        {{ if .IsHome }}<p class="count">Envoy binaries available on {{ len $section }} platforms</p> {{  end }}
         <ul>    
             {{ range $section }}
             <li {{  if eq .Params.platform $activePage }} class="active" {{ end }}><a href="{{ .Permalink | relURL }}" class="package-platform {{ .Params.platform }}">
@@ -11,6 +18,6 @@
             </a></li>
             {{ end }}
         </ul>
-            <p>More coming soon.</p>
+            <p>More coming soon</p>
 
 </section>

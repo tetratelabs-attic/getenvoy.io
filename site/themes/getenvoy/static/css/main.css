@@ -16,25 +16,45 @@
  /*
    Or add your statements here:
   */
-  @import url('https://fonts.googleapis.com/css?family=Open+Sans:300|Roboto&display=swap');
+  @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,900&display=swap');
  
 
  html, 
  html body {
    min-height: 100%;
-   font: 16px/1.25em 'roboto','Source Sans Pro', sans-serif;
+   font: 16px/1.25em 'Source Sans Pro', sans-serif;
+   background:#fff;
+   box-shadow:0 4px 8px rgba(0,0,0,.25)
  }
-
+html {background:#ddd;}
 body #menu {
 	position: fixed;
 	top:0; left:0; right:0;
-	box-shadow: 0 2px 8px rgba(0,0,0,.33);
-	background:#fff;
+	background:#224281;
+	box-shadow: none;
 	z-index: 2;
 }
-body #header > nav.menu {
 
+.extra-copy {
+	padding:2rem 2rem 8rem;
+	max-width: 60rem;
+	margin:0 auto;
+	font-size: 1.2rem;
+	text-align: center;
 }
+
+#footer nav.menu,
+body.kind-home #menu {text-align: center}
+#footer .menu .home,
+body.kind-home #menu .home {
+	display:none;
+}
+#footer section nav.menu ul,
+body.kind-home #menu > nav.menu ul {
+	float: none;	
+}
+#footer nav.menu ul > li,
+#footer nav.menu ul,
 body #menu > nav.menu ul > li,
 body #menu > nav.menu ul {
 	float:right;
@@ -43,13 +63,22 @@ body #menu > nav.menu ul {
 	padding: 0;
 	margin:0;
 }
+#footer nav.menu ul a,
 body #menu > nav.menu a{
 	display:inline-block;
 	text-decoration: none;
-	color:#999;
+	color:#fff;
+	z-text-transform: uppercase;
+	font-size: 1.1rem;
+	font-weight: bold;
 	border:none;
-	padding: 1.5rem 1rem;
-    
+	padding: 1.5rem 1rem;   
+}
+body #menu > nav.menu a:hover,
+body #menu > nav.menu a:focus,
+#footer a:hover,
+#footer a:focus{
+	color:#9ef !important;
 }
 body #menu > nav.menu a.home{
 	position: relative;
@@ -64,7 +93,7 @@ body #menu > nav.menu a.home::before{
 	top:0;
 	bottom:0;
 	margin:.85rem 0;
-	background:url(/images/getEnvoy-horizontal-outline.svg) no-repeat left;
+	background:url(/images/getEnvoy-horizontal-outline-white.svg) no-repeat left;
 	background-size: contain;
 	display:block;
 	width:100%;
@@ -72,7 +101,7 @@ body #menu > nav.menu a.home::before{
 }
 
 body #menu > nav.menu a.home::after{
-	background-image:url(/images/getEnvoy-horizontal.svg);
+	background-image:url(/images/getEnvoy-horizontal-outline.svg);
 	opacity: 0;
 }
 body #menu > nav.menu a.home:focus:after,
@@ -91,33 +120,107 @@ body #menu > nav,
 	padding: 0 5%;
 	width:100%;
 }
+body.kind-home section.quote,
+body.kind-home section#why{
+	max-width: 60rem;
+	margin:0 auto;
+	padding:4rem 2rem;
+	font-size: 1.5rem;
+	font-weight: 200;
+	text-align: left;
+}
+body.kind-home section.quote {
+	font-size:1.67rem;
+}
+body.kind-home section.quote footer p {
+	margin:0;
+	display:inline-block;
+	margin:0 .5rem 0 0;
+	font-size: 1.25rem;
+}
+body.kind-home section.quote footer p.author{
+	font-weight: 600;
+}
+body.kind-home section.quote footer p.job-title:after {
+	content:', ';
+}
+body.kind-home section.quote > blockquote{
+	margin:2rem; 
+	padding:4rem;
+	background:#224281;
+	color:#fff;
+}
 
-body.kind-section.section-platforms #header > header,
-body.kind-home #header > header {display: none;}
+body.kind-section.section-platforms #main > section.platforms {padding:4rem 0 0}
+body.kind-section.section-platforms section.platforms > h3,
+body.kind-home #main section > h3{
+	font-weight: bold;
+	text-align:center;
+	margin-bottom:2rem;
+	z-text-transform: uppercase;
+	font-size: 2rem;
+}
+body.kind-home #main .card {
+	display:inline-block;
+	width:20rem;
+	padding:2rem;
+	margin:0 1rem 4rem;
+	box-shadow: 0 4px 8px rgba(0,0,0,.25), 0 0 0 1px #ccc;
+	border-radius: 4px;
+	line-height: 1.4em;
+	font-size: 1.1rem;
+	min-height: 14rem;
+	vertical-align:top;
+}
+body.kind-home #main .card > h4 {
+	z-text-transform: uppercase;
+	font-weight: bold;
+	color:#000;
+	margin-bottom: 2rem;
+	font-size: 1.5rem;
+}
+body.kind-section.section-platforms #header > header {display: none;}
+body.kind-home #header > header {
+	max-width: 100%;
+	padding: 0;
+}
+body.kind-home #header > header .cta,
+body.kind-home #header > header .about {
+	background:#224281;
+	padding: 2rem 0 2rem;
+	margin:0;
+}
+body.kind-home #header > header > .cta {
+	padding:0 0 1rem;
+	margin-top:0;
+}
+body.kind-home #header > header .platforms
+{
+	background:#dce8f4;
+	background:#f4f4f4;
+	margin:0;
+	padding:2rem 0;
+}
+body.kind-home #header > header .platforms h4{
+	display:none;
+}
 body #header{
-	background:#f9f9f9;
-	border-bottom:1px solid #ddd;
+	background:#008fd1;
  }
  body #header > header{
-	padding-top:3rem;	
-	padding-bottom:3rem;	
+	padding-top:2rem;	
+	padding-bottom:2rem;	
 }
 body #header > header > h1 {
 	margin:0 1rem;
 	position: relative;
-	padding: 1.25rem 0 0 6.25rem;
 	z-index: 1;
 	line-height: 1.1em;
+	color:#fff;
+	z-text-transform: uppercase;
 }
 body #header > header > h1 > em{
-	font-size:0;
-	z-index: -1;
-	position:absolute;
-	background:url(/images/getEnvoy-header.svg) no-repeat left top;
-	background-size:contain;
-	top:-2rem;
-	bottom:-2rem; left:0;
-	width:12rem;
+	display:none;
 }
 body > *:nth-child(2) {padding-top: 4.25rem !important;}
 body.kind-home > *:nth-child(2){padding-top: 2rem !important;}
@@ -127,15 +230,16 @@ body #main > section {
 	padding:1rem 0;
 }
 h1, h2, h3, h4, h5, h6{
-	font-family:'Open Sans', sans-serif !important 
+	font-family:'Source Sans Pro', sans-serif !important 
 }
 body h3 {
 	font-size: 1.67em;
+	z-text-transform: uppercase;
 }
 header.major {text-align:center; margin-top:4rem;}
  h1.logo {
-	width:20%;
-	min-width: 250px;
+	width:33%;
+	min-width: 20rem;
 	position: relative; 
 	margin:0;
 	font-size:0;
@@ -143,19 +247,86 @@ header.major {text-align:center; margin-top:4rem;}
 	display:inline-block;
 	box-sizing: content-box;
 	margin-bottom:2rem;
+	max-width: 30rem;
  }
  h1.logo:after{
 	content:''; 
 	width:100%;
-	padding:100% 0 0;
+	padding:33% 0 0;
 	display:block;
 	position: relative;
-	background:url(/images/getEnvoy.svg) no-repeat center;
+	background:url(/images/getEnvoy-horizontal-outline-white.svg) no-repeat center;
 	background-size:contain;
  }
- header.major > h2 {
-	 font-size:1.75rem;
+ header.major > h2,
+ header.major > h3  {
+	 font-size:2rem;
+	 color:#fff;
+	 z-text-transform: uppercase;
+	 line-break: 1.1em;
+	 font-weight: 200;
  }
+ header.major > h3 {
+	font-size:1.67rem;
+	font-weight: bold;
+ }
+ header > .cta h3{display:none}
+ body.kind-home #header >header > .cta > .cta {
+	 text-align:center;
+	 margin-top:-2rem;
+ }
+ .cta > a,
+ header > .cta > .cta > a {
+	font-weight: 600;
+    border-radius: 0;
+    line-height: 4rem;;
+    z-text-transform: uppercase;
+    letter-spacing: -1px;
+    display: inline-block;
+    font-size: 1.5rem;
+    min-width: 12rem;
+    text-align: center;
+	text-decoration: none;
+	color:#fff;
+	background:#008fd1;
+	border:none;
+	margin:.5rem;
+	border-radius: 4px;
+	transition:.5s
+ }
+ #main .cta > a {margin-bottom: 3rem;}
+ header > .cta > p a {display:inline-block; border-bottom:1px solid transparent; transition:.5s}
+ header > .cta > p a:hover{
+	border-bottom:1px dotted;
+	color:#9ef;
+}
+ a:hover {
+	 color:#57BDD6;
+	 
+ }
+.cta > .cta > a.btn-primary:hover,
+.cta > .cta > a.btn-primary:focus{
+	 background:#57BDD6;
+	 color:#fff;
+ }
+header .platforms .count,
+header > .cta a,
+header > .cta > p {
+	 color:#fff;
+	 text-align: center;
+	 font-size:1.5rem;
+	 font-weight: 200;
+	 border:none;
+ }
+ header .platforms .count{
+	 color:#666;
+ }
+ header > .cta strong,
+ header > .about strong {
+	 font-weight: bold;
+	 color:#fff;
+ }
+
  .page.container {
    max-width: 1280px; width:100%; margin:0 auto;
    padding:4rem;
@@ -169,8 +340,8 @@ header.major {text-align:center; margin-top:4rem;}
  body.kind-home #main > .platforms > h4 {display:none;}
 #main > .platforms > ul,
 #main > .platforms > ul > li,
-body.kind-home #main > .platforms > ul,
-body.kind-home #main > .platforms > ul > li{
+body.kind-home .platforms > ul,
+body.kind-home .platforms > ul > li{
 	list-style: none;
 	margin:0; 
 	padding:0;
@@ -178,6 +349,8 @@ body.kind-home #main > .platforms > ul > li{
 	position: static;
 	font-size: 0;
 }
+body.kind-home .platforms > ul li a{max-width: 13rem;}
+
  .platforms{
    text-align: center;
    font-size: 0;
@@ -185,7 +358,7 @@ body.kind-home #main > .platforms > ul > li{
  .platforms > * {
 	 font-size:1rem;
  }
- .platforms > .count {margin:3rem 0 1rem; font-size:1rem;}
+ .platforms > .count {margin:0 0 1rem; font-size:1rem;}
  .platforms {}
 
 body .hide-me {
@@ -199,14 +372,16 @@ body .hide-me {
  .package-platform{
    display:inline-block;
    margin:1rem 1%;
-   width:18%;
+   width:15%;
    font-size:1rem;
    box-sizing: border-box;
-   box-shadow: 0 2px 4px #d5dde5, 0 0 0 2px rgba(34, 130, 179, 0.3);
+   box-shadow: 0 2px 4px #d5dde5, 0 0 0 4px #008fd1;
    border-radius: 3px;
    position: relative;
    min-width: 140px;
    transition: .5s all;
+   background: #fff;
+   border:none;
  }
  .package-platform:after {
     content: '↓';
@@ -215,29 +390,30 @@ body .hide-me {
     bottom: 1rem;
     height: 1.5rem;
     width: 1.5rem;
-    background: #9cc3d4;
     margin: 0 0 0 -.75rem;
     left: 50%;
     border-radius: 50%;
     color: #fff;
     text-align: center;
     line-height: 1.5rem;
-	font-size: .8rem;
-	box-shadow: inset 0 1px 3px rgba(0,0,0,.33);
+	font-size: 1.75rem;
 	transition: .5s all;
+	color:#008fd1;
+	font-weight: bold;
  }
  .package-platform:focus, 
  .package-platform:hover {
 	 background:rgb(246, 253, 255);
-	 box-shadow: 0 2px 8px #b9ccdf, 0 0 0 2px rgba(5, 113, 167, 0.67);
+	 background:#ddf9ff;
+	 box-shadow: 0 2px 8px #b9ccdf, 0 0 0 4px rgba(5, 113, 167, 0.67);
 	 outline: none;
  }
- .package-platform:focus:after,
- .package-platform:hover:after{
+ .zpackage-platform:focus:after,
+ .zpackage-platform:hover:after{
 	 background:#4cadd6
  }
  .package-platform:active{
-	background:rgb(246, 253, 255);
+	background:#c0eef9;
 	box-shadow: inset 0 2px 4px #b9ccdf, 0 0 0 2px rgba(5, 113, 167, 0.5)
  }
 @media screen and (max-width: 890px){
@@ -391,10 +567,10 @@ form.micro.inline .icon::before{
 }
 
 #footer {
-	background:#f0f0f0;
+	background:#224281;
 	position: relative;
-	border-top:1px solid #ddd;
 	text-align: center;
+	color:#fff;
 }
 
 #footer section{ padding:1rem 0 3rem;}
@@ -419,7 +595,7 @@ form.micro.inline .icon::before{
 #footer section .copyright,
 #footer section .copyright a,
 #footer section .icons a{
-	color:#999;
+	color:#fff;
 }
 #footer section.copyright-box {
 	margin:0;
@@ -465,16 +641,33 @@ form.micro.inline .icon::before{
 	margin-top:3rem;
 }
 .body > section.next-steps > a{
-	margin-bottom:1rem;
-	display:inline-block;
+	margin-bottom:2rem;
+	display:block;
+	border:none;
+}
+.body > section.next-steps > a > h4{
+	font-weight: bold;
+	margin:1rem 0;
+	border-bottom: 1px solid transparent;
+	font-size: 1.25rem;
+}
+.body > section.next-steps > a:hover > h4{
+	border-bottom: 1px dotted;
+}
+.body > section.next-steps > a > p{
+	color:#666;
 }
 
+.platform-box > nav {
+	text-transform: uppercase
+}
 .platform-box > nav ul,
 .platform-box > nav ul > li{
 	display:block;
 	text-decoration: none;
 	margin:0;
 	padding:0;
+	position: relative;
 }
 .platform-box > nav ul {
 	margin-bottom: 1rem;
@@ -486,7 +679,8 @@ form.micro.inline .icon::before{
     content: '▶';
     padding: .5rem 0;
     font-size: .75rem;
-    line-height: 1rem;
+	line-height: 1.25rem;
+	left:1px;
 }
 .platform-box > nav ul > li.active > a {
 	color:#09c;
@@ -504,13 +698,29 @@ form.micro.inline .icon::before{
 	font-weight: bold;
 }
 
-.platform-box > nav ul > li > a {padding:.5rem 1rem; display: block; border:none; color:#8bc; text-align: left}
+.platform-box > nav ul > li > a {padding:.5rem 1rem; display: block; border:none; color:#8bc; text-align: left; text-transform: none;}
 .platform-box > .body.single {
-	border-left:1px solid #ddd;
+	z-border-left:6px solid #008fd1;
 	width:100%;
+	position: relative;
+}
+.platform-box > .body.single::before{
+	content:'';
+	width:8px;
+	position: absolute;
+	display: block;
+	top:0; bottom:0; left:0;
+
+	/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#008fd1+0,224281+100 */
+	background: #008fd1; /* Old browsers */
+	background: -moz-linear-gradient(top,  #008fd1 0%, #224281 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top,  #008fd1 0%,#224281 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom,  #008fd1 0%,#224281 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#008fd1', endColorstr='#224281',GradientType=0 ); /* IE6-9 */
 }
 
-.platform-box > nav ul.tutorials > li > a {font-size:.85rem;}
+.platform-box > nav ul.blogs > li > a,
+.platform-box > nav ul.tutorials > li > a {font-size:.9rem;}
 
 .body.single {padding:3rem; max-width: 60rem}
 
@@ -531,7 +741,7 @@ form.micro.inline .icon::before{
 	counter-increment: steps;
 	position: relative;
 	margin-bottom: 1rem;
-	box-shadow:inset 2px 0   #eee;
+	box-shadow:inset 3px 0  #b9ccdf;
 }
 .body.single > ol > li:last-of-type{
 	box-shadow: none;
@@ -547,6 +757,7 @@ form.micro.inline .icon::before{
 	text-shadow: none;
 	color:#666;
 	margin-bottom: 0.5rem;
+	z-text-transform: uppercase;
 }
 .body.single > ol > li:before {
 	position: absolute;
@@ -557,11 +768,11 @@ form.micro.inline .icon::before{
 	text-align: center;
 	line-height: 2.5rem;
 	width:2.5rem;
-	box-shadow: 0 0 1px 1px #ccc, 0 0 0 1rem #fff;
+	box-shadow: 0 0 0 1rem #fff;
 	content:counter(steps);
-	color:#000;
 	font-weight: bold;
-	background:#fff;
+	background:#008fd1;
+	color:#fff;
 }
 
 
@@ -608,14 +819,7 @@ form.micro.inline .icon::before{
 		list-style: none;
 	}
 
-	blockquote, q {
-		quotes: none;
-	}
 
-	blockquote:before, blockquote:after, q:before, q:after {
-		content: '';
-		content: none;
-	}
 
 	table {
 		border-collapse: collapse;
@@ -2144,7 +2348,7 @@ form.micro.inline .icon::before{
 		}
 
 	body, input, select, textarea {
-		color: #a2a2a2;
+		color: #666;
 		font-family: "Source Sans Pro", Helvetica, sans-serif;
 		font-size: 16pt;
 		font-weight: 400;
@@ -2157,14 +2361,13 @@ form.micro.inline .icon::before{
 		-ms-transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out;
 		transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out;
 		border-bottom: dotted 1px;
-		color: #49bf9d;
+		color: #008fd1;
 		text-decoration: none;
 	}
 
 
 
 	strong, b {
-		color: #787878;
 		font-weight: 400;
 	}
 
@@ -2173,7 +2376,7 @@ form.micro.inline .icon::before{
 	}
 
 	p {
-		margin: 0 0 0 0;
+		margin: 0 0 1em;
 		font-family: "Source Sans Pro", Helvetica, sans-serif;
 		line-height: 1.5em;
 	}
@@ -2236,15 +2439,9 @@ form.micro.inline .icon::before{
 			margin: 3em 0;
 		}
 
-	blockquote {
-		border-left: solid 6px #efefef;
-		font-style: italic;
-		margin: 0 0 2em 0;
-		padding: 0.5em 0 0.5em 1.5em;
-	}
 
 	code {
-		background: #f7f7f7;
+		background: #f9f9f9;
 		border-radius: 0.35em;
 		border: solid 2px #efefef;
 		font-family: "Courier New", monospace;
@@ -2252,6 +2449,9 @@ form.micro.inline .icon::before{
 		margin: 0 0.25em;
 		padding: 0.25em 0.65em;
 		position: relative;
+		text-transform: none !important;
+		font-weight: 400;
+		text-shadow: 0 0 1px rgba(0,0,0,.25);
 	}
 	code .clipboard{
 		position: absolute;
@@ -2261,7 +2461,7 @@ form.micro.inline .icon::before{
 		border:1px solid #ddd;
 		padding:.5rem 1rem;
 		border-radius: 3px;
-		font-family: roboto;
+		font-family: 'Source Sans Pro';
 		font-weight: bold;
 		opacity: .85;
 		color:#589;
@@ -2315,11 +2515,6 @@ form.micro.inline .icon::before{
 		text-align: center;
 	}
 
-	header p {
-		color: #b2b2b2;
-		position: relative;
-		margin: 0 0 1.5em 0;
-	}
 
 	header h2 + p {
 		font-size: 1.25em;
@@ -2341,9 +2536,6 @@ form.micro.inline .icon::before{
 		line-height: 1.5em;
 	}
 
-	header.major h2 {
-		font-size: 2em;
-	}
 
 /* Form */
 
@@ -2696,7 +2888,7 @@ form.micro.inline .icon::before{
 	ol {
 		list-style: decimal;
 		margin: 0 0 2em 0;
-		padding-left: 1.25em;
+		padding-left: 2em;
 	}
 
 		ol li {
@@ -2706,7 +2898,7 @@ form.micro.inline .icon::before{
 	ul {
 		list-style: disc;
 		margin: 0 0 2em 0;
-		padding-left: 1em;
+		padding-left: 2em;
 	}
 
 		ul li {
@@ -3063,8 +3255,14 @@ form.micro.inline .icon::before{
 
 /* Footer */
 
-
+		#footer h4{
+			display: inline-block;
+			vertical-align: middle;
+		}
 		#footer .icons {
+			display: inline-block;
+			margin: 0 0 0 1rem;
+			vertical-align: middle;
 		}
 
 			#footer .icons a {
