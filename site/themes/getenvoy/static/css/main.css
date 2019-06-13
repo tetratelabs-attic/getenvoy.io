@@ -2442,7 +2442,7 @@ form.micro.inline .icon::before{
 
 
 	code {
-		background: #f7f7f7;
+		background: #f9f9f9;
 		border-radius: 0.35em;
 		border: solid 2px #efefef;
 		font-family: "Courier New", monospace;
@@ -2451,6 +2451,8 @@ form.micro.inline .icon::before{
 		padding: 0.25em 0.65em;
 		position: relative;
 		text-transform: none !important;
+		font-weight: 400;
+		text-shadow: 0 0 1px rgba(0,0,0,.25);
 	}
 	code .clipboard{
 		position: absolute;
@@ -2483,8 +2485,6 @@ form.micro.inline .icon::before{
 		line-height: 1.75em;
 		padding: 1em 1.5em;
 		overflow-x: auto;
-		font-weight: 400;
-		text-shadow: 0 0 1px rgba(0,0,0,.25);
 	}
 
 	/* This is a little hacky, if anyone can think of a better way to do this be my guest! */
