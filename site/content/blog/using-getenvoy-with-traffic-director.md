@@ -13,9 +13,11 @@ Traffic Director is a hosted Envoy control plane offering on Google Cloud Platfo
 4. Copy the Envoy to all the machines you want to deploy to.
 5. Run the Envoy instances.
 
-If you're deploying on VMs this may seem like a weird approach to deploying things. Why aren't they using a package manager to distribute Envoy? The answer is that there isn't currently an official Envoy binary distributed by the project only a Docker image. This is why we have to copy the binary from within the Docker image.
+If you're deploying on VMs this may seem like a weird approach to deploying things. Why not use a package manager to distribute Envoy? The answer is that the only artefact distributed by the project is a Docker image. This is why we have to copy the binary from within the Docker image.
 
-The GetEnvoy project mantains Stable and Nightly builds of Envoy for Ubuntu, Debian, CentOS and RHEL distributed via `apt` and `yum`. These can be used to distribute Envoys to your VMs and connect your VM based workloads to Traffic Director. In Istio the Envoy versioning follows Istio's version and not Envoy. For instance, at time of writing the current version of Istio proxy is `1.1.8`, and this uses Envoy at commit `52a04b6c55b7f6d5646c0fb235ce403394f67839`. This is not an official Envoy release version, it's somewhere between 1.10.0 and the future 1.11.0 release. Using a package manager rather than the Istio DockerHub image allows you to explicitly and clearly manage the versioning of the Envoy you're deploying via the package manager with Envoy versioning, not Istio versioning of Envoy. 
+Another factor to consider is that the default image is the Istio image not an Envoy image. In Istio, the Envoy versioning follows Istio's version not Envoys. For instance, at time of writing the current version of Istio proxy is `1.1.8`, and this uses Envoy at commit `52a04b6c55b7f6d5646c0fb235ce403394f67839`. This is not an official Envoy release version, it's somewhere between 1.10.0 and the future 1.11.0 release. Using a package manager rather than the Istio DockerHub image allows you to clearly and explicitly manage the version of the Envoy you're deploying via a package manager with Envoy versioning. 
+
+The GetEnvoy project mantains Stable and Nightly builds of Envoy for Ubuntu, Debian, CentOS and RHEL distributed via `apt` and `yum`. These builds can be used to distribute Envoys to your VMs and connect your VM based workloads to Traffic Director. 
 
 Rather than running the `pull_envoy.sh` script provided in the documentation, you just need to ensure that Envoy is installed on the machine and there is a sym-link to directory that the provided `run.sh` is in. The steps to connecting a single VM to the Traffic Director xDS API are as follows:
 
