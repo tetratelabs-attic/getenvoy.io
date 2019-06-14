@@ -8,7 +8,7 @@ logo = "/images/macos.svg"
 
 ## Requirements ##
 
-To install Envoy, you need to have installed [Homebrew](https://brew.sh/). The package is only tested in latest macOS release.
+To install Envoy, you need to have installed [Homebrew](https://brew.sh/). The package is only tested in macOS 10.14.
 
 ## Installation ##
 
