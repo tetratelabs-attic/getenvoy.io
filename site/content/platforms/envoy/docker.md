@@ -8,11 +8,9 @@ logo = "/images/docker-logo.svg"
 
 ## Requirements ##
 
-Any Linux distribution with Docker installed.
+Any host OS on x86-64 architecture with Docker installed.
 
 ## Installation ##
-
-To use the `nightly` build instead, replace the word `stable` with `nightly`
 
 1. **Pull latest docker image.
 ```
@@ -23,3 +21,5 @@ docker pull getenvoy/envoy:stable
 ```
 $ docker run getenvoy/envoy:stable --version
 ```
+
+To use the `nightly` build instead, replace the word `stable` with `nightly`
