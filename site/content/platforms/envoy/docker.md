@@ -12,7 +12,7 @@ Any host OS on x86-64 architecture with Docker installed.
 
 ## Installation ##
 
-1. **Pull latest docker image.
+1. **Pull the latest docker image.**
 ```
 docker pull getenvoy/envoy:stable
 ```
