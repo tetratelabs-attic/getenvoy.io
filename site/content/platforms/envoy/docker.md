@@ -14,7 +14,7 @@ Any host OS on x86-64 architecture with Docker installed.
 
 1. **Pull the latest docker image.**
 ```
-docker pull getenvoy/envoy:stable
+$ docker pull getenvoy/envoy:stable
 ```
 
 1. **Verify Envoy image.**
