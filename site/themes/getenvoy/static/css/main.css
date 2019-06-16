@@ -823,7 +823,7 @@ nav.menu > .pop-toggle{
     text-align: center;
     line-height: 2.25rem;
     width: 2.25rem;
-    box-shadow: 0 0 0 0.5rem #fff;
+    box-shadow: 0 0 0 0.75rem #fff;
     content: counter(steps);
     font-weight: bold;
     background: #008fd1;

@@ -2,7 +2,7 @@ $(function() {
     function clipboardMagic(){
 
         // find all the "code" blocks and bind click event...
-        $("pre code").on('click',function(a,b,c){
+        $("pre code").on('click',function(){
             var $this = $(this);
 
             // set initial state...
