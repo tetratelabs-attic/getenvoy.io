@@ -128,7 +128,9 @@ body #menu > nav,
 	padding: 0 5%;
 	width:100%;
 }
-body #menu > nav{min-height:4rem;}
+body #menu > nav {
+	min-height:4rem;
+}
 body.kind-home section.quote,
 body.kind-home section#why{
 	max-width: 60rem;
