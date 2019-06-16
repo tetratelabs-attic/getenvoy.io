@@ -128,6 +128,7 @@ body #menu > nav,
 	padding: 0 5%;
 	width:100%;
 }
+body #menu > nav{min-height:4rem;}
 body.kind-home section.quote,
 body.kind-home section#why{
 	max-width: 60rem;
@@ -652,6 +653,7 @@ nav.menu > .pop-toggle{
 	}
 	html > body > #menu > nav.menu#show-menu:target > ul{
 		left:0;
+		top:4rem;
 	}
 	html > body > #menu > nav.menu .pop-toggle {
 		display:block;
