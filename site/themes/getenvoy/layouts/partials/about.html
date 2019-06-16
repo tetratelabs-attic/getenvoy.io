@@ -2,6 +2,7 @@
 	<header class="major">
 		{{ if .Site.Params.about.logo }}<h1 class="logo">{{ .Site.Params.about.logo }}</h1>{{ end }}
 		{{ with .Site.Params.about.title }}<h2>{{ . | markdownify }}</h2>{{ end }}
+		{{ if .Site.Params.about.subtitle }}<h3>{{ .Site.Params.about.subtitle }}</h3>{{ end }}
 	</header>
 	{{ with .Site.Params.about.content }}<p>{{ . | markdownify }}</p>{{ end }}
 </section>

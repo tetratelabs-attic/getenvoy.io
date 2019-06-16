@@ -54,6 +54,7 @@ body.kind-home #menu .home {
 body.kind-home #menu > nav.menu ul {
 	float: none;	
 }
+
 #footer nav.menu ul > li,
 #footer nav.menu ul,
 body #menu > nav.menu ul > li,
@@ -64,6 +65,7 @@ body #menu > nav.menu ul {
 	padding: 0;
 	margin:0;
 }
+
 body #menu > nav.menu ul > li.home-btn{
 	display:none;
 }
@@ -71,6 +73,7 @@ body #menu > nav.menu ul > li.home-btn{
 body #menu > nav.menu ul{
 float:right;
 }
+
 #footer nav.menu ul a,
 body #menu > nav.menu a{
 	display:inline-block;
@@ -283,7 +286,7 @@ header.major {text-align:center; margin-top:4rem;}
 	 text-align:center;
 	 margin-top:-2rem;
  }
- .cta > a,
+.cta > a,
  header > .cta > .cta > a {
 	font-weight: 600;
     border-radius: 0;
@@ -819,7 +822,7 @@ nav.menu > .pop-toggle{
     text-align: center;
     line-height: 2.25rem;
     width: 2.25rem;
-    box-shadow: 0 0 0 0.5rem #fff;
+    box-shadow: 0 0 0 0.75rem #fff;
     content: counter(steps);
     font-weight: bold;
     background: #008fd1;

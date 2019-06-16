@@ -7,6 +7,8 @@ disqusShortname = ""
 googleAnalytics = ""
 # Define how many posts should appear on a site
 paginate = 10
+pygmentsUseClasses = true
+pluralizelisttitles = false
 
 [params]
 	# To provide some metadata for search engines feel free to add a few
@@ -31,8 +33,8 @@ paginate = 10
 		# Use Markdown to format the string. This works nearly all over the theme
 		bio = ""
 		# The icons will be shown if you enter your username
-		twitter = "tetrateio"
-		github = ""
+		twitter = "GetEnvoyProxy"
+		github = "http://github.com/tetratelabs/getenvoy"
 		gitlab = ""
 		dribbble = ""
 		facebook = ""
@@ -48,7 +50,14 @@ paginate = 10
 	[params.about]
 		hide  = false
 		logo = "GetEnvoy"
-		title = "Simplify your service mesh data plane."
+		title = "The easiest way to get started with Envoy"
+		subtitle = "on any cloud or platform"
+		version = "0.0.1"
+		envoyVersion = "1.10.0"
+
+		[[ params.about.cta ]]
+			title = "Get Started"
+			href = "/platforms/"
 
     [params.platforms]
         hide  = false

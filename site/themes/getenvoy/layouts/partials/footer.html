@@ -1,10 +1,9 @@
 {{ "<!-- Footer -->" | safeHTML }}
 <footer id="footer">
 	<section>
-		<div class="logo">
-			<h3><em>Tetrate</h3>
-		</div>
-	<ul class="icons">
+		{{ partial "menu" . }}
+
+		<ul class="icons">
 		{{ with .Site.Params.sidebar.googleplus }}
 		<li><a href="//plus.google.com/+{{ . }}" target="_blank" class="icon fa-google-plus"><span class="label">Google Plus</span></a></li>
 		{{ end }}
@@ -36,14 +35,10 @@
 		<li><a href="{{ if $.RSSLink }}{{ $.RSSLink }}{{ else }}{{ $.Site.RSSLink }}{{ end }}" class="icon fa-rss" type="application/rss+xml"><span class="label">RSS</span></a></li>
 		{{ end }}
 	</ul>
+	<p class="copyright">
+			2019 © <a href="https://tetrate.io/">Tetrate.io</a>. All rights reserved. Tetrate has registered trademarks and uses trademarks.
+		</p>
 </section>
-<section class="copyright-box">
-	<ul class="copyright">
-		{{ range .Site.Params.sidebar.copyright }}
-		<li>{{ . | markdownify }}</li>
-		{{ end }}
-	</ul>
-	</section>
 </footer>
 
 {{ "<!-- Scripts -->" | safeHTML }}
