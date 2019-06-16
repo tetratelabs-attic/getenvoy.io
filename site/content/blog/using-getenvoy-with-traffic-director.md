@@ -3,6 +3,8 @@ tags = []
 categories = []
 title = "Using GetEnvoy with Google Traffic Director"
 abstract = "Learn how to leverage GetEnvoy's distribution of Envoy with Traffic Director."
+date = 2019-06-16T09:51:27+00:00
+authors = ["Liam White"]
 +++
 
 Traffic Director is a hosted Envoy control plane offering on Google Cloud Platform. Currently to deploy Envoy on VMs their [documentation](https://cloud.google.com/traffic-director/docs/setting-up-traffic-director) suggests the following:
