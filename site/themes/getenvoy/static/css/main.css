@@ -17,6 +17,7 @@
    Or add your statements here:
   */
   @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,900&display=swap');
+  @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
  
 
  html, 
@@ -57,11 +58,18 @@ body.kind-home #menu > nav.menu ul {
 #footer nav.menu ul,
 body #menu > nav.menu ul > li,
 body #menu > nav.menu ul {
-	float:right;
+
 	display:inline-block;
 	list-style: none;
 	padding: 0;
 	margin:0;
+}
+body #menu > nav.menu ul > li.home-btn{
+	display:none;
+}
+#footer nav.menu ul,
+body #menu > nav.menu ul{
+float:right;
 }
 #footer nav.menu ul a,
 body #menu > nav.menu a{
@@ -119,6 +127,9 @@ body #menu > nav,
 	max-width: 80rem;
 	padding: 0 5%;
 	width:100%;
+}
+body #menu > nav {
+	min-height:4rem;
 }
 body.kind-home section.quote,
 body.kind-home section#why{
@@ -614,9 +625,54 @@ form.micro.inline .icon::before{
 	max-width:16rem;
 	padding:3rem 0rem 3rem 1rem;
 }
+
+#menu > nav.menu > .pop-toggle > a {
+    display: inline-block;
+    width: 2rem;
+    text-align: center;
+    padding: 1.5rem 0;
+}
+#menu > nav.menu > *{
+	vertical-align:middle
+}
+nav.menu > .pop-toggle{
+	display:none;
+}
 @media screen and (max-width: 45rem) {
+	html > body > #menu > nav.menu > ul > li.home-btn,
+	html > body > #menu > nav.menu > ul > li,
+	html > body > #menu > nav.menu > ul {
+		display:block;
+		float: none;
+		width:100%;
+		float:none;
+	}
+
+	html > body > #menu > nav.menu > ul {
+		position:absolute;
+		background:#008FD1;
+		left:-999rem;
+	}
+	html > body > #menu > nav.menu#show-menu:target > ul{
+		left:0;
+		top:4rem;
+	}
+	html > body > #menu > nav.menu .pop-toggle {
+		display:block;
+		position:absolute; right:0;
+	} 
+	html > body > #menu > nav.menu .pop-toggle .menu,
+	html > body > #menu > nav.menu#show-menu:target .pop-toggle .close {
+		display:block;
+	}
+	html > body > #menu > nav.menu .pop-toggle .close,
+	html > body > #menu > nav.menu#show-menu:target .pop-toggle .menu {
+		display:none;
+	}
+
+.platform-box > .body.single::before,
  #main > .platform-box > nav {
-	 display:none;
+	 display:none !important;
  }
  #main > .platform-box > .body.single {
 	 border:none;
@@ -624,7 +680,6 @@ form.micro.inline .icon::before{
  }
  body #menu > nav.menu a.home{
     padding: .5rem 0;
-    width: 2rem;
     height: 4rem;
  }
  body #menu > nav.menu a.home::after, body #menu > nav.menu a.home::before{
