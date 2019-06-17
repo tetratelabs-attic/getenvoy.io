@@ -34,7 +34,7 @@ pluralizelisttitles = false
 		bio = ""
 		# The icons will be shown if you enter your username
 		twitter = "GetEnvoyProxy"
-		github = "http://github.com/tetratelabs/getenvoy"
+		github = "tetratelabs/getenvoy"
 		gitlab = ""
 		dribbble = ""
 		facebook = ""
@@ -61,13 +61,13 @@ pluralizelisttitles = false
 
     [params.platforms]
         hide  = false
-        
+
     [params.releases]
         hide = true
-    
+
     [params.startnow]
         hide = false
-    
+
     [params.subscribe]
         hide = true
 
