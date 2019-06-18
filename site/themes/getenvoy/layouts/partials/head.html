@@ -48,9 +48,10 @@
 		<link href="{{ . }}" rel="feed" type="application/rss+xml" title="{{ $.Site.Title }}" />
 		{{ end }}
 		{{ range .Site.Params.custom_css }}
-		<link rel="stylesheet" href="{{ $.Site.BaseURL }}{{ . }}">
-		
+		<link rel="stylesheet" href="{{ $.Site.BaseURL }}{{ . }}">	
+		{{ end }}
+	
 		<!-- Mail Chimp link -->
 		<script id="mcjs">!function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","https://chimpstatic.com/mcjs-connected/js/users/b59d6c6d9ceb1641c05b8cb74/6ec964092b411c5091088b46f.js");</script>
-		{{ end }}
+	
 	</head>
