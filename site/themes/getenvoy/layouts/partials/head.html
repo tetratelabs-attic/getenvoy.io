@@ -41,13 +41,22 @@
 		{{ "<!--[if lte IE 8]>" | safeHTML }}<link rel="stylesheet" href="{{ .Site.BaseURL }}/css/ie8.css">{{ "<![endif]-->" | safeHTML}}
 
 		<link rel="icon" type="image/x-icon" href="/favicon.ico" />
-		<link rel="icon" type="image/png" href="/favicon.png" />
+		<link rel="icon" type="image/png" href="/favicon-16.png" sizes="16x16" />
+		<link rel="icon" type="image/png" href="/favicon-32.png" sizes="32x32" />
+		<link rel="icon" type="image/png" href="/favicon-196.png" sizes="196x196" />
 
 		{{ with .RSSLink }}
 		<link href="{{ . }}" rel="alternate" type="application/rss+xml" title="{{ $.Site.Title }}" />
 		<link href="{{ . }}" rel="feed" type="application/rss+xml" title="{{ $.Site.Title }}" />
 		{{ end }}
 		{{ range .Site.Params.custom_css }}
-		<link rel="stylesheet" href="{{ $.Site.BaseURL }}{{ . }}">
+		<link rel="stylesheet" href="{{ $.Site.BaseURL }}{{ . }}">	
 		{{ end }}
+		{{ range .AlternativeOutputFormats -}}
+    		{{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
+		{{ end -}}
+
+		<script id="?????head????"></script>
+
 	</head>
+	
