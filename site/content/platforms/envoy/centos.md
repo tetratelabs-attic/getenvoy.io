@@ -21,13 +21,9 @@ $ sudo yum install -y yum-utils
 ```sh
 $ sudo yum-config-manager --add-repo https://getenvoy.io/linux/centos/tetrate-getenvoy.repo
 ```
-To install nightly packages instead, enable the nightly repository configuration.
+Nightly packages can be enabled using the `--enable` flag. To disable again use the `--disable` flag.
 ```sh
 $ sudo yum-config-manager --enable tetrate-getenvoy-nightly
-```
-To disable nightly repository configuration, run the following command.
-```sh
-$ sudo yum-config-manager --disable tetrate-getenvoy-nightly
 ```
 
 1. **Install Envoy binary.**
