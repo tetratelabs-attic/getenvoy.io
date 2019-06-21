@@ -21,7 +21,7 @@ $ sudo yum install -y yum-utils
 ```sh
 $ sudo yum-config-manager --add-repo https://getenvoy.io/linux/centos/tetrate-getenvoy.repo
 ```
-Nightly packages can be enabled using the `--enable` flag. To disable again use the `--disable` flag.
+Nightly packages can be enabled using the `--enable` flag. To disable again, use the `--disable` flag.
 ```sh
 $ sudo yum-config-manager --enable tetrate-getenvoy-nightly
 ```
