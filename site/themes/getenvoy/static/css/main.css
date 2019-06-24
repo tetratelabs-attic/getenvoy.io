@@ -437,15 +437,12 @@ body .hide-me {
 	content: '';
 	display: block;
   }
- .package-platform > .title{
-   font-size: 1rem;
-   margin:0;
- }
 
  .package-platform > .title{
    position: absolute;
+   margin:0;
    font-size: 0;
-   top:2%; left:2%; right:2%; bottom:2%;
+   top:-2%; left:2%; right:2%; bottom:2%;
    color:transparent;
    background:transparent no-repeat center;
    background-size: 80% auto;   
@@ -462,7 +459,7 @@ body .hide-me {
  {
 	background-image:url(/images/debian-logo.png);
 	background-size:66.7% auto;
-	top:-13%;
+	background-position-y: 45%;
 
  }
  .package-platform.Ubuntu > .title{
@@ -473,8 +470,12 @@ body .hide-me {
  .package-platform.MacOS > .title{
 	background-image:url(/images/macos.svg);
 	background-size:50% auto;
-	background-position-y: 45%;
+	background-position-y: 49%;
 }
+.package-platform.Docker > .title{
+	background-position-y: 47%;
+}
+
 #main > section.color-row  {
 	display:flex;
 	height:7rem;
