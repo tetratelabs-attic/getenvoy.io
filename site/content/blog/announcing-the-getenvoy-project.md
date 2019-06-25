@@ -30,7 +30,7 @@ If you want to leverage our build pipeline and build Envoy yourself, we are in t
 
 In summary, these are the features currently available:
 
-- Stable and nightly builds for `Ubuntu`, `Debian`, `CentOS`, `RHEL` and `macOS`.
+- Stable and nightly builds for `Ubuntu`, `Debian`, `CentOS` and `macOS`.
 - Distribution via `apt`, `yum`, `Homebrew`, `DockerHub`.
 - Stable and nightly distro-less Docker image.
 
