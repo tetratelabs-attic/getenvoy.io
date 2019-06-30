@@ -52,7 +52,7 @@ $ ln -s /usr/bin/envoy ./envoy
 
 1. **Run Envoy using the provided helper script.**
 ```sh
-$ sudo ./run.sh
+$ sudo ./run.sh start
 ```
 
 1. **Verify that Envoy is running.**
@@ -60,8 +60,8 @@ $ sudo ./run.sh
 $ ps aux | grep envoy
 ```
 ```sh-output
-user      2885  0.2  0.9 136352 35972 ?        Sl   15:02   0:00 ./envoy --config-path ./bootstrap_instance.yaml --log-level info
-user      2913  0.0  0.0  12752   968 pts/0    S+   15:04   0:00 grep envoy
+liam      2662  0.3  0.8 131596 30640 ?        Sl   14:45   0:00 ./envoy --config-path ./bootstrap_instance.yaml --log-level info --allow-unknown-fields
+liam      2739  0.0  0.0  12752   988 pts/0    S+   14:45   0:00 grep envoy
 ```
 
 Assuming you have set up Traffic Director correctly, the Envoy instance will now be connected to Traffic Director. For instructions on setting up Traffic Director to understand your topology follow the [Setting Up Traffic Director](https://cloud.google.com/traffic-director/docs/setting-up-traffic-director) how-to guide.
