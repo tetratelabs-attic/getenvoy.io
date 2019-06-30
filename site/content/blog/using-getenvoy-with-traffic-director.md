@@ -17,7 +17,7 @@ Traffic Director is a hosted Envoy control plane offering on Google Cloud Platfo
 
 If you're deploying on VMs this may seem like a weird approach to deploying things. Why not use a package manager to distribute Envoy? The answer is that the only artefact distributed by the project is a Docker image. This is why we have to copy the binary from within the Docker image.
 
-Another factor to consider is that the default image is the Istio image not an Envoy image. In Istio, the Envoy versioning follows Istio's version not Envoys. For instance, at time of writing the current version of Istio proxy is `1.1.8`, and this uses Envoy at commit `52a04b6c55b7f6d5646c0fb235ce403394f67839`. This is not an official Envoy release version, it's somewhere between 1.10.0 and the future 1.11.0 release. Using a package manager rather than the Istio DockerHub image allows you to clearly and explicitly manage the version of the Envoy you're deploying via a package manager with Envoy versioning. 
+Another factor to consider is that the default image is the Istio image not an Envoy image. In Istio, the Envoy versioning follows Istio's version not Envoys. For instance, at time of writing the current version of Istio proxy is `1.1.8`, and this uses Envoy at commit `52a04b6c55b7f6d5646c0fb235ce403394f67839`. This is not an official Envoy release version, it's somewhere between 1.10.0 and the future 1.11.0 release. Using a package manager rather than the Istio DockerHub image allows you to clearly and explicitly manage the version of the Envoy you're deploying via a package manager with Envoy versioning.
 
 The GetEnvoy project mantains Stable and Nightly builds of Envoy for Ubuntu, Debian, CentOS and RHEL distributed via `apt` and `yum`. These builds can be used to distribute Envoys to your VMs and connect your VM based workloads to Traffic Director. 
 
@@ -35,9 +35,9 @@ sudo apt-get update && sudo apt-get install -y getenvoy-envoy
 
 1. **Get the Traffic Director helper scripts onto the VM.**
 ```sh
-$ wget https://storage.googleapis.com/traffic-director/beta/traffic-director-beta.tar.gz && \
-tar -xzvf traffic-director-beta.tar.gz && \
-cd traffic-director-beta
+$ wget https://storage.googleapis.com/traffic-director/traffic-director.tar.gz && \
+tar -xzvf traffic-director.tar.gz && \
+cd traffic-director
 ```
 
 1. **Edit the `sidecar.env` to use the correct user.**
