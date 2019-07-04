@@ -3,7 +3,7 @@ tags = []
 categories = []
 title = "Announcing the GetEnvoy Project"
 abstract = "A collection of tooling to help simplify Envoy proxy adoption."
-date = 2019-06-25T09:51:27+00:00
+date = 2019-07-16T09:00:00+00:00
 authors = ["Liam White", "Tevah Platt"]
 +++
 
