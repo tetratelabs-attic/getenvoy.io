@@ -13,6 +13,10 @@
  {{ partial "features" . }}
 {{ end }}
 
+{{ if not .Site.Params.features.hide }}
+ {{ partial "quote" . }}
+{{ end }}
+
 {{ if not .Site.Params.cta.hide }}
  {{ partial "cta" . }}
 {{ end }}
