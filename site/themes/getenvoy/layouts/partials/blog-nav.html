@@ -2,7 +2,7 @@
 {{ $activePage := .Params.title }}
 
 <h4><a {{ if and (eq .Section "blog") (eq .Page.Kind "section")  }} class="active" {{ end }} href="/blog/">Blog</a></h4>
-<ul class="blogs">
+<ul class="blog">
     {{ range $section }}
     <li {{  if eq .Params.title $activePage }} class="active" {{ end }}><a href="{{ .Permalink | relURL }}" class="">
         {{ .Params.title }}

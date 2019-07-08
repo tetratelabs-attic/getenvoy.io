@@ -774,7 +774,7 @@ nav.menu > .pop-toggle{
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#008fd1', endColorstr='#224281',GradientType=0 ); /* IE6-9 */
 }
 
-.platform-box > nav ul.blogs > li > a,
+.platform-box > nav ul.blog > li > a,
 .platform-box > nav ul.tutorials > li > a {font-size:.9rem;}
 
 .body.single {padding:3rem; max-width: 60rem}
