@@ -3,7 +3,7 @@ title = "Install Envoy on CentOS"
 platform = "CentOS"
 tags = []
 categories = []
-logo = "/images/centos-logo-light.png"
+logo = "/images/centos.png"
 +++
 
 ## Requirements ##
