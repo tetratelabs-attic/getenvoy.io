@@ -13,10 +13,13 @@
  {{ partial "features" . }}
 {{ end }}
 
+{{ if not .Site.Params.quotes.hide }}
+ {{ partial "quote" . }}
+{{ end }}
+
 {{ if not .Site.Params.cta.hide }}
  {{ partial "cta" . }}
 {{ end }}
-
 
 {{ if not .Site.Params.subscribe.hide }}
  {{ partial "subscribe" . }}
