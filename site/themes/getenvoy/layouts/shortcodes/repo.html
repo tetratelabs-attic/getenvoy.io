@@ -3,7 +3,7 @@
         <i class="material-icons  md-48 large">{{ .Get "icon"}}</i>
     {{ end }}
     {{ if .Get "title" }}
-    <h3><a href='{{ .Get "href" }}'>{{ .Get "title"}}</a></h3>
+    <h3>{{ .Get "title"}}</h3>
     {{ end }}
     {{.Inner}}
 </article>
