@@ -170,7 +170,7 @@ body.kind-home #main section > h3{
 	z-text-transform: uppercase;
 	font-size: 2rem;
 }
-body.kind-home #main .card {
+body .card {
 	display:inline-block;
 	width:20rem;
 	padding:2rem;
@@ -829,6 +829,70 @@ nav.menu > .pop-toggle{
     background: #008fd1;
     color: #fff;
 }
+
+body.kind-section.section-feedback section.body > h2{
+	font-weight: 400;
+	font-size:2rem;
+}
+body.kind-section.section-feedback section.body > p {
+	max-width:30rem;
+	margin-bottom:2rem;
+	font-size: 1.1gitrem;
+}
+.body > article.repo{
+	display: flex;
+    flex-direction: column;
+    padding: 2rem 2rem 2rem 12rem;
+	position: relative;
+	width:100%;
+	margin:0 0 2rem 0
+}
+article.repo > .material-icons {
+	font-size:8rem;
+	width:12rem;
+	text-align: center;
+	position: absolute;
+	left:0; bottom:0; top:0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+article.repo > ul,
+article.repo > ul > li{
+	display:block;
+	list-style: none;
+	padding:0;
+	margin:1rem 0 0 0;
+	border-top:1px solid #ccc;
+}
+article.repo > ul > li {
+	display:inline-block;
+	padding:1rem;
+	margin:0;
+	border:none;
+	position:relative;
+	left:-1rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
