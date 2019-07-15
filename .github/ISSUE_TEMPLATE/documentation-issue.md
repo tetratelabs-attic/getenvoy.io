@@ -1,8 +1,8 @@
 ---
 name: Documentation Issue
 about: Incorrect, confusing or missing documentation on GetEnvoy.io
-title: "[DOCS]"
-labels: ''
+title: ''
+labels: documentation
 assignees: ''
 
 ---
