@@ -3,7 +3,7 @@ title = "Run Envoy with Docker"
 platform = "Docker"
 tags = []
 categories = []
-logo = "/images/docker-logo.svg"
+logo = "/images/docker.svg"
 +++
 
 ## Requirements ##

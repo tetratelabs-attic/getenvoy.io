@@ -3,7 +3,7 @@ title = "Install Envoy on Red Hat Enterprise Linux"
 platform = "RHEL"
 tags = []
 categories = []
-logo = "/images/Logo-RedHat-A-Color-RGB.svg"
+logo = "/images/redhat.svg"
 +++
 
 ## Requirements ##

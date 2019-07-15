@@ -100,7 +100,7 @@ body #menu > nav.menu a.home::before{
 	top:0;
 	bottom:0;
 	margin:.85rem 0;
-	background:url(/images/getEnvoy-horizontal-outline-white.svg) no-repeat left;
+	background:url(/images/getenvoy-horizontal-white.svg) no-repeat left;
 	background-size: contain;
 	display:block;
 	width:100%;
@@ -108,7 +108,7 @@ body #menu > nav.menu a.home::before{
 }
 
 body #menu > nav.menu a.home::after{
-	background-image:url(/images/getEnvoy-horizontal-outline.svg);
+	background-image:url(/images/getenvoy-horizontal.svg);
 	opacity: 0;
 }
 body #menu > nav.menu a.home:focus:after,
@@ -265,7 +265,7 @@ header.major {text-align:center; margin-top:4rem;}
 	padding:33% 0 0;
 	display:block;
 	position: relative;
-	background:url(/images/getEnvoy-horizontal-outline-white.svg) no-repeat center;
+	background:url(/images/getenvoy-horizontal-white.svg) no-repeat center;
 	background-size:contain;
  }
  header.major > h2,
@@ -448,22 +448,22 @@ body .hide-me {
    background-size: 80% auto;   
  }
  .package-platform.CentOS > .title{
-   background-image:url(/images/centos-logo-light.png);
+   background-image:url(/images/centos.png);
  }
  .package-platform.Red.Hat > .title
  {
-	background-image:url(/images/Logo-RedHat-A-Color-RGB.svg);
+	background-image:url(/images/redhat.svg);
 
  }
  .package-platform.Debian > .title
  {
-	background-image:url(/images/debian-logo.png);
+	background-image:url(/images/debian.png);
 	background-size:66.7% auto;
 	background-position-y: 45%;
 
  }
  .package-platform.Ubuntu > .title{
-	background-image:url(/images/ubuntu_black-orange_hex_su.svg);
+	background-image:url(/images/ubuntu.svg);
 	background-size:90% auto;
 	top:-4%;
  }
@@ -774,7 +774,7 @@ nav.menu > .pop-toggle{
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#008fd1', endColorstr='#224281',GradientType=0 ); /* IE6-9 */
 }
 
-.platform-box > nav ul.blogs > li > a,
+.platform-box > nav ul.blog > li > a,
 .platform-box > nav ul.tutorials > li > a {font-size:.9rem;}
 
 .body.single {padding:3rem; max-width: 60rem}

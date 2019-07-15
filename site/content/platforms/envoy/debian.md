@@ -3,7 +3,7 @@ title = "Install Envoy on Debian"
 platform = "Debian"
 tags = []
 categories = []
-logo = "/images/debian-logo.png"
+logo = "/images/debian.png"
 +++
 
 ## Requirements ##
