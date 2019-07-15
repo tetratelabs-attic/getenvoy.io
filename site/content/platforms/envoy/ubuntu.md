@@ -3,7 +3,7 @@ title = "Install Envoy on Ubuntu"
 platform = "Ubuntu"
 tags = []
 categories = []
-logo = "/images/ubuntu_black-orange_hex_su.svg"
+logo = "/images/ubuntu.svg"
 +++
 
 ## Requirements ##
