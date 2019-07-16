@@ -3,7 +3,7 @@ tags = []
 categories = []
 title = "Using GetEnvoy with Google Traffic Director"
 abstract = "Learn how to leverage GetEnvoy's distribution of Envoy with Traffic Director."
-date = 2019-07-05T00:00:00+00:00
+date = 2019-07-16
 authors = ["Liam White"]
 +++
 
