@@ -24,7 +24,7 @@ The main project repository and home of the CLI source code. If you're unsure wh
     href="https://github.com/tetratelabs/getenvoy-package"
     icon="build"
 %}}
-The packaging pipeline we use to build our builds of Envoy. If you want to build Envoy yourself, you can use the scripts here.
+The packaging pipeline we use to build our Envoy releases. If you want to build Envoy yourself, you can use the scripts here.
 
 + [Repository](https://github.com/tetratelabs/getenvoy-package)
 + [Request Feature](https://github.com/tetratelabs/getenvoy-package/issues/new?assignees=&labels=enhancement&template=feature-request.md&title=)
