@@ -2574,8 +2574,9 @@ article.repo > ul > li {
 	}
 
 	code button{
+		cursor: pointer;
 		position: absolute;
-    right: 8px;
+                right: 8px;
 		top: 8px;
 		padding: 0;
 		border: none;
