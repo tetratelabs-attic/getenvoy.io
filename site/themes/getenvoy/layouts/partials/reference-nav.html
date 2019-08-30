@@ -1,0 +1,20 @@
+{{ $type := where $.Site.RegularPages "Type" "reference"}}
+{{ $url := .URL }}
+
+<h4>
+    <a href="/reference/getenvoy">COMMANDS</a>
+</h4>
+
+{{ range where $type "Params.parent" "root" }}
+{{ $parent := .Params.command }}
+<h4>
+    <a class="command {{ if eq $url .URL }}active{{ end }}" href="{{ .Permalink | relURL }}">{{ .Params.command }}</a>
+</h4>
+<ul>
+    {{ range where $type "Params.parent" $parent }}
+        <li class="{{ if eq $url .URL }}active{{ end }}">
+            <a href="{{ .Permalink | relURL }}" class="{{ .Params.platform }}">{{ lower .Title }}</a>
+    </li>
+    {{ end }}
+</ul>
+{{ end }}

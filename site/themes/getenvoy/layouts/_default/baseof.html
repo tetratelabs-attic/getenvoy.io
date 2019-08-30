@@ -6,9 +6,11 @@
 			{{ partial "menu" .}}
 		</div>
 		
-		<div id="header" class="{{ if .IsPage }} page {{ else }} section {{ end }}">
-			{{ partial "header" .}}
+		{{ if and (.IsPage) (ne .Title "") }}
+		<div id="header" class="page">
+				{{ partial "header" .}}
 		</div>
+		{{ end }}
 
 		{{ "<!-- Main -->" | safeHTML }}
 		<div id="main">

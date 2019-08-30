@@ -161,8 +161,9 @@ body.kind-home section.quote > blockquote{
 	color:#fff;
 }
 
-body.kind-section.section-platforms #main > section.platforms {padding:4rem 0 0}
-body.kind-section.section-platforms section.platforms > h3,
+body.kind-section.section-install #main > section.environments {padding:4rem 0 0}
+body.kind-section.section-install section.environments > h3,
+body.kind-section.section-docs section.environments > h3,
 body.kind-home #main section > h3{
 	font-weight: bold;
 	text-align:center;
@@ -189,7 +190,9 @@ body.kind-home #main .card > h4 {
 	margin-bottom: 2rem;
 	font-size: 1.5rem;
 }
-body.kind-section.section-platforms #header > header {display: none;}
+body.kind-section.section-install #header > header,
+body.kind-page.section-docs #header > header {display: none;}
+
 body.kind-home #header > header {
 	max-width: 100%;
 	padding: 0;
@@ -204,14 +207,14 @@ body.kind-home #header > header > .cta {
 	padding:0 0 1rem;
 	margin-top:0;
 }
-body.kind-home #header > header .platforms
+body.kind-home #header > header .environments
 {
 	background:#dce8f4;
 	background:#f4f4f4;
 	margin:0;
 	padding:2rem 0;
 }
-body.kind-home #header > header .platforms h4{
+body.kind-home #header > header .environments h4{
 	display:none;
 }
 body #header{
@@ -319,7 +322,7 @@ header.major {text-align:center; margin-top:4rem;}
 	 background:#57BDD6;
 	 color:#fff;
  }
-header .platforms .count,
+header .environments .count,
 header > .cta a,
 header > .cta > p {
 	 color:#fff;
@@ -328,7 +331,7 @@ header > .cta > p {
 	 font-weight: 200;
 	 border:none;
  }
- header .platforms .count{
+ header .environments .count{
 	 color:#666;
  }
  header > .cta strong,
@@ -346,12 +349,12 @@ header > .cta > p {
    color: pink;
    text-decoration: none;
  }
- #main > .platforms > h4,
- body.kind-home #main > .platforms > h4 {display:none;}
-#main > .platforms > ul,
-#main > .platforms > ul > li,
-body.kind-home .platforms > ul,
-body.kind-home .platforms > ul > li{
+ #main > .environments > h4,
+ body.kind-home #main > .environments > h4 {display:none;}
+#main > .environments > ul,
+#main > .environments > ul > li,
+body.kind-home .environments > ul,
+body.kind-home .environments > ul > li{
 	list-style: none;
 	margin:0; 
 	padding:0;
@@ -359,17 +362,17 @@ body.kind-home .platforms > ul > li{
 	position: static;
 	font-size: 0;
 }
-body.kind-home .platforms > ul li a{max-width: 13rem;}
+body.kind-home .environments > ul li a{max-width: 13rem;}
 
- .platforms{
+ .environments{
    text-align: center;
    font-size: 0;
  }
- .platforms > * {
+ .environments > * {
 	 font-size:1rem;
  }
- .platforms > .count {margin:0 0 1rem; font-size:1rem;}
- .platforms {}
+ .environments > .count {margin:0 0 1rem; font-size:1rem;}
+ .environments {}
 
 body .hide-me {
 	position: fixed;
@@ -379,7 +382,7 @@ body .hide-me {
 	max-height:0; max-width:0;  
 	z-index: -1;  
 }
- .package-platform{
+ .package-environment{
    display:inline-block;
    margin:1rem 1%;
    width:15%;
@@ -393,7 +396,7 @@ body .hide-me {
    background: #fff;
    border:none;
  }
- .package-platform:after {
+ .package-environment:after {
     content: '↓';
     display: block;
     position: absolute;
@@ -411,34 +414,34 @@ body .hide-me {
 	color:#008fd1;
 	font-weight: bold;
  }
- .package-platform:focus, 
- .package-platform:hover {
+ .package-environment:focus, 
+ .package-environment:hover {
 	 background:rgb(246, 253, 255);
 	 background:#ddf9ff;
 	 box-shadow: 0 2px 8px #b9ccdf, 0 0 0 4px rgba(5, 113, 167, 0.67);
 	 outline: none;
  }
- .zpackage-platform:focus:after,
- .zpackage-platform:hover:after{
+ .zpackage-environment:focus:after,
+ .zpackage-environment:hover:after{
 	 background:#4cadd6
  }
- .package-platform:active{
+ .package-environment:active{
 	background:#c0eef9;
 	box-shadow: inset 0 2px 4px #b9ccdf, 0 0 0 2px rgba(5, 113, 167, 0.5)
  }
 @media screen and (max-width: 890px){
-	.package-platform{
+	.package-environment{
 		min-width: 200px;margin:.5rem 1rem;	
 	}
 }
 
- .package-platform:before{
+ .package-environment:before{
 	padding-top:100%;
 	content: '';
 	display: block;
   }
 
- .package-platform > .title{
+ .package-environment > .title{
    position: absolute;
    margin:0;
    font-size: 0;
@@ -447,33 +450,36 @@ body .hide-me {
    background:transparent no-repeat center;
    background-size: 80% auto;   
  }
- .package-platform.CentOS > .title{
+ .package-environment.CentOS > .title{
    background-image:url(/images/centos.png);
  }
- .package-platform.Red.Hat > .title
+ .package-environment.Red.Hat > .title
  {
 	background-image:url(/images/redhat.svg);
 
  }
- .package-platform.Debian > .title
+ .package-environment.Debian > .title
  {
 	background-image:url(/images/debian.png);
 	background-size:66.7% auto;
 	background-position-y: 45%;
 
  }
- .package-platform.Ubuntu > .title{
+ .package-environment.Ubuntu > .title{
 	background-image:url(/images/ubuntu.svg);
 	background-size:90% auto;
 	top:-4%;
  }
- .package-platform.MacOS > .title{
+ .package-environment.macOS > .title{
 	background-image:url(/images/macos.svg);
 	background-size:50% auto;
 	background-position-y: 49%;
 }
-.package-platform.Docker > .title{
+.package-environment.Docker > .title{
 	background-position-y: 47%;
+}
+.package-environment.Linux > .title{
+	background-size:70% auto;
 }
 
 #main > section.color-row  {
@@ -616,11 +622,11 @@ form.micro.inline .icon::before{
 }
 
 
-.platform-box {
+.single-box {
 	display:flex;
 	align-items: stretch;
 }
-.platform-box > nav{
+.single-box > nav{
 	min-width:16rem;
 	max-width:16rem;
 	padding:3rem 0rem 3rem 1rem;
@@ -670,11 +676,11 @@ nav.menu > .pop-toggle{
 		display:none;
 	}
 
-.platform-box > .body.single::before,
- #main > .platform-box > nav {
+.single-box > .body.single::before,
+ #main > .single-box > nav {
 	 display:none !important;
  }
- #main > .platform-box > .body.single {
+ #main > .single-box > .body.single {
 	 border:none;
 	 padding:2rem 0;
  }
@@ -713,21 +719,21 @@ nav.menu > .pop-toggle{
 	color:#666;
 }
 
-.platform-box > nav {
+.single-box > nav {
 	text-transform: uppercase
 }
-.platform-box > nav ul,
-.platform-box > nav ul > li{
+.single-box > nav ul,
+.single-box > nav ul > li{
 	display:block;
 	text-decoration: none;
 	margin:0;
 	padding:0;
 	position: relative;
 }
-.platform-box > nav ul {
+.single-box > nav ul {
 	margin-bottom: 1rem;
 }
-.platform-box > nav ul > li.active:before
+.single-box > nav ul > li.active:before
 {	
     display: block;
     position: absolute;
@@ -737,29 +743,32 @@ nav.menu > .pop-toggle{
 	line-height: 1.25rem;
 	left:1px;
 }
-.platform-box > nav ul > li.active > a {
+.single-box > nav ul > li.active > a {
 	color:#09c;
 	font-weight:bold;
 }
-.platform-box nav h4 {
+.single-box nav h4 {
 	margin:.25rem 0 .5rem;
 }
-.platform-box nav h4 a{
+.single-box nav h4 a{
 	text-decoration: none;
 	border-bottom:none;
 }
-.platform-box nav h4 a.active{
-	color:#000;
+
+.single-box nav h4 a.command{
+	text-transform: lowercase;
+}
+.single-box nav h4 a.active{
 	font-weight: bold;
 }
 
-.platform-box > nav ul > li > a {padding:.5rem 1rem; display: block; border:none; color:#8bc; text-align: left; text-transform: none;}
-.platform-box > .body.single {
+.single-box > nav ul > li > a {padding:.5rem 1rem; display: block; border:none; color:#8bc; text-align: left; text-transform: none;}
+.single-box > .body.single {
 	z-border-left:6px solid #008fd1;
 	width:100%;
 	position: relative;
 }
-.platform-box > .body.single::before{
+.single-box > .body.single::before{
 	content:'';
 	width:8px;
 	position: absolute;
@@ -774,8 +783,8 @@ nav.menu > .pop-toggle{
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#008fd1', endColorstr='#224281',GradientType=0 ); /* IE6-9 */
 }
 
-.platform-box > nav ul.blog > li > a,
-.platform-box > nav ul.tutorials > li > a {font-size:.9rem;}
+.single-box > nav ul.blog > li > a,
+.single-box > nav ul.tutorials > li > a {font-size:.9rem;}
 
 .body.single {padding:3rem; max-width: 60rem}
 
@@ -873,7 +882,6 @@ article.repo > ul > li {
 	position:relative;
 	left:-1rem;
 }
-
 
 
 

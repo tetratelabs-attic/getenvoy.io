@@ -1,10 +1,6 @@
 {{ define "main" }}
-<div class="platform-box">
-    <nav>
-        {{ partial "platform-nav.html" . }}
-        {{ partial "tutorial-nav.html" . }}
-        {{ partial "blog-nav.html" . }}
-    </nav>
+<div class="single-box">
+    {{ partial "default-nav.html" . }}
     <section class="body single list">
     {{ .Content }}
     {{ $paginator := .Paginate .Data.Pages }}

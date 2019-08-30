@@ -1,0 +1,15 @@
+{{ $type := where $.Site.Pages "Type" "install"}}
+{{ $url := .URL }}
+
+{{ range where $type "Kind" "section" }}
+<h4>
+    <a href="{{ .Permalink | relURL }}">{{ .Title }}</a>
+</h4>
+<ul>
+    {{ range .Pages }}
+    <li class="{{ if eq $url .URL }}active{{ end }}">
+        <a href="{{ .Permalink | relURL }}" class="{{ .Params.platform }}">{{ .Params.environment }}</a>
+    </li>
+    {{ end }}
+</ul>
+{{ end }}
