@@ -1,5 +1,6 @@
 +++
-title = "Getting Started with Envoy as a Basic Front Proxy"
+title = "Using Envoy as a Basic Front Proxy"
+type = "tutorial"
 tags = []
 categories = []
 orderweight = 0

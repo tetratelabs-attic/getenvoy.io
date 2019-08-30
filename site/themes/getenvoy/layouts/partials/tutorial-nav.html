@@ -1,10 +1,16 @@
-{{ $section := where $.Site.RegularPages "Section" "tutorials"}}
-{{ $activePage := .Params.title }}
+{{ $section := where $.Site.RegularPages "Type" "tutorial"}}
+{{ $url := .URL }}
 
-<h4><a {{ if and (eq .Section "tutorials") (eq .Page.Kind "section")  }} class="active" {{ end }} href="/tutorials/">Tutorials</a></h4>
+{{ $rel := (.URL | relURL) }}
+{{ $tutorialRel := ("/tutorials/" | relURL) }}
+<!-- don't ask... -->
+
+<h4>
+    <a class="{{ if eq $rel $tutorialRel }}active{{ end }}" href="/tutorials/">Tutorials</a>
+</h4>
 <ul class="tutorials">
     {{ range $section }}
-    <li {{  if eq .Params.title $activePage }} class="active" {{ end }}><a href="{{ .Permalink | relURL }}" class="{{ .Params.tutorials }}">
+    <li class="{{ if eq $url .URL }}active{{ end }}"><a href="{{ .Permalink | relURL }}" class="{{ .Params.tutorials }}">
         {{ .Params.title }}
     </a></li>
     {{ end }}

@@ -1,0 +1,17 @@
+{{ $parent := $.Site.GetPage "/install"}}
+{{ $url := .URL }}
+
+
+<h4>
+    <a class="{{ if eq $url $parent.URL }}active{{ end }}"href="{{ $parent.Permalink | relURL }}">{{ $parent.Title }}</a>
+</h4>
+
+<ul>
+    {{ range $parent.Sections }}
+    <li class="{{ if eq $url .URL }}active{{ end }}">
+        <a href="{{ .Permalink | relURL }}">{{ .Title }}</a>
+    </li>
+    {{ end }}
+</ul>
+
+

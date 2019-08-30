@@ -1,14 +1,15 @@
 +++
-title = "Install Envoy on Red Hat Enterprise Linux"
-platform = "RHEL"
+title = "Install Envoy on CentOS"
+environment = "CentOS"
+type = "install"
 tags = []
 categories = []
-logo = "/images/redhat.svg"
+logo = "/images/centos.png"
 +++
 
 ## Requirements ##
 
-Envoy is supported on Red Hat Enterprise Linux 7 and above.
+Envoy is supported on CentOS 7 and above.
 
 ## Installation ##
 
@@ -19,7 +20,7 @@ $ sudo yum install -y yum-utils
 
 1. **Add yum repository config.**
 ```sh
-$ sudo yum-config-manager --add-repo https://getenvoy.io/linux/rhel/tetrate-getenvoy.repo
+$ sudo yum-config-manager --add-repo https://getenvoy.io/linux/centos/tetrate-getenvoy.repo
 ```
 Nightly packages can be enabled using the `--enable` flag. To disable again, use the `--disable` flag.
 ```sh

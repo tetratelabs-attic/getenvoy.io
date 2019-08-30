@@ -1,0 +1,21 @@
+
+<section class=" environments">
+
+    <h3>Choose your environment</h3>
+    
+    <ul>    
+        {{ range .Pages }}
+            {{ if ne .Params.Environment "" }}
+                <li>
+                    <a href="{{ .Permalink | relURL }}" class="package-environment {{ .Params.environment }}">
+                        <h3 style="background-image:url({{ .Params.logo | safeCSS   }})" class="title">{{ .Title }}</h3>
+                    </a>
+                </li>
+            {{ end }}
+        {{ end }}
+    </ul>
+    {{ if eq .Section "envoy" }}
+    <p>More coming soon</p>
+    {{ end }}
+
+</section>

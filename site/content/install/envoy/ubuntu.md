@@ -1,6 +1,7 @@
 +++
 title = "Install Envoy on Ubuntu"
-platform = "Ubuntu"
+environment = "Ubuntu"
+type = "install"
 tags = []
 categories = []
 logo = "/images/ubuntu.svg"
