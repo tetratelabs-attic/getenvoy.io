@@ -2572,10 +2572,25 @@ article.repo > ul > li {
 		font-weight: 400;
 		text-shadow: 0 0 1px rgba(0,0,0,.25);
 	}
+
+	code button{
+		position: absolute;
+    right: 8px;
+		top: 8px;
+		padding: 0;
+		border: none;
+		background: none;
+	}
+
+	code button img {
+		width: 16px;
+		height: 16px;
+	}
+
 	code .clipboard{
 		position: absolute;
-		bottom:0;
-		right:0;
+		top: 8px;
+		right:8px;
 		background: #fff;
 		border:1px solid #ddd;
 		padding:.5rem 1rem;
@@ -2584,7 +2599,7 @@ article.repo > ul > li {
 		font-weight: bold;
 		opacity: .85;
 		color:#589;
-		transition:all 2.5s;
+		transition:all 3.5s;
 		z-index: 1;
 	}
 	code .clipboard.fade{
