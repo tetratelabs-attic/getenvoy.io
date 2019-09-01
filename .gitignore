@@ -1,6 +1,5 @@
 node_modules/
 dist/*
-!dist/_redirects
 site/data/webpack.json
 
 Dockerfile
