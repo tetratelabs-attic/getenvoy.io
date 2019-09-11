@@ -1,5 +1,5 @@
 #! /bin/bash
 
-# Ensure CLI docs match latest GetEnvoy docs
+# Generate getenvoy docs
 ./ci/install
 ./bin/getenvoy doc -o ./site/content/docs/cli -l /docs/cli/
