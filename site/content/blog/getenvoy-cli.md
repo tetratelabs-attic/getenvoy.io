@@ -8,10 +8,8 @@ Today we are excited to introduce the GetEnvoy CLI, or just `getenvoy` for short
 Getting Envoy running on most machines is as easy as:
 
 ```sh
-$ sudo apt-get install -y apt-transport-https ca-certificates curl gnupg2 software-properties-common && \
-curl -sL 'https://getenvoy.io/gpg' | sudo apt-key add - && \
-sudo add-apt-repository "deb [arch=amd64] https://dl.bintray.com/tetrate/getenvoy-deb 
-$getenvoy run standard:1.11.1 -- --config-path ./bootstrap.yaml
+$ curl -L https://getenvoy.io/install | bash -s -- -b /usr/local/bin
+$ getenvoy run standard:1.11.1 -- --config-path ./bootstrap.yaml
 ```
 
 GetEnvoy offers a standard upstream Envoy distributed via standard package managers. You can learn more about how to Get Started with GetEnvoy and the `getenvoy` CLI [here](https://www.getenvoy.io/platforms/). In addition to adding an FIPs compliant Envoy, we’re currently expanding GetEnvoy to include:
