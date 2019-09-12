@@ -1,6 +1,6 @@
 +++
 title = "Introducing the `getenvoy` CLI"
-abstract = "A CLI to simplify Envoy installation, management and upgrades."
+abstract = "A CLI to simplify Envoy installation, management, debugging and upgrades."
 date = 2019-09-10
 authors = ["Liam White", "Zack Butcher", "Thea Aldrich"]
 tags = []
@@ -24,6 +24,6 @@ In addition to adding an FIPs compliant Envoy, we’re currently expanding GetEn
 - Automatically Configure traffic interception on a host
 - Istio sidecar support
 - Support for deploying Envoys managed by App Mesh and Traffic Director
-- Readiness and liveness endpoints
+- Readiness and liveness endpoints 
 
 Get Started with GetEnvoy and the `getenvoy` CLI [here](https://www.getenvoy.io/install/). To learn more about Envoy or to contribute to the Envoy Proxy Project please visit [https://www.envoyproxy.io/](https://www.envoyproxy.io/).
