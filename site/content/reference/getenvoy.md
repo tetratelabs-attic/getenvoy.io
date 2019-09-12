@@ -21,7 +21,7 @@ bootstrap generation and automated collection of access logs, Envoy state and ma
 
 ### SEE ALSO
 
-* [getenvoy fetch](/docs/reference/getenvoy_fetch)	 - Retrieve Envoy binaries from GetEnvoy.
-* [getenvoy list](/docs/reference/getenvoy_list)	 - List available Envoys provided by GetEnvoy.
-* [getenvoy run](/docs/reference/getenvoy_run)	 - Runs an instance of Envoy.
+* [getenvoy fetch](/reference/getenvoy_fetch)	 - Retrieve Envoy binaries from GetEnvoy.
+* [getenvoy list](/reference/getenvoy_list)	 - List available Envoys provided by GetEnvoy.
+* [getenvoy run](/reference/getenvoy_run)	 - Runs an instance of Envoy.
 

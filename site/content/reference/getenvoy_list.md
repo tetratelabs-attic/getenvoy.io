@@ -25,5 +25,5 @@ getenvoy list [flags]
 
 ### SEE ALSO
 
-* [getenvoy](/docs/reference/getenvoy)	 - Fetch, deploy and debug Envoy
+* [getenvoy](/reference/getenvoy)	 - Fetch, deploy and debug Envoy
 

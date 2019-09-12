@@ -36,5 +36,5 @@ getenvoy fetch standard:1.11.1/linux-glibc
 
 ### SEE ALSO
 
-* [getenvoy](/docs/reference/getenvoy)	 - Fetch, deploy and debug Envoy
+* [getenvoy](/reference/getenvoy)	 - Fetch, deploy and debug Envoy
 

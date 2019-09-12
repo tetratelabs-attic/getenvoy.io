@@ -47,5 +47,5 @@ getenvoy run standard:1.11.1 -- --help
 
 ### SEE ALSO
 
-* [getenvoy](/docs/reference/getenvoy)	 - Fetch, deploy and debug Envoy
+* [getenvoy](/reference/getenvoy)	 - Fetch, deploy and debug Envoy
 
