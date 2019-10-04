@@ -633,16 +633,20 @@ form.micro.inline .icon::before{
 }
 
 .toc-navbar ul li {
-	margin-top: 8px;
 	padding-left: 0;
 }
 
-.toc-container {
-	margin-left: 32px;
-	padding: 8px 0 16px 16px;
-	border-left: 1px solid #454545;
+.toc-navbar ul li a{
+	margin-top: 8px;
+	padding-left: 0;
+	font-size: .9rem;
 }
 
+.toc-container {
+	margin: 0 24px;
+	padding: 8px 0 16px 16px;
+	border-left: 1px solid #cacaca;
+}
 
 .single-box {
 	display:flex;
@@ -742,7 +746,8 @@ nav.menu > .pop-toggle{
 }
 
 .single-box > nav {
-	text-transform: uppercase
+	text-transform: uppercase;
+	background: #f2f6fc;
 }
 .single-box > nav ul,
 .single-box > nav ul > li{
@@ -907,11 +912,6 @@ article.repo > ul > li {
 	position:relative;
 	left:-1rem;
 }
-
-.side-navbar {
-	background: #f2f6fc;
-}
-
 
 
 
