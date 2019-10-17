@@ -1,27 +1,32 @@
 {{ define "main" }}
     
-    <div class="single-box">
-		{{ partial "default-nav.html" . }}
-        <section class="body single">
-			<h1>{{ .Title }}</h1>
-			{{ .Content }}
+	<div class="single-box">
+	{{ partial "default-nav.html" . }}
+			<section class="body single">
+				<h1>{{ .Title }}</h1>
+				{{ .Content }}
 
-			{{ if eq .Section "platforms" }}
-			{{ $steps:= where $.Site.RegularPages "Section" "tutorials"}}
-			<section class="next-steps">
-				<h3>Next steps</h3>
-				{{ range sort $steps ".Params.orderweight"}}
-				<a href="{{ .Permalink | relURL }}" class="next-step">
-					<h4>{{ .Title }}</h4>
-					<p>{{ .Params.abstract }}</p>
-				</a>
+				{{ if eq .Section "platforms" }}
+				{{ $steps:= where $.Site.RegularPages "Section" "tutorials"}}
+				<section class="next-steps">
+					<h3>Next steps</h3>
+					{{ range sort $steps ".Params.orderweight"}}
+					<a href="{{ .Permalink | relURL }}" class="next-step">
+						<h4>{{ .Title }}</h4>
+						<p>{{ .Params.abstract }}</p>
+					</a>
+					{{ end }}
+		
+				</section>
 				{{ end }}
-	
 			</section>
-			{{ end }}
-
-        </section>
-    </div>
+			<aside class="toc-navbar">
+				<div class="toc-container">
+					<h4>On this page</h4>
+					{{ .TableOfContents }}
+				</div>
+			</aside>
+	</div>
     
 {{ end }}
 

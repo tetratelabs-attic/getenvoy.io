@@ -1,6 +1,7 @@
 {{ define "main" }}
     <div class="single-box">
         <nav>
+            {{ partial "getting-started-nav.html" . }}
             {{ partial "reference-nav.html" . }}
             {{ partial "tutorial-nav.html" . }}
             {{ partial "blog-nav.html" . }}
@@ -8,6 +9,12 @@
         <section class="body single">
 			{{ .Content }}
         </section>
+        <aside class="toc-navbar">
+            <div class="toc-container">
+                <h4>On this page</h4>
+                {{ .TableOfContents }}
+            </div>
+        </aside>
     </div>   
 {{ end }}
 

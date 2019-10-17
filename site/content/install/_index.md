@@ -1,6 +1,7 @@
 +++
-title = "CLI vs Binary"
-type = "faq"
+title = "Installation"
+type = "install"
+layout = "install"
 +++
 
 ## Why Use CLI?

@@ -648,6 +648,11 @@ form.micro.inline .icon::before{
 	border-left: 1px solid #cacaca;
 }
 
+.toc-container h4 {
+	font-size: 0.9em;
+	margin-bottom: 8px;
+}
+
 .single-box {
 	display:flex;
 	align-items: stretch;
@@ -792,7 +797,8 @@ nav.menu > .pop-toggle{
 .single-box > nav ul > li > a {padding:.5rem 1rem; display: block; border:none; color:#8bc; text-align: left; text-transform: none;}
 .single-box > .body.single {
 	z-border-left:6px solid #008fd1;
-	width:100%;
+	/*width:100%;*/
+	width: 65%;
 	position: relative;
 }
 
