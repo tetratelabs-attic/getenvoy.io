@@ -6,11 +6,20 @@ layout = "install"
 
 ## Why Use CLI?
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+The `getenvoy` CLI simplifies installation, management and upgrades for each Envoy instance by codifying ongoing learnings and best practices for deploying and debugging Envoy. This allows you to benefit from the experiences of the wider Envoy community and get the most out of your investment in open source.
+
+It simplifies installation, management and upgrades for each Envoy instance and gives gives a streamlined experience by providing a single binary to download, run, and upgrade Envoy. And it reduces decision fatigue by applying sensible defaults that adhere to existing best practices, making it dramatically easier to distribute, deploy, and debug Envoy across multiple environments.  
+
+Finally, it is the distribution mechanism for upcoming Envoy builds such as the Istio proxy and FIPs compliant flavors.
 
 ## CLI Installation
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+Installing and running `getenvoy` on Linux and macOS is as easy as:
+
+```sh
+$ curl -L https://getenvoy.io/cli | bash -s -- -b /usr/local/bin
+$ getenvoy run standard:1.11.1
+```
 
 The CLI is also available via [Homebrew]({{< relref "cli/homebrew">}}) and [Docker]({{< relref "cli/docker">}}).
 
