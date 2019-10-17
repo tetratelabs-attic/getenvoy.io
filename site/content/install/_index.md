@@ -12,16 +12,8 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
-## Other Ways to Install GetEnvoy CLI
+The CLI is also available via [Homebrew]({{< relref "cli/homebrew">}}) and [Docker]({{< relref "cli/docker">}}).
 
-- [Homebrew]({{< relref "cli/homebrew">}})
-- [Docker]({{< relref "cli/docker">}})
+## Standalone Envoy Binary
 
-## Standard GetEnvoy Binary
-
-- [CentOS]({{< relref "envoy/centos">}})
-- [Debian]({{< relref "envoy/debian">}})
-- [RHEL]({{< relref "envoy/rhel">}})
-- [Ubuntu]({{< relref "envoy/ubuntu">}})
-- [macOS]({{< relref "envoy/macos">}})
-- [Docker]({{< relref "envoy/docker">}})
+Instructions to install a standalone Envoy binary via your favorite package managers can be found [here]({{< relref "envoy">}}).
