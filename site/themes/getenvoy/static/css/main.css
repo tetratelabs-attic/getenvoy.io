@@ -634,6 +634,7 @@ form.micro.inline .icon::before{
 
 .toc-navbar ul li {
 	padding-left: 0;
+	margin-bottom: 8px;
 }
 
 .toc-navbar ul li a{
