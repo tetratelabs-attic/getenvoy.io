@@ -3,6 +3,7 @@
     <div class="single-box">
 		{{ partial "default-nav.html" . }}
         <section class="body single">
+			<h1>{{ .Title }}</h1>
 			{{ .Content }}
 
 			{{ if eq .Section "platforms" }}

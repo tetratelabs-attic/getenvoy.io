@@ -840,8 +840,12 @@ nav.menu > .pop-toggle{
 .body.single > ol > li:last-of-type{
 	box-shadow: none;
 }
+
 .body.single h2:not(:first-child) {
 	margin-top: 1.5rem;
+}
+.body.single h2:first-of-type {
+	margin-top: 0.5em;
 }
 .body.single h2,
 .body.single > ol > li strong {
@@ -851,7 +855,7 @@ nav.menu > .pop-toggle{
 	text-shadow: none;
 	color:#666;
 	margin-bottom: 0.5rem;
-	z-text-transform: uppercase;
+	/*text-transform: uppercase;*/
 }
 .body.single > ol > li:before {
     position: absolute;

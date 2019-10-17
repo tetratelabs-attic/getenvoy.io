@@ -2,6 +2,7 @@
 <div class="single-box">
     {{ partial "default-nav.html" . }}
     <section class="body single list">
+    <h1>{{ .Title }}</h1>
     {{ .Content }}
     {{ $paginator := .Paginate .Data.Pages }}
     {{ range $paginator.Pages }}
