@@ -250,7 +250,7 @@ body h3 {
 	font-size: 1.67em;
 	z-text-transform: uppercase;
 }
-header.major {text-align:center; margin-top:4rem;}
+header.major {text-align:center; margin-top:2rem; padding-top:2rem;}
  h1.logo {
 	width:33%;
 	min-width: 20rem;
@@ -308,7 +308,7 @@ header.major {text-align:center; margin-top:4rem;}
 	border-radius: 4px;
 	transition:.5s
  }
- #main .cta > a {margin-bottom: 3rem;}
+ /*#main .cta > a {margin-bottom: 3rem;}*/
  header > .cta > p a {display:inline-block; border-bottom:1px solid transparent; transition:.5s}
  header > .cta > p a:hover{
 	border-bottom:1px dotted;
@@ -386,18 +386,18 @@ body .hide-me {
  .package-environment{
    display:inline-block;
    margin:1rem 1%;
-   width:15%;
+   /*width:15%;*/
    font-size:1rem;
    box-sizing: border-box;
    box-shadow: 0 2px 4px #d5dde5, 0 0 0 4px #008fd1;
-   border-radius: 3px;
+   border-radius: 36px;
    position: relative;
    min-width: 140px;
    transition: .5s all;
    background: #fff;
    border:none;
  }
- .package-environment:after {
+ /*.package-environment:after {
     content: '↓';
     display: block;
     position: absolute;
@@ -410,11 +410,11 @@ body .hide-me {
     color: #fff;
     text-align: center;
     line-height: 1.5rem;
-	font-size: 1.75rem;
-	transition: .5s all;
-	color:#008fd1;
-	font-weight: bold;
- }
+		font-size: 1.75rem;
+		transition: .5s all;
+		color:#008fd1;
+		font-weight: bold;
+ }*/
  .package-environment:focus, 
  .package-environment:hover {
 	 background:rgb(246, 253, 255);
@@ -490,6 +490,98 @@ body .hide-me {
 	align-items: center;
 	flex-direction: column;
 	margin:0;
+}
+
+.header .about, .header .cta {
+	background: #224281;
+}
+.header .cta {
+	padding-bottom: 2rem;
+}
+.cta.buttons {
+	text-align: center;
+	padding-top: 2rem;
+}
+#quickstart-container {
+	position: relative;
+}
+#quickstart {
+	display: flex;
+	align-items: flex-start;
+	flex-wrap: nowrap;
+}
+#quickstart h2 {
+	font-weight: bold;
+}
+#quickstart-cli, #quickstart-binary {
+	width: 50%;
+	padding: 64px 48px;
+}
+#quickstart-cli {
+	background: #C2D1EF
+}
+#quickstart-cli pre, #quickstart-binary pre {
+	margin-top: 0;
+	margin-bottom: 0;
+	height: 120px;
+}
+#quickstart-binary {
+	background: #EBF0FA
+}
+#quickstart-binary ul li {
+	display: inline;
+}
+#binary-container {
+	display: flex;
+	flex-direction: row;
+	align-items: stretch;
+	flex-wrap: nowrap;
+	padding-bottom: 32px;
+}
+.binary-link {
+	flex: 1;
+}
+.binary-link .package-environment {
+	margin:1rem 8px 1rem 0;
+	font-size:1rem;
+	box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+	border-radius: 36px;
+	position: relative;
+	min-width: 72px;
+	transition: .5s all;
+	background: #fff;
+	border:none;
+}
+.binary-link .package-environment:before{
+	padding-top:100%;
+	content: '';
+	display: block;
+}
+@media screen and (max-width: 1200px){
+	.binary-link .package-environment{
+		min-width: unset;
+		width: 72px;
+		margin-right: 4px;
+	}
+}
+@media screen and (max-width: 1058px) {
+	#binary-container {
+		padding-top: 36px;
+	}
+}
+#or-button {
+	padding: 16px;
+	background:#224281;
+	color: #fff;
+	text-align: center;
+	width: 56px;
+	height: 56px;
+	font-size: 20px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	border-radius: 28px;
 }
 
 .color-row > *{
@@ -1112,6 +1204,26 @@ article.repo > ul > li {
 			width: 960px;
 		}
 
+		header.header, #quickstart {
+			margin: 0 -64px;
+		}
+
+		#quickstart {
+			display: block;
+		}
+
+		#quickstart-cli, #quickstart-binary {
+			width: 100%;
+		}
+
+		#binary-container {
+			padding-top: 0;
+		}
+
+		.binary-link {
+			text-align: center;
+		}
+
 	}
 
 	@media screen and (max-width: 736px) {
@@ -1138,6 +1250,26 @@ article.repo > ul > li {
 			width: 960px;
 		}
 
+		header.header, #quickstart {
+			margin: 0 -24px;
+		}
+
+	}
+
+	@media screen and (max-width: 500px) {
+		#main {
+			padding: 2.25em 0;
+		}
+		#binary-container {
+			flex-wrap: wrap;
+			padding-bottom: 0px;
+		}
+		.binary-link .package-environment {
+			min-width: 72px;
+		}
+		#or-button {
+			top: 44%;
+		}
 	}
 
 	@media screen and (max-width: 480px) {
