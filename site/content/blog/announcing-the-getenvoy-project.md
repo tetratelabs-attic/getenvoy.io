@@ -5,6 +5,7 @@ title = "Announcing the GetEnvoy Project"
 abstract = "A collection of tooling to help simplify Envoy proxy adoption."
 date = 2019-07-16
 authors = ["Liam White", "Tevah Platt"]
+toc = true
 +++
 
 ## Why Envoy Proxy ##

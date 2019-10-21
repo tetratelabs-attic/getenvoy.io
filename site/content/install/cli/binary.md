@@ -5,6 +5,7 @@ type = "install"
 tags = []
 categories = []
 logo = "/images/linux.png"
+toc = true
 +++
 
 ## Requirements ##

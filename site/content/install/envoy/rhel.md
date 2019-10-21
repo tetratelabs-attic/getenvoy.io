@@ -5,6 +5,7 @@ type = "install"
 tags = []
 categories = []
 logo = "/images/redhat.svg"
+toc = true
 +++
 
 ## Requirements ##

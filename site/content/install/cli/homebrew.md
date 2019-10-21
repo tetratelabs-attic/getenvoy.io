@@ -5,6 +5,7 @@ type = "install"
 tags = []
 categories = []
 logo = "/images/macos.svg"
+toc = true
 +++
 
 ## Requirements ##

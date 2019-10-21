@@ -2,6 +2,7 @@
 title = "Installation"
 type = "install"
 layout = "install"
+toc = true
 +++
 
 ## Why Use CLI?

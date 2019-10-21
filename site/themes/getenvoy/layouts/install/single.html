@@ -5,10 +5,12 @@
             <!-- {{ partial "tutorial-nav.html" . }}
             {{ partial "blog-nav.html" . }} -->
         </nav>
+        {{ if .Params.toc }}
         <section class="body single">
             <h1>{{ .Title }}</h1>
 			{{ .Content }}
         </section>
+        {{ end }}
     </div>   
 {{ end }}
 

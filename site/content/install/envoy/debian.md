@@ -5,6 +5,7 @@ type = "install"
 tags = []
 categories = []
 logo = "/images/debian.png"
+toc = true
 +++
 
 ## Requirements ##

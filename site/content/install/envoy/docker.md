@@ -5,6 +5,7 @@ type = "install"
 tags = []
 categories = []
 logo = "/images/docker.svg"
+toc = true
 +++
 
 ## Requirements ##

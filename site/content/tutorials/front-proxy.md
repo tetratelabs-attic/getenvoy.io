@@ -5,6 +5,7 @@ tags = []
 categories = []
 orderweight = 0
 abstract = "In this tutorial we use Envoy as a basic front proxy to Google and Bing."
+toc = true
 +++
 
 ## Requirements ##

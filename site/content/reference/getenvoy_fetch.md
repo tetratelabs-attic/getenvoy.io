@@ -3,6 +3,7 @@ title = "getenvoy fetch"
 type = "reference"
 parent = "getenvoy"
 command = "fetch"
+toc = true
 +++
 ## getenvoy fetch
 

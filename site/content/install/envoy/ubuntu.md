@@ -5,6 +5,7 @@ type = "install"
 tags = []
 categories = []
 logo = "/images/ubuntu.svg"
+toc = true
 +++
 
 ## Requirements ##

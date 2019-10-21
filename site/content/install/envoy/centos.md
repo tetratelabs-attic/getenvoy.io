@@ -5,6 +5,7 @@ type = "install"
 tags = []
 categories = []
 logo = "/images/centos.png"
+toc = true
 +++
 
 ## Requirements ##

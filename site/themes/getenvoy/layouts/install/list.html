@@ -10,12 +10,14 @@
     <h1>{{ .Title }}</h1>
     {{ .Content }}
   </section>
+  {{ if .Params.toc }}
   <aside class="toc-navbar">
     <div class="toc-container">
       <h4>On this page</h4>
       {{ .TableOfContents }}
     </div>
   </aside>
+  {{ end }}
 </div>
 
 {{ end }}
