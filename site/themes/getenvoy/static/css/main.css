@@ -375,6 +375,11 @@ body.kind-home .environments > ul li a{max-width: 13rem;}
  .environments > .count {margin:0 0 1rem; font-size:1rem;}
  .environments {}
 
+.environments ul li {
+	display: inline;
+	list-style: none;
+}
+
 body .hide-me {
 	position: fixed;
 	left: -99rem;	top: -99rem;
