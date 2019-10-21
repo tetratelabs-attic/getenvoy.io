@@ -735,6 +735,11 @@ form.micro.inline .icon::before{
 	font-size: .9rem;
 }
 
+/* this is hacky, because Hugo's ToC generate additional ul > li for heading with different level */
+.toc-navbar ul li ul li ul {
+	margin-top: 8px;
+}
+
 .toc-container {
 	margin: 0 24px;
 	padding: 8px 0 16px 16px;
