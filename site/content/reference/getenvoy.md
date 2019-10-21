@@ -3,7 +3,6 @@ title = "getenvoy"
 type = "reference"
 parent = "root"
 command = "getenvoy"
-toc = true
 +++
 ## getenvoy
 
