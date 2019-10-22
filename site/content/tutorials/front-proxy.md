@@ -10,7 +10,7 @@ toc = true
 
 ## Requirements ##
 
-An installation of Envoy. You can find instructions on how to install Envoy [here](https://www.getenvoy.io/install).
+An installation of GetEnvoy. You can find instructions on how to install GetEnvoy [here](/install/cli/binary).
 
 ## Instructions ##
 
@@ -30,15 +30,15 @@ The YAML contains comments explaining the behavior of the relevant sections.
 
 1. **Run Envoy using the static configuration.**
 ```sh
-$ envoy --config-path ./basic-front-proxy.yaml
+$ getenvoy run standard:1.11.1 -- --config-path ./basic-front-proxy.yaml
 ```
 
 1. **Open a new shell and cURL Envoy with `google.com` as the host header.**
 ```sh
-$ curl -s -o /dev/null -vvv -H 'Host: google.com' localhost:15000/
+$ curl -s -o /dev/null -vvv -H 'Host: google.com' localhost:15001/
 ```
 ```sh-output
-Connected to localhost (127.0.0.1) port 15000 (#0)
+Connected to localhost (127.0.0.1) port 15001 (#0)
 > GET / HTTP/1.1
 > Host: google.com
 > User-Agent: curl/7.54.0
@@ -52,11 +52,11 @@ In this abbreviated response you can see that we made it to google.com as it is 
 
 1. **cURL Envoy with `bing.com` as the host header.**
 ```sh
-$ curl -s -o /dev/null -vvv -H 'Host: bing.com' localhost:15000/
+$ curl -s -o /dev/null -vvv -H 'Host: bing.com' localhost:15001/
 ```
 ```sh-output
 ...
-Connected to localhost (127.0.0.1) port 15000 (#0)
+Connected to localhost (127.0.0.1) port 15001 (#0)
 > GET / HTTP/1.1
 > Host: bing.com
 > User-Agent: curl/7.54.0
