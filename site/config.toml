@@ -57,7 +57,7 @@ pluralizelisttitles = false
 
 		[[ params.about.cta ]]
 			title = "Get Started"
-			href = "/platforms/"
+			href = "/install/"
 
     [params.platforms]
         hide  = false

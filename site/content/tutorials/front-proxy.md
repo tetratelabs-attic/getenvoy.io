@@ -10,7 +10,7 @@ toc = true
 
 ## Requirements ##
 
-An installation of Envoy. You can find instructions on how to install Envoy [here](https://www.getenvoy.io/platforms/).
+An installation of Envoy. You can find instructions on how to install Envoy [here](https://www.getenvoy.io/install).
 
 ## Instructions ##
 
