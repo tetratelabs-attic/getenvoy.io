@@ -19,7 +19,7 @@ Installing and running `getenvoy` on Linux and macOS is as easy as:
 
 ```sh
 $ curl -L https://getenvoy.io/cli | bash -s -- -b /usr/local/bin
-$ getenvoy run standard:1.11.1
+$ getenvoy run standard:1.11.2 -- --version
 ```
 
 The CLI is also available via [Homebrew]({{< relref "cli/homebrew">}}) and [Docker]({{< relref "cli/docker">}}).
