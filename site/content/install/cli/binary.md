@@ -18,7 +18,7 @@ GetEnvoy is supported on macOS and Linux (Ubuntu, Debian, RHEL and CentOS).
 ```sh
 $ curl -L https://getenvoy.io/install | bash -s -- -b /usr/local/bin
 ```
-{{% notice warning %}}
+{{% notice info %}}
 If you install to a different location, ensure the binary is in your `$PATH` environment variable.
 {{% /notice %}}
 

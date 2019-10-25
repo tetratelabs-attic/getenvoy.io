@@ -26,4 +26,4 @@ In addition to adding an FIPs compliant Envoy, we’re currently expanding GetEn
 - Support for deploying Envoys managed by App Mesh and Traffic Director
 - Readiness and liveness endpoints 
 
-Get Started with the `getenvoy` CLI [here](/install/). To learn more about Envoy or to contribute to the Envoy Proxy Project please visit [https://www.envoyproxy.io/](https://www.envoyproxy.io/).
+Get Started with the `getenvoy` CLI [here](/install/). To learn more about Envoy or to contribute to the Envoy Proxy Project please visit [envoyproxy.io](https://www.envoyproxy.io/).

@@ -1,5 +1,5 @@
 +++
-title = "Standard Binary"
+title = "Standard Envoy Binary"
 type = "envoy"
 +++
 To get started, pick the environment you would like to use Envoy on.

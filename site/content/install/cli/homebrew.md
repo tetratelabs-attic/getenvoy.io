@@ -13,7 +13,7 @@ toc = true
 To install GetEnvoy via Homebrew, you need to have installed [Homebrew](https://brew.sh/).
 
 {{% notice tip %}}
-To install the binary without `homebrew` follow [these](/docs/install/cli/linux) instructions.
+To install the binary without `homebrew` follow [these](/install/cli/binary) instructions.
 {{% /notice %}}
 
 ## Installation ##
