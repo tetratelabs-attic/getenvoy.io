@@ -10,7 +10,7 @@ toc = true
 
 ## Requirements ##
 
-GetEnvoy is supported on macOS and Linux.
+GetEnvoy is supported on macOS and Linux (Ubuntu, Debian, RHEL and CentOS).
 
 ## Installation ##
 
