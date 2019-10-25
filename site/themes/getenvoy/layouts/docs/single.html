@@ -1,0 +1,11 @@
+{{ define "main" }}
+    <div class="single-box">
+        <nav>
+            {{ partial "reference-nav.html" . }}
+        </nav>
+        <section class="body single">
+			{{ .Content }}
+        </section>
+    </div>   
+{{ end }}
+

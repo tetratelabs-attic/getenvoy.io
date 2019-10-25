@@ -1,9 +1,11 @@
 +++
 title = "Run Envoy with Docker"
-platform = "Docker"
+environment = "Docker"
+type = "install"
 tags = []
 categories = []
 logo = "/images/docker.svg"
+toc = true
 +++
 
 ## Requirements ##
@@ -22,4 +24,6 @@ $ docker pull getenvoy/envoy:stable
 $ docker run getenvoy/envoy:stable --version
 ```
 
+{{% notice tip %}}
 To use the `nightly` build instead, replace the word `stable` with `nightly`
+{{% /notice %}}

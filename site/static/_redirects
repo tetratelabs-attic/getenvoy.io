@@ -1,1 +1,3 @@
-/install https://raw.githubusercontent.com/tetratelabs/getenvoy/master/godownloader.sh
+/cli https://raw.githubusercontent.com/tetratelabs/getenvoy/master/godownloader.sh
+
+/docs/reference /docs/reference/getenvoy

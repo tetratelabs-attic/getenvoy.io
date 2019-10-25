@@ -1,9 +1,11 @@
 +++
-title = "Install Envoy on MacOS"
-platform = "MacOS"
+title = "Install Envoy on macOS"
+environment = "macOS"
+type = "install"
 tags = []
 categories = []
 logo = "/images/macos.svg"
+toc = true
 +++
 
 ## Requirements ##

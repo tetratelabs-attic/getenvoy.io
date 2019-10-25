@@ -1,6 +1,9 @@
 
 {{ define "main" }}
 
+{{ partial "header" .}}
+{{ partial "quickstart" .}}
+
 {{ if not .Site.Params.releases.hide }}
  {{ partial "releases" . }}
 {{ end }}

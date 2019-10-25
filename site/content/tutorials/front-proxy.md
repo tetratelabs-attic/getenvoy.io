@@ -1,14 +1,16 @@
 +++
-title = "Getting Started with Envoy as a Basic Front Proxy"
+title = "Using Envoy as a Basic Front Proxy"
+type = "tutorial"
 tags = []
 categories = []
 orderweight = 0
 abstract = "In this tutorial we use Envoy as a basic front proxy to Google and Bing."
+toc = true
 +++
 
 ## Requirements ##
 
-An installation of Envoy. You can find instructions on how to install Envoy [here](https://www.getenvoy.io/platforms/).
+An installation of GetEnvoy. You can find instructions on how to install GetEnvoy [here](/install/cli/binary).
 
 ## Instructions ##
 
@@ -28,15 +30,15 @@ The YAML contains comments explaining the behavior of the relevant sections.
 
 1. **Run Envoy using the static configuration.**
 ```sh
-$ envoy --config-path ./basic-front-proxy.yaml
+$ getenvoy run standard:1.11.1 -- --config-path ./basic-front-proxy.yaml
 ```
 
 1. **Open a new shell and cURL Envoy with `google.com` as the host header.**
 ```sh
-$ curl -s -o /dev/null -vvv -H 'Host: google.com' localhost:15000/
+$ curl -s -o /dev/null -vvv -H 'Host: google.com' localhost:15001/
 ```
 ```sh-output
-Connected to localhost (127.0.0.1) port 15000 (#0)
+Connected to localhost (127.0.0.1) port 15001 (#0)
 > GET / HTTP/1.1
 > Host: google.com
 > User-Agent: curl/7.54.0
@@ -50,11 +52,11 @@ In this abbreviated response you can see that we made it to google.com as it is 
 
 1. **cURL Envoy with `bing.com` as the host header.**
 ```sh
-$ curl -s -o /dev/null -vvv -H 'Host: bing.com' localhost:15000/
+$ curl -s -o /dev/null -vvv -H 'Host: bing.com' localhost:15001/
 ```
 ```sh-output
 ...
-Connected to localhost (127.0.0.1) port 15000 (#0)
+Connected to localhost (127.0.0.1) port 15001 (#0)
 > GET / HTTP/1.1
 > Host: bing.com
 > User-Agent: curl/7.54.0
@@ -72,4 +74,4 @@ In this abbreviated response you can see that we made it to bing.com as it is al
 [2019-06-05T08:30:01.145Z] "GET / HTTP/1.1" 200 - 0 111162 374 135 "-" "curl/7.54.0" "c1aeafd2-dcd9-4070-80fd-f8f4f6bd1e85" "www.bing.com" "13.107.21.200:80"
 [2019-06-05T08:30:07.799Z] "GET / HTTP/1.1" 200 - 0 12426 64 60 "-" "curl/7.54.0" "0c8ce45d-e99e-4ddc-9cc4-06d75d81e610" "www.google.com" "216.58.213.4:80"
 ```
-The access logs confirm that we have made two successful requests: one to `www.google.com` and the other to `www.bing.com`. To find out more about the default format of the access logs and information on the other fields present, check out the Envoy [documentation](https://www.envoyproxy.io/docs/envoy/latest/configuration/access_log#default-format-string).
+The access logs confirm that we have made two successful requests: one to `www.google.com` and the other to `www.bing.com`. To find out more about the default format of the access logs and information on the other fields present, check out the Envoy [documentation](https://www.envoyproxy.io/docs/envoy/latest/configuration/observability/access_log#access-logging).

@@ -24,7 +24,7 @@ The GetEnvoy project mantains Stable and Nightly builds of Envoy for Ubuntu, Deb
 Rather than running the `pull_envoy.sh` script provided in the documentation, you just need to ensure that Envoy is installed on the machine and there is a sym-link to directory that the provided `run.sh` is in. The steps to connecting a single VM to the Traffic Director xDS API are as follows:
 
 1. **Install Envoy on the VM.**
-For more detailed instructions checkout our [installation guides](https://getenvoy.io/platforms).
+For more detailed instructions checkout our [installation guides](/install/envoy).
 ```sh
 $ sudo apt-get install -y apt-transport-https ca-certificates curl gnupg2 software-properties-common && \
 curl -sL 'https://getenvoy.io/gpg' | sudo apt-key add - && \

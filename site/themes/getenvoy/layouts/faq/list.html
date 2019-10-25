@@ -1,0 +1,20 @@
+{{ define "main" }}
+
+<div class="single-box">
+  <nav class="side-navbar">
+    {{ partial "tutorial-nav.html" . }}
+    {{ partial "blog-nav.html" . }}
+  </nav>
+  <section class="body single">
+    <h1>{{ .Title }}</h1>
+    {{ .Content }}
+  </section>
+  <aside class="toc-navbar">
+    <div class="toc-container">
+      <h4>On this page</h4>
+      {{ .TableOfContents }}
+    </div>
+  </aside>
+</div>
+
+{{ end }}

@@ -1,0 +1,14 @@
+{{ define "main" }}
+
+<div class="single-box">
+  <nav class="side-navbar">
+    {{ partial "default-nav.html" . }}
+  </nav>
+  <section class="body single">
+    <h1>{{ .Title }}</h1>
+    {{ .Content }}
+    {{ partial "environments.html" . }}
+  </section>
+</div>
+
+{{ end }}

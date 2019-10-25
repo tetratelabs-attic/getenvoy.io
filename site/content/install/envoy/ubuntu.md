@@ -1,14 +1,16 @@
 +++
-title = "Install Envoy on Debian"
-platform = "Debian"
+title = "Install Envoy on Ubuntu"
+environment = "Ubuntu"
+type = "install"
 tags = []
 categories = []
-logo = "/images/debian.png"
+logo = "/images/ubuntu.svg"
+toc = true
 +++
 
 ## Requirements ##
 
-Envoy is supported on Debian 8 and above.
+Envoy is supported on LTS versions of Ubuntu 16.04 and above.
 
 ## Installation ##
 
@@ -23,7 +25,7 @@ $ sudo apt-get install -y \
   apt-transport-https \
   ca-certificates \
   curl \
-  gnupg2 \
+  gnupg-agent \
   software-properties-common
 ```
 
