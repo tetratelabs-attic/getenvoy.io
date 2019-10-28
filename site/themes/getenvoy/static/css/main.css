@@ -817,6 +817,7 @@ nav.menu > .pop-toggle{
  #main > .single-box > .body.single {
 	 border:none;
 	 padding:2rem 0;
+	 width: 100%;
  }
  body #menu > nav.menu a.home{
     padding: .5rem 0;
@@ -1028,43 +1029,16 @@ article.repo > ul > li {
 	left:-1rem;
 }
 
+.content {
+	padding: 0 32px;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- .content {
-   padding: 0 32px;
- }
- 
- :root {
-   --mdc-theme-primary: #000;
-   --mdc-theme-secondary: #666;
-   --mdc-theme-on-primary: #fff;
-   --mdc-theme-on-secondary: #fff;
- }
+:root {
+	--mdc-theme-primary: #000;
+	--mdc-theme-secondary: #666;
+	--mdc-theme-on-primary: #fff;
+	--mdc-theme-on-secondary: #fff;
+}
 
 
 /* Reset */
@@ -2207,6 +2181,10 @@ article.repo > ul > li {
 
 		.\-1u\28medium\29 {
 			margin-left: 8.33333%;
+		}
+
+		body.Blog #main {
+			padding: 4em 0 0 0 !important;
 		}
 
 	}
