@@ -810,23 +810,23 @@ nav.menu > .pop-toggle{
 		display:none;
 	}
 
-.single-box > .body.single::before,
- #main > .single-box > nav {
-	 display:none !important;
- }
- #main > .single-box > .body.single {
-	 border:none;
-	 padding:2rem 0;
-	 width: 100%;
- }
- body #menu > nav.menu a.home{
-    padding: .5rem 0;
-    height: 4rem;
- }
- body #menu > nav.menu a.home::after, body #menu > nav.menu a.home::before{
-    background-size: auto 100%;
-    background-position: left;
- }
+	.single-box > .body.single::before,
+	#main > .single-box > nav {
+		display:none !important;
+	}
+	#main > .single-box > .body.single {
+		border: none;
+		padding: 2rem 0;
+		width: 100% !important;
+	}
+	body #menu > nav.menu a.home{
+		padding: .5rem 0;
+		height: 4rem;
+	}
+	body #menu > nav.menu a.home::after, body #menu > nav.menu a.home::before{
+		background-size: auto 100%;
+		background-position: left;
+	}
 }
 
 .body.list article{ margin-bottom: 3rem;}
@@ -900,7 +900,7 @@ nav.menu > .pop-toggle{
 
 .single-box > nav ul > li > a {padding:.5rem 1rem; display: block; border:none; color:#8bc; text-align: left; text-transform: none;}
 .single-box > .body.single {
-	z-border-left:6px solid #008fd1;
+	/*z-border-left:6px solid #008fd1;*/
 	/*width:100%;*/
 	width: 65%;
 	position: relative;
@@ -2183,8 +2183,12 @@ article.repo > ul > li {
 			margin-left: 8.33333%;
 		}
 
-		body.Blog #main {
-			padding: 4em 0 0 0 !important;
+		body.kind-page #main, body.kind-section #main {
+			padding: 4em 0 0 0;
+		}
+
+		body.kind-home #main {
+			padding: 6em 4em;
 		}
 
 	}
@@ -2400,6 +2404,10 @@ article.repo > ul > li {
 
 		.\-1u\28small\29 {
 			margin-left: 8.33333%;
+		}
+
+		body.kind-page #main, body.kind-section #main, body.kind-home #main {
+			padding: 2.25em 1.5em 0.25em 1.5em;
 		}
 
 	}
