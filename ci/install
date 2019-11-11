@@ -1,6 +1,6 @@
 #! /bin/bash
 
 # Install latest GetEnvoy CLI to ensure generated docs are up-to-date
-curl -L https://getenvoy.io/install | bash -s -- -b ./bin
+curl -L https://getenvoy.io/cli | bash -s -- -b ./bin
 
 
