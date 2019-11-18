@@ -19,7 +19,6 @@ $(function() {
 
       // parse to get the right linebreaks and such...
       var cmd = getCodeCommand($this);
-      console.log(cmd);
 
       // create the dom input element to do the select/copy then remove...
       var $copyArea = $('<textarea class="to-clipboard hide-me" />')
@@ -46,21 +45,30 @@ $(function() {
 
     function getCodeCommand(block) {
       const inner = block.innerText;
-      const lines = inner.split('\n');
+
+      // check number of $ character
+      let numLine = inner.split('$').length - 1
+      let lines;
       let line = '';
       let cmd = '';
       let arrCmd = []
-      let linesLength = lines.length;
-      for (let i = 0; i < linesLength; i++) {
-        if (lines[i].startsWith('$ ')) {
-          line = lines[i].substring(2);
-          arrCmd.push(line);
+      if (numLine > 1) {
+        lines = inner.split('\n');
+        let linesLength = lines.length;
+        for (let i = 0; i < linesLength; i++) {
+          if (lines[i].startsWith('$ ')) {
+            line = lines[i].substring(2);
+            arrCmd.push(line);
+          }
         }
+        cmd = arrCmd.join (' && ');
+      } else {
+        lines = inner;
+        cmd = lines.substring(2);
       }
-      cmd = arrCmd.join (' && ');
       return cmd;
     }
   }
-
   clipboardMagic();
 });
+
