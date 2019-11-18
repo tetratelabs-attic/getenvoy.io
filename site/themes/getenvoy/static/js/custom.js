@@ -45,9 +45,8 @@ $(function() {
 
     function getCodeCommand(block) {
       const inner = block.innerText;
-
       // check number of $ character
-      let numLine = inner.split('$').length - 1
+      let numLine = inner.split('$ ').length - 1
       let lines;
       let line = '';
       let cmd = '';
