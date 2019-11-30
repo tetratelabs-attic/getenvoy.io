@@ -16,7 +16,7 @@ GetEnvoy is supported on macOS and Linux (Ubuntu, Debian, RHEL and CentOS).
 
 1. **Install CLI.**
 ```sh
-$ curl -L https://getenvoy.io/install | bash -s -- -b /usr/local/bin
+$ curl -L https://getenvoy.io/cli | bash -s -- -b /usr/local/bin
 ```
 {{% notice info %}}
 If you install to a different location, ensure the binary is in your `$PATH` environment variable.
