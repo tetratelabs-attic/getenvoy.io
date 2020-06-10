@@ -3568,46 +3568,105 @@ article.repo > ul > li {
 
 /* Footer */
 
-		#footer h4{
-			display: inline-block;
-			vertical-align: middle;
-		}
-		#footer .icons {
-			display: inline-block;
-			margin: 0 0 0 1rem;
-			vertical-align: middle;
-		}
+#footer h4{
+	display: inline-block;
+	vertical-align: middle;
+}
+#footer .icons {
+	display: inline-block;
+	margin: 0 0 0 1rem;
+	vertical-align: middle;
+}
 
-			#footer .icons a {
-				color: rgba(255, 255, 255, 0.4);
-			}
+	#footer .icons a {
+		color: rgba(255, 255, 255, 0.4);
+	}
 
-		#footer .copyright {
-			color: rgba(255, 255, 255, 0.4);
-			font-size: 0.8em;
-			list-style: none;
-			margin: 1em 0 0 0;
-			padding: 0;
-		}
+#footer .copyright {
+	color: rgba(255, 255, 255, 0.4);
+	font-size: 0.8em;
+	list-style: none;
+	margin: 1em 0 0 0;
+	padding: 0;
+}
 
-			#footer .copyright li {
-				border-left: solid 1px rgba(255, 255, 255, 0.25);
-				display: inline-block;
-				line-height: 1em;
-				margin-left: 0.75em;
-				padding-left: 0.75em;
-			}
+#footer .copyright li {
+	border-left: solid 1px rgba(255, 255, 255, 0.25);
+	display: inline-block;
+	line-height: 1em;
+	margin-left: 0.75em;
+	padding-left: 0.75em;
+}
 
-				#footer .copyright li:first-child {
-					border-left: 0;
-					margin-left: 0;
-					padding-left: 0;
-				}
+#footer .copyright li:first-child {
+	border-left: 0;
+	margin-left: 0;
+	padding-left: 0;
+}
 
-				#footer .copyright li a {
-					color: inherit;
-				}
+#footer .copyright li a {
+	color: inherit;
+}
 
+#footer #contactForm {
+	padding: 2em;
+	background-color: #c3d1f0;;
+}
+
+#contactForm h4 {
+	margin-bottom: 16px;
+	color: #454545;
+}
+
+#emailForm {
+	display: flex;
+	width: 70%;
+	margin: 0 auto;
+	max-width: 800px;
+}
+
+#emailForm input {
+	color: black;
+}
+
+#emailForm #email.error {
+	border-color: #c50a0a;
+}
+
+#errorMessage {
+	display:none;
+}
+
+#errorMessage.active {
+	display: block;
+	color: #c50a0a;
+}
+
+#emailForm button {
+	width: 120px;
+	border-radius: 4px;
+	font-family: "Source Sans Pro";
+	font-size: 14px;
+	padding: 4px 10px;
+	color: white;
+	background-color: #008fd2;
+	border-color: #008fd3;
+	cursor: pointer;
+	margin-left: 16px;
+}
+
+#emailFormContainer.hidden {
+	display: none;
+}
+
+#contactForm p {
+	color: #454545;
+	display: none;
+}
+
+#contactForm p.active {
+	display: block;
+}
 
 /* Poptrox */
 
