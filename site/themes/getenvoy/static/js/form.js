@@ -8,6 +8,14 @@ function validation() {
   }
 }
 
+function displayMessage() {
+  let emailForm = document.getElementById("emailFormContainer");
+  let formMessage = document.getElementById("formMessage");
+
+  emailForm.className += "hidden";
+  formMessage.className += "active";
+}
+
 document.getElementById("emailForm").addEventListener("submit", function (e) {
   e.preventDefault();
   var xhr = new XMLHttpRequest();
@@ -49,10 +57,3 @@ document.getElementById("emailForm").addEventListener("submit", function (e) {
   }
 });
 
-function displayMessage() {
-  let emailForm = document.getElementById("emailFormContainer");
-  let formMessage = document.getElementById("formMessage");
-
-  emailForm.className += "hidden";
-  formMessage.className += "active";
-}
