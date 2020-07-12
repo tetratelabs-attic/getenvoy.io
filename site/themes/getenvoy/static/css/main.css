@@ -527,7 +527,6 @@ body .hide-me {
 #quickstart-cli pre, #quickstart-binary pre {
 	margin-top: 1rem;
 	margin-bottom: 1rem;
-	/* height: 120px; */
 }
 #quickstart-binary {
 	background: #EBF0FA
@@ -2800,7 +2799,6 @@ article.repo > ul > li {
 	
 	pre {
 		position: relative;
-		/* white-space: nowrap; */
 	}
 
 	/* This is a little hacky, if anyone can think of a better way to do this be my guest! */
