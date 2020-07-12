@@ -526,9 +526,9 @@ body .hide-me {
 	background: #C2D1EF
 }
 #quickstart-cli pre, #quickstart-binary pre {
-	margin-top: 0;
-	margin-bottom: 0;
-	height: 120px;
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+	/* height: 120px; */
 }
 #quickstart-binary {
 	background: #EBF0FA
@@ -2751,22 +2751,22 @@ article.repo > ul > li {
 		text-shadow: 0 0 1px rgba(0,0,0,.25);
 	}
 
-	code button{
+	pre button{
 		cursor: pointer;
 		position: absolute;
-                right: 8px;
-		top: 8px;
+    right: 12px;
+		top: 12px;
 		padding: 0;
 		border: none;
 		background: none;
 	}
 
-	code button img {
+	pre button img {
 		width: 16px;
 		height: 16px;
 	}
 
-	code .clipboard{
+	pre .clipboard{
 		position: absolute;
 		top: 8px;
 		right:8px;
@@ -2781,7 +2781,7 @@ article.repo > ul > li {
 		transition:all 3.5s;
 		z-index: 1;
 	}
-	code .clipboard.fade{
+	pre .clipboard.fade{
 		opacity: 0;
 	}
 
@@ -2797,6 +2797,11 @@ article.repo > ul > li {
 		line-height: 1.75em;
 		padding: 1em 1.5em;
 		overflow-x: auto;
+	}
+	
+	pre {
+		position: relative;
+		/* white-space: nowrap; */
 	}
 
 	/* This is a little hacky, if anyone can think of a better way to do this be my guest! */

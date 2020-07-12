@@ -1,17 +1,17 @@
 $(function() {
   function clipboardMagic() {
-    $('pre code.language-sh').append(
+    $('pre code.language-sh').parent().append(
       '<button><img src="/images/copy.png" /></button>'
     );
 
     // find all the "code" blocks and bind click event...
-    $('pre code button').on('click', function() {
+    $('pre button').on('click', function() {
       var $this = $(this)
         .parent()
         .get(0);
 
       // set initial state...
-      $('pre code .clipboard').remove();
+      $('pre .clipboard').remove();
       var $inform = null;
 
       // if I don't have a $this, I should quit.
