@@ -2752,7 +2752,7 @@ article.repo > ul > li {
 	pre button{
 		cursor: pointer;
 		position: absolute;
-    right: 12px;
+		right: 12px;
 		top: 12px;
 		padding: 0;
 		border: none;
@@ -2796,7 +2796,7 @@ article.repo > ul > li {
 		padding: 1em 1.5em;
 		overflow-x: auto;
 	}
-	
+
 	pre {
 		position: relative;
 	}
@@ -3954,7 +3954,7 @@ article.repo > ul > li {
 
 
 
-		
+
 
 
 	}
