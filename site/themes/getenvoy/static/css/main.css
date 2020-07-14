@@ -527,6 +527,7 @@ body .hide-me {
 #quickstart-cli pre, #quickstart-binary pre {
 	margin-top: 1rem;
 	margin-bottom: 1rem;
+	white-space: nowrap;
 }
 #quickstart-binary {
 	background: #EBF0FA
