@@ -355,8 +355,8 @@ Specifically, let’s provide a counter with a number of HTTP responses the extr
            }
        }
        pub fn responses_injected_total(&self) -> &dyn Counter { // added code
-           &*self.responses_injected_total
-       }
+           &*self.responses_injected_total                      // added code
+       }                                                        // added code
     }
     ```
 2. 💻 Next, let’s create the _counter_ at a time when `Extension Factory` is created (added lines are marked with `// added code`):
@@ -424,7 +424,7 @@ That concludes a brief look into _Envoy_ extension development using [`GetEnvoy 
 
 
 [`GetEnvoy Extension Toolkit`]: /reference/getenvoy_extension_toolkit_reference/
-[`getenvoy CLI`]: /reference/getenvoy/
+[`getenvoy CLI`]: /reference/getenvoy_extension/
 
 [`GetEnvoy Extension Toolkit: Walkthrough`]: /reference/getenvoy_extension_toolkit_reference/#walkthrough
 [`GetEnvoy Extension Toolkit: Get familiar with the source code`]: /reference/getenvoy_extension_toolkit_reference/#7-get-familiar-with-the-source-code
