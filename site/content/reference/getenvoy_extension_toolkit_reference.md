@@ -417,7 +417,7 @@ E.g.,
 ```yaml
 kind: Extension
 
-name: my_company.my_http_filter
+name: me.filters.http.my_http_filter
 
 category: envoy.filters.http
 language: rust
@@ -560,7 +560,7 @@ static_resources:
 | Placeholder                                 | Purpose                                                                           |
 | ------------------------------------------- | --------------------------------------------------------------------------------- |
 | `{{ .GetEnvoy.DefaultValue "<property>" }}` | Gets replaced with the default value of a _given property_.                       |
-| `{{ .GetEnvoy.Extension.Name }}`            | Gets replaced with the extension name, e.g. `"my_company.my_http_filter"`.        |
+| `{{ .GetEnvoy.Extension.Name }}`            | Gets replaced with the extension name, e.g. `"me.filters.http.my_http_filter"`.   |
 | `{{ .GetEnvoy.Extension.Code }}`            | Gets replaced with a `Datasource` representing the `*.wasm` file.                 |
 | `{{ .GetEnvoy.Extension.Config }}`          | Gets replaced with extension config, defaults to the contents of `extension.json` |
 
