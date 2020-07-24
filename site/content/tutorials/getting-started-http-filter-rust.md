@@ -421,13 +421,15 @@ That concludes a brief look into _Envoy_ extension development using [`GetEnvoy 
 
 * [Extension Toolkit Reference][`GetEnvoy Extension Toolkit`]
 * [getenvoy CLI Reference][`getenvoy CLI`]
-
+* [Envoy SDK for Rust][`Envoy SDK for Rust`]
 
 [`GetEnvoy Extension Toolkit`]: /reference/getenvoy_extension_toolkit_reference/
 [`getenvoy CLI`]: /reference/getenvoy_extension/
 
 [`GetEnvoy Extension Toolkit: Walkthrough`]: /reference/getenvoy_extension_toolkit_reference/#walkthrough
 [`GetEnvoy Extension Toolkit: Get familiar with the source code`]: /reference/getenvoy_extension_toolkit_reference/#7-get-familiar-with-the-source-code
+
+[`Envoy SDK for Rust`]: https://docs.rs/envoy-sdk/
 
 [`Install GetEnvoy`]: /install/cli/binary
 [`Install Docker`]: https://docs.docker.com/engine/install/
