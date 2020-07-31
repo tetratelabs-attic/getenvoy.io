@@ -367,10 +367,10 @@ Let’s take a closer look into the source code of a _HTTP Filter_ extension.
 * `HTTP Filter` in `Envoy` is a stateful object that is only processing a single HTTP request
 * Once _Envoy_ receives a new HTTP request, it will call the `Extension Factory` to create a new `HTTP Filter` instance
 * Next, _Envoy_ will start calling lifecycle callbacks defined on that `HTTP Filter`, e.g.
-  * `on request headers`,
-  * `on request body chunk`,
-  * `on response headers`,
-  * `on exchange complete`,
+  * `on request headers`
+  * `on request body chunk`
+  * `on response headers`
+  * `on exchange complete`
   * etc
 * Within the context of lifecycle callbacks, `HTTP Filter` can do the following:
   * _suspend_/_resume_ further processing of that HTTP request
