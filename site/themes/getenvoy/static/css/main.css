@@ -2800,6 +2800,12 @@ article.repo > ul > li {
 
 	pre {
 		position: relative;
+  }
+
+	/* Make sure that Markdown text like `GetEnvoy Extension Toolkit` stays on the same line
+	   (for better readability). */
+	p > code, a > code {
+		white-space: nowrap;
 	}
 
 	/* This is a little hacky, if anyone can think of a better way to do this be my guest! */
