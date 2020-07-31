@@ -512,7 +512,6 @@ body .hide-me {
 }
 #quickstart {
 	display: flex;
-	align-items: flex-start;
 	flex-wrap: nowrap;
 }
 #quickstart h2 {
@@ -526,9 +525,9 @@ body .hide-me {
 	background: #C2D1EF
 }
 #quickstart-cli pre, #quickstart-binary pre {
-	margin-top: 0;
-	margin-bottom: 0;
-	height: 120px;
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+	white-space: nowrap;
 }
 #quickstart-binary {
 	background: #EBF0FA
@@ -2751,22 +2750,22 @@ article.repo > ul > li {
 		text-shadow: 0 0 1px rgba(0,0,0,.25);
 	}
 
-	code button{
+	pre button{
 		cursor: pointer;
 		position: absolute;
-                right: 8px;
-		top: 8px;
+		right: 12px;
+		top: 12px;
 		padding: 0;
 		border: none;
 		background: none;
 	}
 
-	code button img {
+	pre button img {
 		width: 16px;
 		height: 16px;
 	}
 
-	code .clipboard{
+	pre .clipboard{
 		position: absolute;
 		top: 8px;
 		right:8px;
@@ -2781,7 +2780,7 @@ article.repo > ul > li {
 		transition:all 3.5s;
 		z-index: 1;
 	}
-	code .clipboard.fade{
+	pre .clipboard.fade{
 		opacity: 0;
 	}
 
@@ -2798,6 +2797,10 @@ article.repo > ul > li {
 		padding: 1em 1.5em;
 		overflow-x: auto;
 	}
+
+	pre {
+		position: relative;
+  }
 
 	/* Make sure that Markdown text like `GetEnvoy Extension Toolkit` stays on the same line
 	   (for better readability). */
@@ -3958,7 +3961,7 @@ article.repo > ul > li {
 
 
 
-		
+
 
 
 	}
