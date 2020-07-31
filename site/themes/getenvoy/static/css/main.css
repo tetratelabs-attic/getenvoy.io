@@ -2799,6 +2799,12 @@ article.repo > ul > li {
 		overflow-x: auto;
 	}
 
+	/* Make sure that Markdown text like `GetEnvoy Extension Toolkit` stays on the same line
+	   (for better readability). */
+	p > code, a > code {
+		white-space: nowrap;
+	}
+
 	/* This is a little hacky, if anyone can think of a better way to do this be my guest! */
 	pre+pre code.language-sh-output {
 		margin-top: -2rem;
