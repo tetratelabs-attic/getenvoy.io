@@ -162,13 +162,13 @@ test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
      # Runtime the extension is being developed against.
      runtime:
        envoy:
-         version: wasm:nightly
+         version: wasm:1.15
      ```
 
 4. 💻 Next, we need to download `Envoy` binary of that version:
 
      ```shell
-     $ getenvoy fetch wasm:nightly
+     $ getenvoy fetch wasm:1.15
      ```
    ✅ `getenvoy` will download `Envoy` binary and cache it under `$HOME/.getenvoy`:
 
@@ -283,14 +283,18 @@ my_http_filter: #2 http exchange complete
     ```rust
     /// Called when HTTP response headers have been received.
     ///
-    /// Use filter_ops to access and mutate response headers.
+    /// Use `filter_ops` to access and mutate response headers.
     fn on_response_headers(
         &mut self,
         _num_headers: usize,
+        _end_of_stream: bool,
         filter_ops: &dyn http::ResponseHeadersOps,
     ) -> Result<http::FilterHeadersStatus> {
-        if self.config.response_header_name != "" {
-            filter_ops.add_response_header(&self.config.response_header_name, "injected by WebAssembly extension")?;
+        if !self.config.response_header_name.is_empty() {
+            filter_ops.set_response_header(
+                &self.config.response_header_name,
+                "injected by WebAssembly extension",
+            )?;
         }
         Ok(http::FilterHeadersStatus::Continue)
     }
@@ -338,6 +342,8 @@ Specifically, let’s provide a counter with a number of HTTP responses the extr
 
     **src/stats.rs**
     ```rust
+    use envoy::host::stats::Counter;
+
     // Sample stats.
     pub struct SampleHttpFilterStats {
        requests_total: Box<dyn Counter>,
@@ -353,6 +359,9 @@ Specifically, let’s provide a counter with a number of HTTP responses the extr
                requests_total,
                responses_injected_total,                        // added code
            }
+       }
+       pub fn requests_total(&self) -> &dyn Counter {
+           &*self.requests_total
        }
        pub fn responses_injected_total(&self) -> &dyn Counter { // added code
            &*self.responses_injected_total                      // added code
@@ -383,15 +392,16 @@ Specifically, let’s provide a counter with a number of HTTP responses the extr
     ```rust
     /// Called when HTTP response headers have been received.
     ///
-    /// Use filter_ops to access and mutate response headers.
+    /// Use `filter_ops` to access and mutate response headers.
     fn on_response_headers(
         &mut self,
         _num_headers: usize,
+        _end_of_stream: bool,
         filter_ops: &dyn http::ResponseHeadersOps,
     ) -> Result<http::FilterHeadersStatus> {
-        if self.config.response_header_name != "" {
-            filter_ops.add_response_header(&self.config.response_header_name, "injected by WebAssembly extension")?;
-            self.stats.responses_injected_total().inc()?;         // added code
+        if !self.config.response_header_name.is_empty() {
+            filter_ops.set_response_header(&self.config.response_header_name, "injected by WebAssembly extension")?;
+            self.stats.responses_injected_total().inc()?; // added code
         }
         Ok(http::FilterHeadersStatus::Continue)
     }

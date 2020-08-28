@@ -250,7 +250,7 @@ info	Envoy command: [$HOME/.getenvoy/builds/wasm/nightly/darwin/bin/envoy -c /tm
      # Runtime the extension is being developed against.
      runtime:
        envoy:
-         version: wasm:nightly
+         version: wasm:1.15
      ```
    ⚠️  Since _WebAssembly_ support in `Envoy` is still under active development, no assumptions can be made about
    [API][`Envoy ABI`] compatibility between various _Envoy_ releases.
@@ -258,7 +258,7 @@ info	Envoy command: [$HOME/.getenvoy/builds/wasm/nightly/darwin/bin/envoy -c /tm
 4. 💻 Next, we need to download `Envoy` binary of that version:
 
      ```shell
-     $ getenvoy fetch wasm:nightly
+     $ getenvoy fetch wasm:1.15
      ```
    ✅ `getenvoy` will download `Envoy` binary and cache it under `$HOME/.getenvoy`:
 
@@ -425,7 +425,7 @@ language: rust
 # Runtime the extension is being developed against.
 runtime:
   envoy:
-    version: wasm:nightly
+    version: wasm:1.15
 ```
 
 ### Toolchain
@@ -521,7 +521,7 @@ kind: Example
 # Runtime required by the example.
 runtime:
   envoy:
-    version: wasm:nightly
+    version: wasm:1.15
 ```
 
 #### envoy.tmpl.yaml
