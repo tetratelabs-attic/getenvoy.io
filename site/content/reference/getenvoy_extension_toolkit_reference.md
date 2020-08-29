@@ -195,7 +195,7 @@ $ getenvoy extension run
 ✅ `getenvoy` will download `Envoy` binary, generate a sample _Envoy_ config and start the _Envoy_ process in the foreground:
 
 ```
-info	Envoy command: [$HOME/.getenvoy/builds/wasm/nightly/darwin/bin/envoy -c /tmp/getenvoy_extension_run732371719/envoy.tmpl.yaml]
+info	Envoy command: [$HOME/.getenvoy/builds/wasm/1.15/darwin/bin/envoy -c /tmp/getenvoy_extension_run732371719/envoy.tmpl.yaml]
 ...
 [info][main] [external/envoy/source/server/server.cc:339] admin address: 127.0.0.1:9901
 ...
@@ -267,7 +267,7 @@ info	Envoy command: [$HOME/.getenvoy/builds/wasm/nightly/darwin/bin/envoy -c /tm
      
      $HOME/.getenvoy/builds
      └── wasm
-         └── nightly
+         └── 1.15
              └── darwin
                  └── bin
                      └── envoy
@@ -280,7 +280,7 @@ info	Envoy command: [$HOME/.getenvoy/builds/wasm/nightly/darwin/bin/envoy -c /tm
    ✅ `getenvoy` will generate the actual `Envoy` config (by resolving placeholders in the configuration template )
    and start the _Envoy_ process in the foreground:
    ```
-   info	Envoy command: [$HOME/.getenvoy/builds/wasm/nightly/darwin/bin/envoy -c /tmp/getenvoy_extension_run732371719/envoy.tmpl. yaml]
+   info	Envoy command: [$HOME/.getenvoy/builds/wasm/1.15/darwin/bin/envoy -c /tmp/getenvoy_extension_run732371719/envoy.tmpl. yaml]
    ...
    [info][main] [external/envoy/source/server/server.cc:339] admin address: 127.0.0.1:9901
    ...
@@ -455,7 +455,7 @@ kind: BuiltinToolchain
 
 ## container:
 ##   # Builder image.
-##   image: getenvoy/extension-rust-builder:latest
+##   image: getenvoy/extension-rust-builder:0.2.0
 ##   # Docker cli options.
 ##   options: []
 
@@ -468,7 +468,7 @@ kind: BuiltinToolchain
 ## build:
 ##   container:
 ##     # Builder image.
-##     image: getenvoy/extension-rust-builder:latest
+##     image: getenvoy/extension-rust-builder:0.2.0
 ##     # Docker cli options.
 ##     options: []
 ##   output:

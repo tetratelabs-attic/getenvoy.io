@@ -177,7 +177,7 @@ test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
      
      $HOME/.getenvoy/builds
      └── wasm
-         └── nightly
+         └── 1.15
              └── darwin
                  └── bin
                      └── envoy
@@ -190,7 +190,7 @@ test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
    ✅ `getenvoy` will generate the actual `Envoy` config (by resolving placeholders in the configuration template )
    and start the _Envoy_ process in the foreground:
    ```
-   info	Envoy command: [$HOME/.getenvoy/builds/wasm/nightly/darwin/bin/envoy -c /tmp/getenvoy_extension_run732371719/envoy.tmpl. yaml]
+   info	Envoy command: [$HOME/.getenvoy/builds/wasm/1.15/darwin/bin/envoy -c /tmp/getenvoy_extension_run732371719/envoy.tmpl. yaml]
    ...
    [info][main] [external/envoy/source/server/server.cc:339] admin address: 127.0.0.1:9901
    ...
@@ -211,7 +211,7 @@ $ getenvoy extension run
 ✅ `getenvoy` will download `Envoy` binary, generate a sample _Envoy_ config and start the _Envoy_ process in the foreground:
 
 ```
-info	Envoy command: [$HOME/.getenvoy/builds/wasm/nightly/darwin/bin/envoy -c /tmp/getenvoy_extension_run732371719/envoy.tmpl.yaml]
+info	Envoy command: [$HOME/.getenvoy/builds/wasm/1.15/darwin/bin/envoy -c /tmp/getenvoy_extension_run732371719/envoy.tmpl.yaml]
 ...
 [info][main] [external/envoy/source/server/server.cc:339] admin address: 127.0.0.1:9901
 ...
