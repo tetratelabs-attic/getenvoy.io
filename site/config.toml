@@ -53,7 +53,7 @@ pluralizelisttitles = false
 		title = "The easiest way to get started with Envoy"
 		subtitle = "on any cloud or platform"
 		version = "0.0.1"
-		envoyVersion = "1.15.1"
+		envoyVersion = "1.16.0"
 
 		[[ params.about.cta ]]
 			title = "Get Started"
