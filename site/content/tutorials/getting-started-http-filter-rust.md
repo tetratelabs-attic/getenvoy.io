@@ -162,13 +162,13 @@ test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
      # Runtime the extension is being developed against.
      runtime:
        envoy:
-         version: wasm:1.15
+         version: standard:1.17.0
      ```
 
 4. 💻 Next, we need to download `Envoy` binary of that version:
 
      ```shell
-     $ getenvoy fetch wasm:1.15
+     $ getenvoy fetch standard:1.17.0
      ```
    ✅ `getenvoy` will download `Envoy` binary and cache it under `$HOME/.getenvoy`:
 
@@ -176,8 +176,8 @@ test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
      $ tree $HOME/.getenvoy/builds
      
      $HOME/.getenvoy/builds
-     └── wasm
-         └── 1.15
+     └── standard
+         └── 1.17.0
              └── darwin
                  └── bin
                      └── envoy
@@ -190,7 +190,7 @@ test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
    ✅ `getenvoy` will generate the actual `Envoy` config (by resolving placeholders in the configuration template )
    and start the _Envoy_ process in the foreground:
    ```
-   info	Envoy command: [$HOME/.getenvoy/builds/wasm/1.15/darwin/bin/envoy -c /tmp/getenvoy_extension_run732371719/envoy.tmpl. yaml]
+   info	Envoy command: [$HOME/.getenvoy/builds/standard/1.17.0/darwin/bin/envoy -c /tmp/getenvoy_extension_run732371719/envoy.tmpl. yaml]
    ...
    [info][main] [external/envoy/source/server/server.cc:339] admin address: 127.0.0.1:9901
    ...
@@ -211,7 +211,7 @@ $ getenvoy extension run
 ✅ `getenvoy` will download `Envoy` binary, generate a sample _Envoy_ config and start the _Envoy_ process in the foreground:
 
 ```
-info	Envoy command: [$HOME/.getenvoy/builds/wasm/1.15/darwin/bin/envoy -c /tmp/getenvoy_extension_run732371719/envoy.tmpl.yaml]
+info	Envoy command: [$HOME/.getenvoy/builds/standard/1.17.0/darwin/bin/envoy -c /tmp/getenvoy_extension_run732371719/envoy.tmpl.yaml]
 ...
 [info][main] [external/envoy/source/server/server.cc:339] admin address: 127.0.0.1:9901
 ...
