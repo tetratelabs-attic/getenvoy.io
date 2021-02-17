@@ -512,7 +512,6 @@ body .hide-me {
 }
 #quickstart {
 	display: flex;
-	align-items: flex-start;
 	flex-wrap: nowrap;
 }
 #quickstart h2 {
@@ -526,9 +525,9 @@ body .hide-me {
 	background: #C2D1EF
 }
 #quickstart-cli pre, #quickstart-binary pre {
-	margin-top: 0;
-	margin-bottom: 0;
-	height: 120px;
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+	white-space: nowrap;
 }
 #quickstart-binary {
 	background: #EBF0FA
@@ -950,6 +949,9 @@ nav.menu > .pop-toggle{
 .body.single > ol > li:last-of-type{
 	box-shadow: none;
 }
+.body.single ul > li {
+	padding-top: 0.5rem;
+}
 .body.single h1 {
 	margin-bottom: 0.5rem;
 }
@@ -958,6 +960,9 @@ nav.menu > .pop-toggle{
 }
 .body.single h2:first-of-type {
 	margin-top: 0;
+}
+.body.single h3, .body.single h4, .body.single h5, .body.single h6 {
+	margin-bottom: 1rem;
 }
 .body.single h2,
 .body.single > ol > li strong {
@@ -2751,22 +2756,22 @@ article.repo > ul > li {
 		text-shadow: 0 0 1px rgba(0,0,0,.25);
 	}
 
-	code button{
+	pre button{
 		cursor: pointer;
 		position: absolute;
-                right: 8px;
-		top: 8px;
+		right: 12px;
+		top: 12px;
 		padding: 0;
 		border: none;
 		background: none;
 	}
 
-	code button img {
+	pre button img {
 		width: 16px;
 		height: 16px;
 	}
 
-	code .clipboard{
+	pre .clipboard{
 		position: absolute;
 		top: 8px;
 		right:8px;
@@ -2781,7 +2786,7 @@ article.repo > ul > li {
 		transition:all 3.5s;
 		z-index: 1;
 	}
-	code .clipboard.fade{
+	pre .clipboard.fade{
 		opacity: 0;
 	}
 
@@ -2797,6 +2802,16 @@ article.repo > ul > li {
 		line-height: 1.75em;
 		padding: 1em 1.5em;
 		overflow-x: auto;
+	}
+
+	pre {
+		position: relative;
+  }
+
+	/* Make sure that Markdown text like `GetEnvoy Extension Toolkit` stays on the same line
+	   (for better readability). */
+	p > code, a > code {
+		white-space: nowrap;
 	}
 
 	/* This is a little hacky, if anyone can think of a better way to do this be my guest! */
@@ -3568,46 +3583,105 @@ article.repo > ul > li {
 
 /* Footer */
 
-		#footer h4{
-			display: inline-block;
-			vertical-align: middle;
-		}
-		#footer .icons {
-			display: inline-block;
-			margin: 0 0 0 1rem;
-			vertical-align: middle;
-		}
+#footer h4{
+	display: inline-block;
+	vertical-align: middle;
+}
+#footer .icons {
+	display: inline-block;
+	margin: 0 0 0 1rem;
+	vertical-align: middle;
+}
 
-			#footer .icons a {
-				color: rgba(255, 255, 255, 0.4);
-			}
+	#footer .icons a {
+		color: rgba(255, 255, 255, 0.4);
+	}
 
-		#footer .copyright {
-			color: rgba(255, 255, 255, 0.4);
-			font-size: 0.8em;
-			list-style: none;
-			margin: 1em 0 0 0;
-			padding: 0;
-		}
+#footer .copyright {
+	color: rgba(255, 255, 255, 0.4);
+	font-size: 0.8em;
+	list-style: none;
+	margin: 1em 0 0 0;
+	padding: 0;
+}
 
-			#footer .copyright li {
-				border-left: solid 1px rgba(255, 255, 255, 0.25);
-				display: inline-block;
-				line-height: 1em;
-				margin-left: 0.75em;
-				padding-left: 0.75em;
-			}
+#footer .copyright li {
+	border-left: solid 1px rgba(255, 255, 255, 0.25);
+	display: inline-block;
+	line-height: 1em;
+	margin-left: 0.75em;
+	padding-left: 0.75em;
+}
 
-				#footer .copyright li:first-child {
-					border-left: 0;
-					margin-left: 0;
-					padding-left: 0;
-				}
+#footer .copyright li:first-child {
+	border-left: 0;
+	margin-left: 0;
+	padding-left: 0;
+}
 
-				#footer .copyright li a {
-					color: inherit;
-				}
+#footer .copyright li a {
+	color: inherit;
+}
 
+#contactForm {
+	padding: 2em;
+	background-color: #93acde;;
+}
+
+#contactForm h4 {
+	margin-bottom: 16px;
+	color: #454545;
+}
+
+#emailForm {
+	display: flex;
+	width: 70%;
+	margin: 0 auto;
+	max-width: 800px;
+}
+
+#emailForm input {
+	color: black;
+}
+
+#emailForm #email.error {
+	border-color: #c50a0a;
+}
+
+#errorMessage {
+	display:none;
+}
+
+#errorMessage.active {
+	display: block;
+	color: #c50a0a;
+}
+
+#emailForm button {
+	width: 120px;
+	border-radius: 4px;
+	font-family: "Source Sans Pro";
+	font-size: 14px;
+	padding: 4px 10px;
+	color: white;
+	background-color: #008fd2;
+	border-color: #008fd3;
+	cursor: pointer;
+	margin-left: 16px;
+}
+
+#emailFormContainer.hidden {
+	display: none;
+}
+
+#contactForm p {
+	color: #454545;
+	display: none;
+}
+
+#contactForm p.active {
+	display: block;
+}
 
 /* Poptrox */
 
@@ -3893,7 +3967,7 @@ article.repo > ul > li {
 
 
 
-		
+
 
 
 	}

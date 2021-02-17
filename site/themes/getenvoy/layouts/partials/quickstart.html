@@ -9,15 +9,15 @@
     </div>
     <div id="quickstart-binary">
       <h2>Install Envoy via package managers</h2>
-      <div id="binary-container">    
+      <div id="binary-container">
         {{range where .Site.RegularPages "Section" "install"}}
-            {{ if in (.Permalink | string) "/envoy"}}
-              <div class="binary-link">
-                <a href="{{ .Permalink | relURL }}" class="package-environment {{ .Params.environment }}">
-                  <h3 style="background-image:url({{.Params.logo|safeCSS}})" class="title">{{ .Title }}</h3>
-                </a>
-              </div>
-            {{end}}  
+        {{ if in (.Permalink | string) "/envoy"}}
+        <div class="binary-link">
+          <a href="{{ .Permalink | relURL }}" class="package-environment {{ .Params.environment }}">
+            <h3 style="background-image:url({{.Params.logo|safeCSS}})" class="title">{{ .Title }}</h3>
+          </a>
+        </div>
+        {{end}}
         {{end}}
       </div>
     </div>
@@ -26,3 +26,14 @@
     or
   </div>
 </div>
+<section id="contactForm">
+  <div id="emailFormContainer">
+    <h4>Subscribe to get the latest development updates</h4>
+    <form id="emailForm">
+      <input type="text" id="email" name="email" placeholder="Enter Your Email" required>
+      <button type="submit">Get Updates</button>
+    </form>
+  </div>
+  <span id="errorMessage">Please enter a valid email address</span>
+  <p id="formMessage">Thank you for subscribing.</p>
+</section>

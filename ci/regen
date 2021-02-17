@@ -4,4 +4,4 @@ set -ex
 
 # Generate getenvoy docs
 ./ci/install
-./bin/getenvoy doc -o ./site/content/reference -l /reference/
+GETENVOY_HOME='$HOME/.getenvoy' ./bin/getenvoy doc -o ./site/content/reference -l /reference/
