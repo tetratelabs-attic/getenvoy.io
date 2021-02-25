@@ -777,6 +777,9 @@ form.micro.inline .icon::before{
 nav.menu > .pop-toggle{
 	display:none;
 }
+.star-button-mobile {
+  display: none !important;
+}
 @media screen and (max-width: 45rem) {
 	html > body > #menu > nav.menu > ul > li.home-btn,
 	html > body > #menu > nav.menu > ul > li,
@@ -808,6 +811,14 @@ nav.menu > .pop-toggle{
 	html > body > #menu > nav.menu#show-menu:target .pop-toggle .menu {
 		display:none;
 	}
+
+  .star-button-mobile {
+    display: block;
+  }
+
+  .star-button {
+    display: none;
+  }
 
 	.single-box > .body.single::before,
 	#main > .single-box > nav {
@@ -4191,4 +4202,8 @@ article.repo > ul > li {
  .recent-posts li {
 	 font-size: 20px;
 	 line-height: 36px;
+ }
+
+ .star-button {
+   margin-left: 24px;
  }
