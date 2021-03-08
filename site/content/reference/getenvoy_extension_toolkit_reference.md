@@ -280,7 +280,7 @@ info	Envoy command: [$HOME/.getenvoy/builds/standard/1.17.0/darwin/bin/envoy -c 
    ✅ `getenvoy` will generate the actual `Envoy` config (by resolving placeholders in the configuration template )
    and start the _Envoy_ process in the foreground:
    ```
-   info	Envoy command: [$HOME/.getenvoy/builds/standard/1.17.0/darwin/bin/envoy -c /tmp/getenvoy_extension_run732371719/envoy.tmpl. yaml]
+   info	Envoy command: [$HOME/.getenvoy/builds/standard/1.17.0/darwin/bin/envoy -c /tmp/getenvoy_extension_run732371719/envoy.tmpl.yaml]
    ...
    [info][main] [external/envoy/source/server/server.cc:339] admin address: 127.0.0.1:9901
    ...
