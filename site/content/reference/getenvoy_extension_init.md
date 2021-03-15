@@ -36,7 +36,7 @@ getenvoy extension init [DIR] [flags]
 ```
       --category string   Choose extension category. One of: "envoy.filters.http", "envoy.filters.network", "envoy.access_loggers"
   -h, --help              help for init
-      --language string   Choose programming language. One of: "rust"
+      --language string   Choose programming language. One of: "rust", "tinygo"
       --name string       Choose extension name, e.g. "mycompany.filters.http.custom_metrics"
 ```
 

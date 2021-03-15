@@ -33,6 +33,9 @@ getenvoy run ./envoy -- --config-path ./bootstrap.yaml
 # List available Envoy flags.
 getenvoy run standard:1.11.1 -- --help
 
+# Run with Postgres specific configuration bootstrapped
+getenvoy run postgres:nightly --templateArg endpoints=127.0.0.1:5432,192.168.0.101:5432 --templateArg inport=5555
+
 ```
 
 ### Options
@@ -43,6 +46,7 @@ getenvoy run standard:1.11.1 -- --help
       --controlplaneAddress string      (experimental) location of Envoy's dynamic configuration server <host|ip:port> (requires bootstrap flag)
   -h, --help                            help for run
       --mode string                     (experimental) mode to run Envoy in <loadbalancer> (requires bootstrap flag)
+      --templateArg stringToString      arguments passed to a config template for substitution (default [])
 ```
 
 ### Options inherited from parent commands

@@ -11,8 +11,7 @@ Push the built WASM extension to the OCI-compliant registry.
 ### Synopsis
 
 
-Push the built WASM extension to the OCI-compliant registry. This command requires to lo
-gin the target container registry with docker CLI
+Push the built WASM extension to the OCI-compliant registry. This command requires to login the target container registry with docker CLI
 
 ```
 getenvoy extension push <image-reference> [flags]
@@ -32,8 +31,7 @@ getenvoy extension push <image-reference> [flags]
       --allow-insecure          allow insecure TLS communication with registry
       --extension-file string   Use a pre-built *.wasm file
   -h, --help                    help for push
-      --toolchain string        Name of the toolchain to use, e.g. "default" toolchain t
-hat is backed by a Docker build container (default "default")
+      --toolchain string        Name of the toolchain to use, e.g. "default" toolchain that is backed by a Docker build container (default "default")
       --use-http                Use HTTP for communication with registry
 ```
 
