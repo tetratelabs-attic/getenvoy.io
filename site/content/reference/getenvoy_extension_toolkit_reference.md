@@ -195,7 +195,7 @@ $ getenvoy extension run
 ✅ `getenvoy` will download `Envoy` binary, generate a sample _Envoy_ config and start the _Envoy_ process in the foreground:
 
 ```
-info	Envoy command: [$HOME/.getenvoy/builds/wasm/1.15/darwin/bin/envoy -c /tmp/getenvoy_extension_run732371719/envoy.tmpl.yaml]
+info	Envoy command: [$HOME/.getenvoy/builds/standard/1.17.0/darwin/bin/envoy -c /tmp/getenvoy_extension_run732371719/envoy.tmpl.yaml]
 ...
 [info][main] [external/envoy/source/server/server.cc:339] admin address: 127.0.0.1:9901
 ...
@@ -250,7 +250,7 @@ info	Envoy command: [$HOME/.getenvoy/builds/wasm/1.15/darwin/bin/envoy -c /tmp/g
      # Runtime the extension is being developed against.
      runtime:
        envoy:
-         version: wasm:1.15
+         version: standard:1.17.0
      ```
    ⚠️  Since _WebAssembly_ support in `Envoy` is still under active development, no assumptions can be made about
    [API][`Envoy ABI`] compatibility between various _Envoy_ releases.
@@ -258,7 +258,7 @@ info	Envoy command: [$HOME/.getenvoy/builds/wasm/1.15/darwin/bin/envoy -c /tmp/g
 4. 💻 Next, we need to download `Envoy` binary of that version:
 
      ```shell
-     $ getenvoy fetch wasm:1.15
+     $ getenvoy fetch standard:1.17.0
      ```
    ✅ `getenvoy` will download `Envoy` binary and cache it under `$HOME/.getenvoy`:
 
@@ -266,8 +266,8 @@ info	Envoy command: [$HOME/.getenvoy/builds/wasm/1.15/darwin/bin/envoy -c /tmp/g
      $ tree $HOME/.getenvoy/builds
      
      $HOME/.getenvoy/builds
-     └── wasm
-         └── 1.15
+     └── standard
+         └── 1.17.0
              └── darwin
                  └── bin
                      └── envoy
@@ -280,7 +280,7 @@ info	Envoy command: [$HOME/.getenvoy/builds/wasm/1.15/darwin/bin/envoy -c /tmp/g
    ✅ `getenvoy` will generate the actual `Envoy` config (by resolving placeholders in the configuration template )
    and start the _Envoy_ process in the foreground:
    ```
-   info	Envoy command: [$HOME/.getenvoy/builds/wasm/1.15/darwin/bin/envoy -c /tmp/getenvoy_extension_run732371719/envoy.tmpl. yaml]
+   info	Envoy command: [$HOME/.getenvoy/builds/standard/1.17.0/darwin/bin/envoy -c /tmp/getenvoy_extension_run732371719/envoy.tmpl.yaml]
    ...
    [info][main] [external/envoy/source/server/server.cc:339] admin address: 127.0.0.1:9901
    ...
@@ -425,7 +425,7 @@ language: rust
 # Runtime the extension is being developed against.
 runtime:
   envoy:
-    version: wasm:1.15
+    version: standard:1.17.0
 ```
 
 ### Toolchain
@@ -521,7 +521,7 @@ kind: Example
 # Runtime required by the example.
 runtime:
   envoy:
-    version: wasm:1.15
+    version: standard:1.17.0
 ```
 
 #### envoy.tmpl.yaml
