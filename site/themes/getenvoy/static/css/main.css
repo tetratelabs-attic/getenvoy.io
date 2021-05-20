@@ -456,13 +456,8 @@ body .hide-me {
    background:transparent no-repeat center;
    background-size: 80% auto;   
  }
- .package-environment.CentOS > .title{
-   background-image:url(/images/centos.png);
- }
- .package-environment.Red.Hat > .title
- {
-	background-image:url(/images/redhat.svg);
-
+ .package-environment.RPM > .title{
+   background-image:url(/images/rpm.png);
  }
  .package-environment.Debian > .title
  {
