@@ -34,12 +34,13 @@ $ brew install getenvoy
 ```
 ```sh-output
 ==> Installing getenvoy from tetratelabs/getenvoy
-==> Downloading ...
+==> Downloading https://github.com/tetratelabs/getenvoy/releases/download/v0.3.0/getenvoy_0.3.0_darwin_amd64.tar.gz
+==> Downloading from https://github-releases.githubusercontent.com/190627388/f2787c00-c3a3-11eb-95fd-56b0df61b4d0?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAIWNJYAX4CS
 ######################################################################## 100.0%
-🍺  /usr/local/Cellar/getenvoy/0.1.1: 5 files, 25.9MB, built in 17 seconds
+🍺  /usr/local/Cellar/getenvoy/0.3.0: 5 files, 7.4MB, built in 4 seconds
 ```
 
 1. **Verify GetEnvoy is installed.**
 ```sh
-$ getenvoy --help
+$ getenvoy --version
 ```
