@@ -4,6 +4,7 @@
 /envoy_versions.json https://raw.githubusercontent.com/tetratelabs/getenvoy/master/site/envoy_versions.json
 /envoy_versions-schema.json https://raw.githubusercontent.com/tetratelabs/getenvoy/master/site/envoy_versions-schema.json
 
-/cli https://raw.githubusercontent.com/tetratelabs/getenvoy/master/godownloader.sh
+# Redirect latest version of install.sh from getenvoy repo
+/install.sh https://raw.githubusercontent.com/tetratelabs/getenvoy/master/site/install.sh
 
 /docs/reference /docs/reference/getenvoy

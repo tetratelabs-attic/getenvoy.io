@@ -14,15 +14,14 @@ Today we are excited to introduce the GetEnvoy CLI, or just `getenvoy` for short
 Getting Envoy running on most machines is as easy as:
 
 ```sh
-$ curl -L https://getenvoy.io/cli | bash -s -- -b /usr/local/bin
-$ getenvoy run standard:1.11.1
+$ curl -L https://getenvoy.io/install.sh | bash -s -- -b /usr/local/bin
+$ getenvoy run standard:1.16.2
 ```
 
-In addition to adding an FIPs compliant Envoy, we’re currently expanding GetEnvoy to include:
+We’re currently expanding GetEnvoy to include:
 
 - The ability to collect a snapshot of live Envoy and VM/container state
 - Automatically Configure traffic interception on a host
-- Istio sidecar support
 - Support for deploying Envoys managed by App Mesh and Traffic Director
 - Readiness and liveness endpoints 
 

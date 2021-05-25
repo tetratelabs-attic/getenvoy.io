@@ -30,7 +30,7 @@ The YAML contains comments explaining the behavior of the relevant sections.
 
 1. **Run Envoy using the static configuration.**
 ```sh
-$ getenvoy run standard:1.11.1 -- --config-path ./basic-front-proxy.yaml
+$ getenvoy run standard:1.16.2 -- --config-path ./basic-front-proxy.yaml
 ```
 
 1. **Open a new shell and cURL Envoy with `google.com` as the host header.**
