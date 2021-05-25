@@ -11,7 +11,7 @@ toc = true
 ## Why Envoy Proxy ##
 
 If you’re running a large, distributed architecture, you’ve probably heard of Envoy, if not pored over its features for controlling, securing and monitoring a system with unwieldy, heterogeneous components. 
-A quick walkthrough, if you haven’t: Originally built at Lyft, Envoy is an open source, edge and service proxy that abstracts the networking functionality away from applications, providing common, platform-agnostic features. Envoy proxies can be deployed beside your applications as a sidecar or run as an edge proxy. (For details, we recommend this [CNCF primer](https://www.cncf.io/project-faq/envoy/)).
+A quick walk through, if you haven’t: Originally built at Lyft, Envoy is an open source, edge and service proxy that abstracts the networking functionality away from applications, providing common, platform-agnostic features. Envoy proxies can be deployed beside your applications as a sidecar or run as an edge proxy. (For details, we recommend this [CNCF primer](https://www.cncf.io/project-faq/envoy/)).
 
 The upshot: With all service traffic flowing through an Envoy mesh, it becomes possible to consistently control and observe what’s going on in your network. Envoy handles most network features-- service discovery, access logging, metrics monitoring, tracing, authentication and authorization-- configured via a control plane such as Istio, Google Traffic Director or AWS App Mesh. It pushes these concerns into the platform itself, so that developers can focus on the business logic of their applications, delivering services quickly and continuously using their choice of languages and technologies. 
 
