@@ -6,5 +6,7 @@
 
 # Redirect latest version of install.sh from getenvoy repo
 /install.sh https://raw.githubusercontent.com/tetratelabs/getenvoy/master/site/install.sh
+# Historical path of install.sh used in some github sites and blogs
+/cli /install.sh
 
 /docs/reference /docs/reference/getenvoy
