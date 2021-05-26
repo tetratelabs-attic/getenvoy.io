@@ -1,7 +1,8 @@
 #! /bin/bash
 
 # Ensure CLI docs match latest GetEnvoy docs
-./ci/regen
+# TODO: temporarily disabled until next release
+# ./ci/regen
 
 if [ "$(git status --porcelain -uno)" != "" ]; then
     echo "The following CLI docs need to be regenerated:"
