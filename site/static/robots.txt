@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /cli
+Disallow: /envoy_versions*
+Disallow: /install.sh
