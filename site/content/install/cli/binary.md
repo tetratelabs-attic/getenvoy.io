@@ -24,5 +24,5 @@ If you install to a different location, ensure the binary is in your `$PATH` env
 
 1. **Verify GetEnvoy is installed.**
 ```sh
-$ getenvoy --help
+$ getenvoy --version
 ```

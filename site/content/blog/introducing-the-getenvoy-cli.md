@@ -15,7 +15,7 @@ Getting Envoy running on most machines is as easy as:
 
 ```sh
 $ curl -L https://getenvoy.io/install.sh | bash -s -- -b /usr/local/bin
-$ getenvoy run standard:1.16.2
+$ getenvoy run --version
 ```
 
 We’re currently expanding GetEnvoy to include:
