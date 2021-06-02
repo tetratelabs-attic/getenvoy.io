@@ -14,11 +14,11 @@
 
 version: 2.0
 
-jobs:     
+jobs:
   test:
     resource_class: small
     docker:
-      - image: circleci/golang:1.12.6
+      - image: circleci/golang:1.16.4
     steps:
       - checkout
       - run: ./ci/install
