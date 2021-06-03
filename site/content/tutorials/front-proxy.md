@@ -30,7 +30,7 @@ The YAML contains comments explaining the behavior of the relevant sections.
 
 1. **Run Envoy using the static configuration.**
 ```sh
-# basic-front-proxy.yaml currently use old Envoy syntax, so use an older version
+# basic-front-proxy.yaml currently uses old Envoy syntax, so use an older version
 $ ENVOY_VERSION=1.16.4 getenvoy run -c basic-front-proxy.yaml
 ```
 
