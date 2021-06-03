@@ -1,7 +1,0 @@
-#! /bin/bash
-
-set -ex
-
-# Generate getenvoy docs
-./ci/install
-./bin/getenvoy doc > site/content/usage/_index.md
