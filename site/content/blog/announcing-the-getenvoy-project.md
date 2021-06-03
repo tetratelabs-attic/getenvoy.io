@@ -39,7 +39,7 @@ So far, we have tackled some of the pre-zero-day issues. Expect more announcemen
 
 ## Get Started ##
 
-To get started with GetEnvoy, use our instructions for [installing Envoy](/install/envoy). If you want to try out our Envoy distributions on Google Traffic director, check out our [blog post](/blog/using-getenvoy-with-traffic-director/) on why and how to do so.
+To get started with GetEnvoy, use our instructions for [installing Envoy](/install/envoy).
 
 ## Call To Action ##
 

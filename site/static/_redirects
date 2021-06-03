@@ -10,3 +10,7 @@
 /cli /install.sh
 
 /docs/reference /docs/reference/getenvoy
+
+
+# Redirect back to upstream https://cloud.google.com/traffic-director/docs/prepare-for-envoy-setup#decide-envoy-binary
+/blog/using-getenvoy-with-traffic-director/ https://www.envoyproxy.io/docs/envoy/latest/start/install
