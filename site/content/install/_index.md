@@ -13,7 +13,9 @@ Installing and running `getenvoy` on Linux and macOS is as easy as:
 
 ```sh
 $ curl -L https://getenvoy.io/install.sh | bash -s -- -b /usr/local/bin
-$ getenvoy run --version
+$ getenvoy run -c /path/to/envoy.yaml
+# If you don't have a configuration file, you can start the admin port like this
+$ getenvoy run --config-yaml "admin: {access_log_path: '/dev/stdout', address: {socket_address: {address: '127.0.0.1', port_value: 0}}}"
 ```
 
 The CLI is also available via [Homebrew]({{< relref "cli/homebrew">}}).
