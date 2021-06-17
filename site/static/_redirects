@@ -1,7 +1,7 @@
 # See https://docs.netlify.com/routing/redirects/ for syntax
 
 # Redirect latest version of schema and versions json from archive-envoy repo
-/envoy-versions.json https://archive.tetratelabs.io/envoy/envoy-versions.json 200
+/envoy-versions.json https://archive-envoy.netlify.app/envoy-versions.json 200
 /envoy-versions-schema.json https://archive.tetratelabs.io/release-versions-schema.json 200
 
 # Redirect latest version of install.sh from getenvoy repo
