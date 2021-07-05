@@ -26,15 +26,12 @@ pluralizelisttitles = false
 	custom_js   = []
 	custom_css  = []
 
-
 	[params.sidebar]
 		# Replace the avatar with a picture of your own under static/images
 		avatar = "avatar.png"
 		# Use Markdown to format the string. This works nearly all over the theme
 		bio = ""
-		# The icons will be shown if you enter your username
-		twitter = "GetEnvoyProxy"
-		github = "tetratelabs/getenvoy"
+		github = "tetratelabs/func-e"
 		gitlab = ""
 		dribbble = ""
 		facebook = ""
@@ -45,35 +42,6 @@ pluralizelisttitles = false
 		copyright = [
 			"&copy; Tetrate.io"
 		]
-
-
-	[params.about]
-		hide  = false
-		logo = "GetEnvoy"
-		title = "The easiest way to get started with Envoy"
-		subtitle = "on any cloud or platform"
-		version = "0.0.1"
-		envoyVersion = "1.18.3"
-
-		[[ params.about.cta ]]
-			title = "Get Started"
-			href = "/install/"
-
-    [params.platforms]
-        hide  = false
-
-    [params.releases]
-        hide = true
-
-    [params.startnow]
-        hide = false
-
-    [params.subscribe]
-        hide = true
-
-	[params.recentposts]
-		hide  = false
-		title = "Recent blog posts"
 
 	[params.rss]
 		hide  = true

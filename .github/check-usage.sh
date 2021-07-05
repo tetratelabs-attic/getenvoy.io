@@ -1,11 +1,11 @@
 #!/bin/sh -ue
 
-# Ensure CLI docs match latest GetEnvoy docs
+# Ensure CLI docs match latest func-e docs
 usage_doc=$1
-curl -sSL https://raw.githubusercontent.com/tetratelabs/getenvoy/master/site/usage.md > "${usage_doc}"
+curl -sSL https://raw.githubusercontent.com/tetratelabs/func-e/master/site/usage.md > "${usage_doc}"
 
 if [ "$(git status --porcelain -uno)" != "" ]; then
-  echo "${usage_doc} needs to be updated to match tetratelabs/getenvoy:"
+  echo "${usage_doc} needs to be updated to match tetratelabs/func-e:"
   git status --porcelain -v -uno
   git --no-pager diff
   exit 1
