@@ -8,4 +8,4 @@ If you have feedback on `func-e`, the repository is [here](https://github.com/te
 
 If you have feedback about official `envoy` binaries, the repository is [here](https://github.com/envoyproxy/envoy).
 
-If you notice problems on the website, report them [here](https://github.com/tetratelabs/getenvoy.io).
+If you notice problems on this website, report them [here](https://github.com/tetratelabs/getenvoy.io).

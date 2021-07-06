@@ -10,7 +10,9 @@ toc = true
 
 ## Requirements ##
 
-An installation of GetEnvoy. You can find instructions on how to install GetEnvoy [here](/install).
+An installation of [func-e](https://github.com/tetratelabs/func-e) (pronounced funky).
+
+You can find instructions on how to install func-e [here](/install).
 
 ## Instructions ##
 

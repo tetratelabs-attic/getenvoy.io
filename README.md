@@ -1,7 +1,3 @@
-# [GetEnvoy.io](https://getenvoy.io)
-
-**GetEnvoy is spread across multiple repos. For more details head over to [GetEnvoy.io](https://getenvoy.io/github).**
-
 ## Building
 
 ### :exclamation: Prerequisites
