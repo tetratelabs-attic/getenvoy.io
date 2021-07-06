@@ -10,7 +10,7 @@ toc = true
 
 ## Requirements ##
 
-An installation of GetEnvoy. You can find instructions on how to install GetEnvoy [here](/install/cli/binary).
+An installation of GetEnvoy. You can find instructions on how to install GetEnvoy [here](/install).
 
 ## Instructions ##
 
@@ -31,7 +31,7 @@ The YAML contains comments explaining the behavior of the relevant sections.
 1. **Run Envoy using the static configuration.**
 ```sh
 # basic-front-proxy.yaml currently uses old Envoy syntax, so use an older version
-$ ENVOY_VERSION=1.16.4 getenvoy run -c basic-front-proxy.yaml
+$ ENVOY_VERSION=1.16.4 func-e run -c basic-front-proxy.yaml
 ```
 
 1. **Open a new shell and cURL Envoy with `google.com` as the host header.**

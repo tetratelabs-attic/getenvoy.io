@@ -4,12 +4,12 @@
 /envoy-versions.json https://archive-envoy.netlify.app/envoy-versions.json 200
 /envoy-versions-schema.json https://archive.tetratelabs.io/release-versions-schema.json 200
 
-# Redirect latest version of install.sh from getenvoy repo
-/install.sh https://raw.githubusercontent.com/tetratelabs/getenvoy/master/site/install.sh
+# Redirect latest version of install.sh from func-e repo
+/install.sh https://raw.githubusercontent.com/tetratelabs/func-e/master/site/install.sh
 # Historical path of install.sh used in some github sites and blogs
 /cli /install.sh
 
-/docs/reference /docs/reference/getenvoy
+/docs/reference /docs/reference/func-e
 
 
 # Redirect back to upstream https://cloud.google.com/traffic-director/docs/prepare-for-envoy-setup#decide-envoy-binary

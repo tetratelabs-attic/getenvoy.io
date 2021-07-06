@@ -2,9 +2,6 @@
 <header class="header">
 	{{ if .IsHome }}
 		{{ partial "about" . }}
-		{{ partial "cta" . }}
-		<!--{{ partial "environments" . }}-->
-
 	{{ else }}
 	<h1 class="header-icon"><em>GetEnvoy platform</em> {{ .Title }}</h1>
 	{{ end }}

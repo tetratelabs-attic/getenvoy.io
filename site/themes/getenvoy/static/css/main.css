@@ -131,47 +131,7 @@ body #menu > nav {
 	min-height:4rem;
 	padding: 0 16px;
 }
-body.kind-home section.quote,
-body.kind-home section#why{
-	max-width: 60rem;
-	margin:0 auto;
-	padding:4rem 2rem;
-	font-size: 1.5rem;
-	font-weight: 200;
-	text-align: left;
-}
-body.kind-home section.quote {
-	font-size:1.67rem;
-}
-body.kind-home section.quote footer p {
-	margin:0;
-	display:inline-block;
-	margin:0 .5rem 0 0;
-	font-size: 1.25rem;
-}
-body.kind-home section.quote footer p.author{
-	font-weight: 600;
-}
-body.kind-home section.quote footer p.job-title:after {
-	content:', ';
-}
-body.kind-home section.quote > blockquote{
-	margin:2rem; 
-	padding:4rem;
-	background:#224281;
-	color:#fff;
-}
 
-body.kind-section.section-install #main > section.environments {padding:4rem 0 0}
-body.kind-section.section-install section.environments > h3,
-body.kind-section.section-docs section.environments > h3,
-body.kind-home #main section > h3{
-	font-weight: bold;
-	text-align:center;
-	margin-bottom:2rem;
-	z-text-transform: uppercase;
-	font-size: 2rem;
-}
 body .card {
 	display:inline-block;
 	width:20rem;
@@ -197,26 +157,6 @@ body.kind-page.section-docs #header > header {display: none;}
 body.kind-home #header > header {
 	max-width: 100%;
 	padding: 0;
-}
-body.kind-home #header > header .cta,
-body.kind-home #header > header .about {
-	background:#224281;
-	padding: 2rem 0 2rem;
-	margin:0;
-}
-body.kind-home #header > header > .cta {
-	padding:0 0 1rem;
-	margin-top:0;
-}
-body.kind-home #header > header .environments
-{
-	background:#dce8f4;
-	background:#f4f4f4;
-	margin:0;
-	padding:2rem 0;
-}
-body.kind-home #header > header .environments h4{
-	display:none;
 }
 body #header{
 	background:#008fd1;
@@ -284,62 +224,6 @@ header.major {text-align:center; margin-top:2rem; padding-top:2rem;}
 	font-size:1.67rem;
 	font-weight: bold;
  }
- header > .cta h3{display:none}
- body.kind-home #header >header > .cta > .cta {
-	 text-align:center;
-	 margin-top:-2rem;
- }
- .cta > a,
- header > .cta > .cta > a {
-	font-weight: 600;
-    border-radius: 0;
-    line-height: 4rem;;
-    z-text-transform: uppercase;
-    letter-spacing: -1px;
-    display: inline-block;
-    font-size: 1.5rem;
-    min-width: 12rem;
-    text-align: center;
-	text-decoration: none;
-	color:#fff;
-	background:#008fd1;
-	border:none;
-	margin:.5rem;
-	border-radius: 4px;
-	transition:.5s
- }
- /*#main .cta > a {margin-bottom: 3rem;}*/
- header > .cta > p a {display:inline-block; border-bottom:1px solid transparent; transition:.5s}
- header > .cta > p a:hover{
-	border-bottom:1px dotted;
-	color:#9ef;
-}
- a:hover {
-	 color:#57BDD6;
-	 
- }
-.cta > .cta > a.btn-primary:hover,
-.cta > .cta > a.btn-primary:focus{
-	 background:#57BDD6;
-	 color:#fff;
- }
-header .environments .count,
-header > .cta a,
-header > .cta > p {
-	 color:#fff;
-	 text-align: center;
-	 font-size:1.5rem;
-	 font-weight: 200;
-	 border:none;
- }
- header .environments .count{
-	 color:#666;
- }
- header > .cta strong,
- header > .about strong {
-	 font-weight: bold;
-	 color:#fff;
- }
 
  .page.container {
    max-width: 1280px; width:100%; margin:0 auto;
@@ -350,35 +234,6 @@ header > .cta > p {
    color: pink;
    text-decoration: none;
  }
- #main > .environments > h4,
- body.kind-home #main > .environments > h4 {display:none;}
-#main > .environments > ul,
-#main > .environments > ul > li,
-body.kind-home .environments > ul,
-body.kind-home .environments > ul > li{
-	list-style: none;
-	margin:0; 
-	padding:0;
-	display: inline;
-	position: static;
-	font-size: 0;
-}
-body.kind-home .environments > ul li a{max-width: 13rem;}
-
- .environments{
-   text-align: center;
-   font-size: 0;
- }
- .environments > * {
-	 font-size:1rem;
- }
- .environments > .count {margin:0 0 1rem; font-size:1rem;}
- .environments {}
-
-.environments ul li {
-	display: inline;
-	list-style: none;
-}
 
 body .hide-me {
 	position: fixed;
@@ -387,100 +242,6 @@ body .hide-me {
 	overflow: hidden;
 	max-height:0; max-width:0;  
 	z-index: -1;  
-}
- .package-environment{
-   display:inline-block;
-   margin:1rem 1%;
-   /*width:15%;*/
-   font-size:1rem;
-   box-sizing: border-box;
-   box-shadow: 0 2px 4px #d5dde5, 0 0 0 4px #008fd1;
-   border-radius: 36px;
-   position: relative;
-   min-width: 140px;
-   transition: .5s all;
-   background: #fff;
-   border:none;
- }
- /*.package-environment:after {
-    content: '↓';
-    display: block;
-    position: absolute;
-    bottom: 1rem;
-    height: 1.5rem;
-    width: 1.5rem;
-    margin: 0 0 0 -.75rem;
-    left: 50%;
-    border-radius: 50%;
-    color: #fff;
-    text-align: center;
-    line-height: 1.5rem;
-		font-size: 1.75rem;
-		transition: .5s all;
-		color:#008fd1;
-		font-weight: bold;
- }*/
- .package-environment:focus, 
- .package-environment:hover {
-	 background:rgb(246, 253, 255);
-	 background:#ddf9ff;
-	 box-shadow: 0 2px 8px #b9ccdf, 0 0 0 4px rgba(5, 113, 167, 0.67);
-	 outline: none;
- }
- .zpackage-environment:focus:after,
- .zpackage-environment:hover:after{
-	 background:#4cadd6
- }
- .package-environment:active{
-	background:#c0eef9;
-	box-shadow: inset 0 2px 4px #b9ccdf, 0 0 0 2px rgba(5, 113, 167, 0.5)
- }
-@media screen and (max-width: 890px){
-	.package-environment{
-		min-width: 200px;margin:.5rem 1rem;	
-	}
-}
-
- .package-environment:before{
-	padding-top:100%;
-	content: '';
-	display: block;
-  }
-
- .package-environment > .title{
-   position: absolute;
-   margin:0;
-   font-size: 0;
-   top:-2%; left:2%; right:2%; bottom:2%;
-   color:transparent;
-   background:transparent no-repeat center;
-   background-size: 80% auto;   
- }
- .package-environment.RPM > .title{
-   background-image:url(/images/rpm.png);
- }
- .package-environment.Debian > .title
- {
-	background-image:url(/images/debian.png);
-	background-size:66.7% auto;
-	background-position-y: 45%;
-
- }
- .package-environment.Ubuntu > .title{
-	background-image:url(/images/ubuntu.svg);
-	background-size:90% auto;
-	top:-4%;
- }
- .package-environment.macOS > .title{
-	background-image:url(/images/macos.svg);
-	background-size:50% auto;
-	background-position-y: 49%;
-}
-.package-environment.Docker > .title{
-	background-position-y: 47%;
-}
-.package-environment.Linux > .title{
-	background-size:70% auto;
 }
 
 #main > section.color-row  {
@@ -492,16 +253,6 @@ body .hide-me {
 	margin:0;
 }
 
-.header .about, .header .cta {
-	background: #224281;
-}
-.header .cta {
-	padding-bottom: 2rem;
-}
-.cta.buttons {
-	text-align: center;
-	padding-top: 2rem;
-}
 #quickstart-container {
 	position: relative;
 }
@@ -540,34 +291,7 @@ body .hide-me {
 .binary-link {
 	flex: 1;
 }
-.binary-link .package-environment {
-	margin:1rem 8px 1rem 0;
-	font-size:1rem;
-	box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
-	border-radius: 36px;
-	position: relative;
-	min-width: 72px;
-	transition: .5s all;
-	background: #fff;
-	border:none;
-}
-.binary-link .package-environment:before{
-	padding-top:100%;
-	content: '';
-	display: block;
-}
-@media screen and (max-width: 1200px){
-	.binary-link .package-environment{
-		min-width: unset;
-		width: 72px;
-		margin-right: 4px;
-	}
-}
-@media screen and (max-width: 1058px) {
-	#binary-container {
-		padding-top: 36px;
-	}
-}
+
 #or-button {
 	padding: 16px;
 	background:#224281;

@@ -28,5 +28,5 @@ jobs:
       - name: "Checkout"
         uses: actions/checkout@v2
 
-      - name: "Ensure ${{ env.USAGE_DOC }} matches getenvoy/getenvoy"
+      - name: "Ensure ${{ env.USAGE_DOC }} matches tetratelabs/func-e"
         run: .github/check-usage.sh ${{ env.USAGE_DOC }}
