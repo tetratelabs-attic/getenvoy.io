@@ -2527,7 +2527,7 @@ article.repo > ul > li {
 		position: relative;
   }
 
-	/* Make sure that Markdown text like `GetEnvoy Extension Toolkit` stays on the same line
+	/* Make sure that Markdown text like `foo bar` stays on the same line
 	   (for better readability). */
 	p > code, a > code {
 		white-space: nowrap;

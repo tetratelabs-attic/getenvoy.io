@@ -1,7 +1,7 @@
 baseurl = "/"
 languageCode = "en-us"
-title = "GetEnvoy"
-theme = "getenvoy"
+title = "func-e"
+theme = "func-e"
 disqusShortname = ""
 # Enable Google Analytics by inserting your tracking code
 googleAnalytics = ""
