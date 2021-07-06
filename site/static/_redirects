@@ -5,7 +5,7 @@
 /envoy-versions-schema.json https://archive.tetratelabs.io/release-versions-schema.json 200
 
 # Redirect latest version of install.sh from func-e repo
-/install.sh https://raw.githubusercontent.com/tetratelabs/func-e/master/site/install.sh
+/install.sh https://raw.githubusercontent.com/tetratelabs/func-e/master/site/static/install.sh
 # Historical path of install.sh used in some github sites and blogs
 /cli /install.sh
 
