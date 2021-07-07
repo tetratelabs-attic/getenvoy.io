@@ -31,7 +31,7 @@ pluralizelisttitles = false
 		avatar = "avatar.png"
 		# Use Markdown to format the string. This works nearly all over the theme
 		bio = ""
-		github = "tetratelabs/func-e"
+		github = ""
 		gitlab = ""
 		dribbble = ""
 		facebook = ""
