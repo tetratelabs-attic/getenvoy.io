@@ -9,8 +9,5 @@
 # Historical path of install.sh used in some github sites and blogs
 /cli /install.sh
 
-/docs/reference /docs/reference/func-e
-
-
-# Redirect back to upstream https://cloud.google.com/traffic-director/docs/prepare-for-envoy-setup#decide-envoy-binary
-/blog/using-getenvoy-with-traffic-director/ https://www.envoyproxy.io/docs/envoy/latest/start/install
+# Redirect any old links back to index
+/*    /index.html   200
