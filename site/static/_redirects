@@ -4,9 +4,9 @@
 /envoy-versions.json https://archive-envoy.netlify.app/envoy-versions.json 200
 /envoy-versions-schema.json https://archive.tetratelabs.io/release-versions-schema.json 200
 
-# Redirect latest version of install.sh from func-e repo
-/install.sh https://archive-envoy.netlify.app/install.sh 200
-# Historical path of install.sh used in some github sites and blogs
+# /install.sh is used by func-e's predecessor "getenvoy"
+/install.sh https://func-e.netlify.app/install.sh 200
+# /cli is an even older path of install.sh used in some github sites and blogs
 /cli /install.sh
 
 # Redirect any old links back to index
